@@ -1,0 +1,456 @@
+/*pull记录 开始*/
+#pull {
+    padding: 20px 40px;
+    margin-top:50px;
+    padding-bottom:50px;
+}
+#pull-head {
+    font-size: 12px;
+    color: #333;
+    height: 50px;
+    border-bottom: 1px solid #cccccc;
+    font-weight: bold;
+    width: 1170px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+#pull-head>b{
+    display: inline-block;
+}
+#pull-title{
+    border-bottom: 1px solid #cccccc;
+    /*border-top: 1px solid #cccccc;*/
+    font-weight: bold;
+    margin-right: 0;
+    width: 1170px;
+    font-size: 14px;
+    height: 50px;
+}
+#pull-title span{
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    width: 230px;
+}
+#pull-title span:nth-child(2){
+    padding-left: 35px;
+}
+#pull-title span:nth-child(3){
+    padding-left: 8px;
+}
+#pull-title span:nth-child(4){
+    padding-right: 35px;
+}
+
+.pullbox{
+    padding-left: 20px;
+}
+#pull-body .record .head {
+    font-size: 0px;
+    cursor: pointer;
+    padding-left: 30px;
+    background-image: url("/img/sliceU2.png");
+    background-repeat: no-repeat;
+    background-position: -275px 10px;
+    margin-right: 20px;
+}
+#pull-body .record .head>p{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 1070px;
+    padding-left: 15px;
+}
+#pull-body .record .body {
+    border-left: 1px solid #ccc;
+    margin-top: -19px;
+    margin-left: 8px;
+    padding-top: 19px;
+    margin-bottom: -16px;
+    padding-bottom: 16px;
+}
+#pull-body .record .head>span {
+    display: inline-block;
+    font-size: 16px;
+    color: #29abe2;
+}
+/*#pull-body .record .head .icon {*/
+    /*background-image: url("/img/sliceU1.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: -272px -6px;*/
+    /*width: 15px;*/
+    /*height: 15px;*/
+    /*margin-right: 20px;*/
+/*}*/
+#pull-body .record .body table {
+    color: #333333;
+    font-size: 14px;
+    width: 94%;
+    table-layout:fixed;
+    margin-left: 20px;
+}
+#pull-body .record .body table tr:hover{
+    background-color: #f2fafe;
+}
+#pull-body .record .body table tr td{
+    height: 50px;
+    line-height: 30px;
+    text-align: center;
+    width: 20%;
+    word-break: keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+#pull-body .record .body table tr .first {
+    text-align: left;
+    padding-left: 37px;
+}
+#pull-body .record .body table tr .last {
+    text-align: right;
+    padding-right: 20px;
+}
+/*#pull-body .record .body table tr:nth-child(odd) {*/
+    /*!*background-color: #f5f5f5;*!*/
+    /*padding-bottom: 5px;*/
+/*}*/
+#pull-body .record .body table tr{
+    /*padding-top: 5px;*/
+    padding-bottom: 5px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.pagination a, .pagination span {
+    padding: 0.5em 1em;
+}
+.pagination a {
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    color: #666;
+}
+.pagination span.current {
+    background: #29abe2 none repeat scroll 0 0;
+    border-radius: 3px;
+}
+.pagination {
+    text-align: right;
+    width: 100%;
+}
+.pagination a, .pagination span {
+    display: inline;
+    float: none;
+}
+
+@media (max-width: 768px){
+    #pull-body .record .body table tr {
+        overflow:hidden;
+    }
+    #pull-body .record .body table tr td {
+        width: 50%;
+        float: left;
+    }
+    #pull-body .record .body table tr td:nth-child(2), #pull-body .record .body table tr td:nth-child(4) {
+        clear: right;
+    }
+    #pull-body .record .body table tr .first {
+        text-align: center;
+        padding: 0px;
+    }
+    #pull-body .record .body table tr .last {
+        text-align: center;
+        padding: 0px;
+    }
+    #pull-body .record .body table tr:nth-child(even) td{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+@media (max-width: 420px) {
+    #pull-body .record .body table tr td {
+        width: 100%;
+        line-height: 30px;
+        text-align: left;
+        display: block;
+        padding: 0px;
+    }
+    #pull-body .record .body table tr .first {
+        text-align: left;
+        padding: 0px;
+    }
+    #pull-body .record .body table tr .last {
+        text-align: left;
+        padding: 0px;
+    }
+    #pull-body .record .body table tr:nth-child(even) td{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+/*pull记录 结束*/
+/*我的订购 开始*/
+.title{
+    margin-top: 40px;
+}
+.title p{
+    font-size: 27px;
+    color: #333333;
+}
+.top_nav {
+    border-bottom: 1px solid #c8c8c8;
+    font-size: 27px;
+    overflow: hidden;
+    /*padding-top: 40px;*/
+    width: 100%;
+}
+.topanvcon {
+    border-bottom: 4px solid #fff;
+    color: #43609f;
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    padding-bottom: 10px;
+    width: 50%;
+    height: 75px;
+}
+.cur {
+    border-bottom: 4px solid #43609f;
+    font-weight: bold;
+}
+.dataitem{
+    height: 60px;
+}
+.dataitem p{
+    font-size: 12px;
+    color: #333333;
+    line-height: 60px;
+    padding-left: 22px;
+    font-weight: bold;
+}
+/* .dataitem:hover p{
+	font-size: 12px bold;
+	color: #333333;
+} */
+.order{
+    width:1130px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    height: 40px;
+}
+.order p{
+    font-size: 14px;
+    color: #000000;
+    width: 260px;
+    padding-left: 1px;
+    margin-left: 0px;
+    line-height: 40px;
+}
+.order span{
+    font: 14px bold;
+    color: #000000;
+}
+.orderNum{
+    float:left;
+}
+.orderNum p{
+    font-size:14px ;
+    color: #000000;
+}
+.orderNum span{
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+.orderTime{
+    float:right;
+}
+.orderTime p{
+    font-size:14px ;
+    color: #000000;
+    padding-left: 36px;
+}
+.orderTime span{
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+.repo{
+    width:100%;
+    height: auto;
+    margin-left: 20px;
+    float:left;
+    border-top:1px solid #c8c8c8;
+    padding:10px 20px;
+}
+/* .repo:hover{
+	background-color:#f4fbfe;
+	border-color: #f4fbfe;
+	border-color: #f4fbfe;
+} */
+.left{
+    float:left;
+    width:540px;
+}
+.repoName {
+    float:left;
+    font: 20px bold;
+    color: #43609f;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    width: 100%;
+
+}
+.repoName>a{
+    font-weight: bold;
+}
+.repoName{
+    display:block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.repoName>a:hover,.repoName>a:focus{
+    color: #43609f;
+}
+.description{
+    float:left;
+    padding-bottom: 20px;
+    font-size:14px;
+    color: #333333;
+    line-height: 20px;
+    width:470px;
+}
+.supplier{
+    float:left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color:#666666;
+}
+.supplier a{
+    font-size: 12px;
+    color:#43609f;
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/* .supplier:hover{
+	opacity: 0.15;
+} */
+.supplier a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.repoName a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.orderStatus{
+    float:left;
+    margin-top: 57px;
+    margin-bottom: 57px;
+    height:40px;
+    width:auto;
+    color: #666666;
+}
+.orderStatus p{
+    border: 2px solid #666666;
+    border-radius: 3px;
+    height: 26px;
+    line-height: 18px;
+    margin-top: 15px;
+    padding: 2px 10px;
+    width: auto;
+}
+.price{
+    float:left;
+    width:20%;
+    height:140px;
+    padding-top: 40px;
+    margin-left: 70px;
+}
+
+.price p{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    width: 210px;
+    border-left-width: 70px;
+    font-size:14px ;
+    color:#666666;
+}
+
+.button{
+    height:42px;
+    /*width:112px;*/
+    float: left;
+    width: 96px;
+    margin-top: 68px;
+    /*margin-bottom: 50px;*/
+    /*margin-left: 100px;"*/
+}
+.mypushcomment {
+    overflow: hidden;
+    width: 100%;
+    padding-left: 0px;
+}
+.mypushcomment li {
+    display: none;
+    overflow: hidden;
+    width: 100%;
+}
+.repoE{
+    margin-bottom:60px;
+    float:left;
+    border-bottom: 1px solid #c8c8c8;
+    border-top: 1px solid #c8c8c8;
+}
+.repoE:hover{
+    background-color:#f4fbfe;
+    border-color: #f4fbfe;
+}
+/*我的订购 结束*/
+
+
+
+/*pagination----分页样式开始*/
+
+.pagination span.current{
+    border: medium hidden !important;
+    color: #ffffff !important;
+    min-width: 1em;
+    /*padding: 0.5em 1em;*/
+    border-radius: 3px;
+    background: #29abe2 none repeat scroll 0 0;
+}
+.pagination a,.pagination span{
+    padding: 0.5em 1em !important;
+    min-width: 1em !important;
+    color: #666 !important;
+    border-radius: 3px !important;
+    border: 1px solid #e5e5e5 !important;
+    margin-bottom: 5px !important;
+    margin-right: 5px !important;
+    text-decoration: none !important;
+    font-size: 80% !important;
+}
+.g-selects-wrap .sel-page a, .g-selects-wrap .sel-page span{
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 3px;
+    color: #666 !important;
+    min-width: 1em !important;
+    padding: 0.5em 1em !important;
+    text-decoration: none !important;
+}
+.pagination .current.prev, .pagination .current.next{
+    background: #fff none repeat scroll 0 0;
+    border-color: #999;
+    color: #999!important;
+}
+/*pagination----分页样式结束*/

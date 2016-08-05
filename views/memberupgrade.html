@@ -1,0 +1,145 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/module/memberupgrade.css"/>') %>
+<!--<% block('js').append('<script src="/js/util/modelcen.js"></script>') %>-->
+<!--<% block('js').append('<script src="/js/pagescript/memberupgrade.js"></script>') %>-->
+
+
+<div class="container" id="background">
+    <div class="title">
+        <h1>会员升级</h1>
+    </div>
+    <div class="main">
+        <div class="synopsis">
+            <p class="p1"> DataHub致力于构建数据链接生态，为企业、个人获取数据、流通数据提供阳光通道和链接工具，
+                助力政府、企业智能分析，最终实现社会资源、企业资源的优化配置，为伟大的民族复兴筑梦！
+            </p>
+            <p class="p2">这里有电信、银行、工商等18个行业权威数据，这里有电信运营商、知名应用开发企业、各级政府等优质客户资源，
+                更有一群活力创造的小伙伴，期待与您一起，用数据链接世界。</p>
+            <ol>
+                <li>注册为DataHub用户，<p>可以免费获取海量免费数据。</p></li>
+                <li>免费升级为认证会员，<p>更可以通过平台发布公开数据。</p></li>
+                <li>升级为金卡会员、钻石会员，<p>更可以获得数据托管空间，发布私有数据。</p></li>
+            </ol>
+        </div>
+        <div class="upgradScheme">
+            <h4>升级方案</h4>
+            <table>
+                <tr class="row1">
+                    <td class="td1 td11">
+                        <span class="icon1"></span><p>会员特权</p></td>
+                    <td class="tdx td12"><span class="icon2"></span><p>钻石会员</p>
+                        <button class=" btn1" @click="DiamondsClick"  data-toggle="modal" data-target="#myModal2" role="button">马上升级</button>
+                        <div class="window1">
+                            <p>请发送您的升级需求到</p>
+                            <p class="p2" >datahub@asiainfo.com</p>
+                            <p>我们会在三个工作日内回复您</p>
+                        </div>
+                    </td>
+                    <td class="tdx td13"><span class="icon3"></span><p>金卡会员</p>
+                        <button class="btn2" @click="goldCard" data-toggle="modal" data-target="#myModal2" role="button">马上升级</button>
+                        <div class="window2">
+                            <p>请发送您的升级需求到</p>
+                            <p class="p2" >datahub@asiainfo.com</p>
+                            <p>我们会在三个工作日内回复您</p>
+                        </div>
+                    </td>
+                    <td class="tdx td14">
+                        <span class="icon4"></span>
+                        <p>认证会员</p>
+                        <button class="btn3" @click="authentication"  data-toggle="modal" data-target="#myModal2" role="button" >马上升级</button>
+
+                        <div class="window3">
+                            <p>请发送您的升级需求到</p>
+                            <p class="p2" >datahub@asiainfo.com</p>
+                            <p>我们会在三个工作日内回复您</p>
+                        </div>
+                    </td>
+                    <td class="tdx td15"><span class="icon5"></span><p>注册用户</p></td>
+                </tr>
+                <tr class="row2">
+                    <td class="td1">发布开放Repository资源量</td>
+                    <td class="tdx">50</td>
+                    <td class="tdx">20</td>
+                    <td class="tdx">10</td>
+                    <td class="tdx">0</td>
+                </tr>
+                <tr class="row3">
+                    <td class="td1">发布私有Repository资源量</td>
+                    <td class="tdx">20</td>
+                    <td class="tdx">2</td>
+                    <td class="tdx">0</td>
+                    <td class="tdx">0</td>
+                </tr>
+                <tr class="row4">
+                    <td class="td1">下载免费数据资源量</td>
+                    <td class="tdx">5000次/天</td>
+                    <td class="tdx">2000次/天</td>
+                    <td class="tdx">1000次/天</td>
+                    <td class="tdx">500次/天</td>
+                </tr>
+                <tr class="row5">
+                    <td class="td1">数据下载付费模式</td>
+                    <td class="tdx">后付费</td>
+                    <td class="tdx">预付费</td>
+                    <td class="tdx">预付费</td>
+                    <td class="tdx">—— ——</td>
+                </tr>
+                <tr class="row6">
+                    <td class="td1">赠送托管空间</td>
+                    <td class="tdx">2G</td>
+                    <td class="tdx">200M</td>
+                    <td class="tdx">50M</td>
+                    <td class="tdx">0</td>
+                </tr>
+                <tr class="row7">
+                    <td class="td1">年费</td>
+                    <td class="tdx">2万/年</td>
+                    <td class="tdx">1万/年</td>
+                    <td class="tdx">0</td>
+                    <td class="tdx">0</td>
+                </tr>
+            </table>
+        </div>
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" id="p-modal-dialog"  style="width: 360px;">
+                <div class="modal-content"  >
+                    <div class="modal-body" id="modal-main">
+                        <div id="modal_title">
+                            <p>会员升级</p>
+                            <button aria-hidden="true"  data-dismiss="modal" class="close" type="button" ></button>
+                        </div>
+                        <div class="form-group">
+                            <label class="modal_label">你要升级的会员级别</label>
+                            <input  class="form-control" v-model="member_grade" id="member_grade" placeholder="会员级别"
+                                    style="margin-bottom: 0;width:480px;">
+                        </div>
+                        <div class="form-group">
+                            <label class="modal_label">升级会员的有效期限</label>
+                            <input  class="form-control" v-model="member_time" id="member_time" placeholder="有限期限"
+                                    style="margin-bottom: 0;width:480px;">
+                        </div>
+                        <div class="form-group">
+                            <label class="modal_label">你需要支付的费用</label>
+                            <input  class="form-control" v-model="member_price" id="member_price" placeholder="续费价格"
+                                    style="margin-bottom: 0;width:480px;">
+                        </div>
+                        <div class="btn-group-00">
+                            <div class="btn-group " role="group">
+                                <button type="button" class="btn0" data-dismiss="modal" id="btn01">取消</button>
+                            </div>
+                            <div class="btn-group " role="group">
+                                <button type="button" class="btn0" @click="btnFadeIn" id="btn02">确认</button>
+                                <div class="window">
+                                    <p>请发送您的升级需求到</p>
+                                    <p class="p2" >datahub@asiainfo.com</p>
+                                    <p>我们会在三个工作日内回复您</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

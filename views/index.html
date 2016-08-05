@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="keywords" content="哈尔滨大数据交易中心,批量数据,API数据,流式数据,数据流动,数据交易,运营商数据,空气质量数据,免费数据调用,数据版权保护,大数据,电商大数据,物流大数据,交通大数据,企业大数据,政府大数据,科研大数据,征信大数据,竞赛数据,数据竞赛,用户画像,画像数据,个人数据,物联网数据,数据资产,数据资源,数据商品,大数据交换标准委员会,去中心化(P2P),数据市场,数据中介,数据集市,数据银行,数据交易所,一站式数据,数据咖啡馆,数据共享,数据交换,跨领域数据,跨域数据,多源数据,数据链接,数据权利,数据权属,数据隐私,数据许可,数据审计,数据使用,数据拥有,数据安全,数据定价,数据估值,数据质量,数据溯源,数据脱敏,数据流通,数据采购,数据合作,数据开放,区块链(Blockchain),数字网络(Digital Mesh),万物互联(Internet of Everything,IoE),PDS(Personal Data Store, OpenPDS),机器学习(Machine Learning),深度学习(Deep Learning),增强学习(Reinforcement Learning),监督学习(Supervised Learning),非监督学习(Unsupervised Learning),人工智能(Artificial Intelligence,AI),智能增强(Intelligence Augmentation,IA),数据开放平台,开放式创新,社会化分析,数据服务,数据价值链,价值链共享交换,数据经济,信息经济,数据即服务(Data as a service,DaaS),数据思维,数据驱动,数据科学,数字化生存(Being Digital),数据生态,数据互联网,数据骨干网,大数据应用" />
+		<meta name="description" content="哈尔滨大数据交易中心是在哈尔滨市委市政府支持下设立的、第三方中立的、具有公信力的大数据交易中心。哈尔滨大数据交易中心以大数据应用为导向，汇聚数据清洗、数据加工、数据咨询、数据创意等全产业链资源，沉淀数据分析技术和供需场景，将多维度数据源与业务逻辑无缝衔接，逐步构建大数据交易生态，解决数据流通困局，让大数据真正成为推动区域经济转型升级的强大动力。">
+
+		<title>哈尔滨大数据交易中心</title>
+		<!-- build:css /css/full.css -->
+		<link rel="stylesheet" href="/css/include/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/module/loader.css">
+		<link rel="stylesheet" href="/css/include/animate.css">
+		<!-- endbuild -->
+		<link rel="stylesheet" href="/css/include/command.css">
+		<link rel="stylesheet" href="/css/module/index.css">
+
+
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			.container{
+				width: 1200px;
+			}
+			.footer{
+				width: 100%;
+				float: left;
+				background-color: #053f6d;
+				color: #fff;
+			}
+			.footer_main{
+				width: 100%;
+				float: left;
+				margin-bottom: 50px;
+			}
+			.footer_one{
+				float: left;
+				width: 65px;
+				margin: 40px 90px 0px 0px;
+			}
+			.footer_one p{
+				font-size: 16px;
+				margin-bottom: 30px;
+			}
+			.footer_two{
+				margin: 30px 30px 0px 0px;
+				width: 120px;
+				float: left;
+				font-size: 12px;
+			}
+			.footer_two img{
+				width: 120px;
+				height: 120px;
+				float: left;
+				/*margin: 30px 30px 0px 0px;*/
+				/*border-right: 1px solid #fff;*/
+			}
+			.footer_three{
+				float: left;
+				margin: 30px 0px 0px 30px;
+			}
+			.footer_three_title{
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
+			.footer_three p{
+				font-size: 14px;
+				margin-bottom: 15px;
+			}
+
+			.nav_bg{
+				background-color: #e6ebf0;
+				width: 100%;
+				height: 191px;
+			}
+			.header{
+				width: 100%;
+				height: 120px;
+				z-index: 999;
+				width: 1200px;
+				margin: 0 auto;
+			}
+			#loginAfterHeader .form{
+				margin-top: 14px;
+			}
+			.logo {
+				float: left;
+				height: 100px;
+				padding-top: 20px;
+				width: 215px;
+			}
+
+			.form{
+				float: left;
+				width: 660px;
+				height: 41px;
+				font-size: 14px;
+				border: 1px solid #000;
+				margin: 63px 60px;
+				height: 41px;
+				padding-top: 0;
+				width: 624px;
+				margin-top: 63px;
+				position: relative;
+			}
+			#kw{
+				width: 486px;
+			}
+			#su{
+				position: absolute;
+				right: 0;
+			}
+			.form p{
+				float: left;
+				margin-top: 45px;
+			}
+			.form img{
+				height: 25px;
+				margin-left: 10px;
+				margin-top: 5px;
+				position: absolute;
+				width: 25px;
+			}
+
+			.form .all{
+				width: 520px;
+				height: 39px;
+				/*border: 1px solid #b7b7b7;*/
+				/*padding-left: 10px;*/
+				/*outline: none;*/
+				/*border-right: none;*/
+				border: none;
+				float: left;
+			}
+
+			.form .butt{
+				width: 48px;
+				height: 39px;
+				font-size: 14px;
+				font-family: "微软雅黑";
+				color: #fff;
+				border: none;
+				background: #0488bb;
+				cursor: pointer;
+				float: left;
+			}
+
+			.form .butt:hover{
+				background:#037bb1;
+			}
+
+			.form ul{
+				padding-top: 9px;
+			}
+
+			.form ul li{
+				float: left;
+				font-size: 12px;
+			}
+
+			.form ul li a{
+				color: #9e9e9e;
+				padding: 0 10px;
+			}
+			/*
+            .form ul li a:hover{
+                color: #C81623;
+            } */
+			.form ul li span{
+				font-size: 12px;
+				color: #0054c7;
+				font-weight: bold;
+			}
+			.nav_btn_if{
+				width: 90px;
+				height:39px;
+				float: left;
+				text-align: center;
+				/*padding: 7px 5px;*/
+				line-height:38px;
+				background-color: #eaeaea;
+				color: #333;
+				font-size: 12px;
+				border-right: 1px solid;
+				border: none;
+			}
+			.arrow-down {
+				border-left: 3px solid transparent;
+				border-right: 3px solid transparent;
+				border-top: 5px solid #000;
+				float: right;
+				height: 0;
+				margin: 16px 8px;
+				width: 0;
+			}
+			.nav_btn-group{
+				float: left; width:245px;margin: 20px 0px 45px -30px;;
+			}
+			.nav_btn-group a:hover{
+				text-decoration: none;
+			}
+			.nav_btn-group > ul ,.nav_btn-group>ul>li{
+				display: inline-block;
+			}
+			.nav_btn-group>ul>li>a{
+				line-height: 33px;
+				margin-right: 10px;
+			}
+			.nav_btn{
+				margin-right: 20px;
+				padding: 5px 4px;
+				text-align: center;
+				border: 1px solid #0000cc;
+				border-radius: 2px;
+				float: right;
+				font-size: 15px;
+				background-color:white;
+
+			}
+			.nav_btn>a{
+				color:#0000cc;
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+			}
+
+			.nav_btn:hover{
+				background-color:#0000cc;
+				color:white;
+			}
+			.nav_btn>a:hover{
+				color:white;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			.content{
+				width: 100%;
+				height: 420px;
+			}
+			.content_left{
+				width: 215px;
+				float: left;
+			}
+			.content_left span{
+				color: #fff;
+				text-decoration: none;
+			}
+			.content_left a{
+				text-decoration: none;
+			}
+			.content_left ul li{
+				height: 60px;
+				width: 215px;
+				background-color: #0488bb;
+				line-height: 60px;
+			}
+			.content_left ul li img{
+				float: left;
+				margin: 15px 10px 15px 35px ;
+			}
+			.content_left ul li:hover{
+				background-color: #1498d6;
+			}
+			.content_right{
+				width: 955px;
+				height: 420px;
+				float: right;
+			}
+			.sliders{
+				width: 100%;
+				float: left;
+				margin-top: 15px;
+			}
+			.slider{
+				float: left;
+				width: 290px;
+				height: 136px;
+				background-color: #e6ebf0;
+				color: #053f6d;
+				font-size: 24px;
+				padding: 45px;
+				margin-right: 2px;
+			}
+			.slider:hover{
+				background-color: #d0eaf7;
+				border-bottom: 4px solid #0488bb;
+			}
+			.slider img{
+				float: left;
+				margin-right: 15px;
+			}
+			.table_left{
+				width: 840px;
+				float: left;
+			}
+
+			.table_left_zong{
+				width: 100%;
+				height: 50px;
+				border: 1px solid #1c94df;
+				float: left;
+			}
+			.table_left_fen{
+				float: left;
+				width: 210px;
+				height: 122px;
+				border: 1px solid #1c94df;
+				border-top: none;
+				border-right: none;
+			}
+			.table_left_fen:hover{
+				background-color:#eef1f5 ;
+			}
+			.table_fen_zi{
+				font-size: 14px;
+				color: #000;
+				text-align: center;
+			}
+			.table_fen_zi:hover{
+				color: #053f6d;
+			}
+			.table_title{
+				float: left;
+				margin: 10px 20px;
+				font-size: 18px;
+				font-weight: bold;
+				color: #053f6d;
+			}
+			.table_right {
+				border: 1px solid #1c94df;
+				float: left;
+				margin-left: 20px;
+				width: 310px;
+			}
+			.table_right_zong{
+				width: 100%;
+				height: 50px;
+				float: right;
+				border-bottom: 1px solid #1c94df;
+			}
+			.table_right_fen{
+				width: 100%;
+				height: 50px;
+				float: right;
+			}
+			.table_right_fen:hover{
+				background-color: #eef1f5;
+			}
+			.table_right_fen_number{
+				margin:15px 25px;
+				width: 22px;
+				height: 22px;
+				border: 1px solid #1c94df;
+				border-radius: 2px;
+				font-size: 12px;
+				padding: 2px 6px;
+				float: left;
+			}
+			.table_right_fen_number:hover{
+				background-color: #1c94df;
+				color: #fff;
+			}
+			.table_text{
+				margin: 25px 40px;
+				font-size: 14px;
+				line-height: 24px;
+			}
+			.table_news{
+				margin:17px 20px 15px 25px;
+				font-size: 12px;
+				float: left;
+			}
+			.table_partner{
+				width: 100%;
+				float: left;
+			}
+			.table_partner_left{
+				float: left;
+				border: 1px solid #1c94df;
+				border-top: none;
+				width: 100%;
+				height: 190px;
+			}
+			.navMenu{
+				background-color: #fff;
+			}
+			.navMenu li:hover{
+				background-color: #ccc;
+				cursor: pointer;
+
+			}
+
+
+		</style>
+</head>
+
+<body>
+
+<!-- load开始 -->
+<div class="be-loader" style="display: block;">
+   	<div class="spinner">
+		<div class="spinner-container container1">
+		    <div class="circle1"></div>
+		    <div class="circle2"></div>
+		    <div class="circle3"></div>
+		    <div class="circle4"></div>
+		</div>
+	  	<div class="spinner-container container2">
+		    <div class="circle1"></div>
+		    <div class="circle2"></div>
+		    <div class="circle3"></div>
+		    <div class="circle4"></div>
+	  	</div>
+	  	<div class="spinner-container container3">
+		    <div class="circle1"></div>
+		    <div class="circle2"></div>
+		    <div class="circle3"></div>
+		    <div class="circle4"></div>
+		</div>
+	</div>
+</div>
+<!-- /load结束 -->
+
+
+
+<div class="container-fluid nav_bg" style="position: relative">
+	<div class="container">
+		<!--<div class="header">-->
+			<!--<img src="/img/heb//LOGO.png" class="logo">-->
+			<!--<div class="form">-->
+				<!--<p><div class="nav_btn_if">数据资源 <div class="arrow-down"></div></div>-->
+				<!--<input type="text" placeholder="请输入关键词，例如：终端数据" name="" class="all" id="kw">-->
+				<!--<input type="button"class="butt" id="su"><img src="/img/heb/image_66.png"></p>-->
+			<!--</div>-->
+			<!--<div style="float: left;margin: 45px 0px">-->
+				<!--<div class="nav_btn">-->
+					<!--<a><model m-text="登录" m-title="登录" m-href="login" m-width="300"></model></a>-->
+				<!--</div>-->
+				<!--<div class="nav_btn"><a href="/reg">注册</a></div>-->
+			<!--</div>-->
+		<!--</div>-->
+		<div class="header" id="loginAfterHeader" style="display:none ">
+			<img src="/img/heb//LOGO.png" class="logo">
+
+			<div class="g-iLoginf">
+				<div class="navbar-collapse collapse navbar-right">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/">首页</a></li>
+						<!--<li class="active"><a href="/selects" id="u-selectLoginb">数据精选</a></li>-->
+						<li class="inLoginfLiF"><a href="/my/publish" title="我的发布">我的发布</a></li>
+						<li class="inLoginfLiF"><a href="/my/mysub" title="我的订购">我的订购</a></li>
+
+						<li class="inLoginfLiF"><a title="工具" href="/clientToolDownload" target="_blank">工具</a></li>
+						<li class="inLoginfLiF">
+							<a  data-toggle="dropdown"  class="dropdown-toggle js-activated" aria-haspopup="true" aria-expanded="false"  href="javaScript:void(0);" title='帮助' >帮助</a>
+							<ul class="dropdown-menu navMenu">
+								<li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/client" target="_blank">客户端命令介绍</a></li>
+								<li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/member" target="_blank">用户入驻</a></li>
+								<li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/supplier" target="_blank">数据发布</a></li>
+								<li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/demander" target="_blank">数据获取</a></li>
+							</ul>
+						</li>
+						<li class="inLoginfLiF">
+							<a href="javaScript:void(0);" title="会员中心" aria-expanded="false" aria-haspopup="true"  class="dropdown-toggle js-activated">会员中心
+								<span class="badgeHeader" style="display: none;">&nbsp;</span>
+							</a>
+							<ul class="dropdown-menu navMenu">
+								<li><a style="cursor: default;color: #333;font-size: 1em" href="javaScript:void(0);" id="innames"></a></li>
+								<li class="divider" role="separator"></li>
+								<li><a style="color: #333;font-size: 1em" target="_blank" href="/my/member">会员升级</a></li>
+								<li><a style="color: #333;font-size: 1em" target="_blank" href="/my/pwd">修改密码</a></li>
+								<li><a style="color: #333;font-size: 1em" target="_blank" href="/my/basicInfo">基本信息</a></li>
+								<li><a style="color: #333;font-size: 1em" target="_blank" href="/monitor">监控中心</a></li>
+								<li><a style="color: #333;font-size: 1em" target="_blank" href="/my/myaccount">账务中心</a></li>
+								<li><a style="color: #333;font-size: 1em" target="_blank" href="/my/msgreq">消息中心</a></li>
+								<li><a style="color: #333;font-size: 1em" target="_blank" href="/my/ca">认证中心</a></li>
+								<li class="divider" role="separator"></li>
+								<li><a style="color: #333;font-size: 1em" href="javaScript:void(0);" id="logout">退出</a></li>
+							</ul>
+						</li>
+						<!--<li class="inLoginfLiF"><a title="博客" href="http://blog.hub.dataos.io" target="_blank">博客</a></li>-->
+					</ul>
+				</div>
+			</div>
+			<div class="form">
+				<select class="nav_btn_if">
+					<option>数据资源</option>
+					<option>方案/技术</option>
+					<option>数据需求</option>
+					<div class="arrow-down"></div>
+				</select>
+				<input type="text" placeholder="请输入关键词，例如：终端数据" name="" class="all" id="kw">
+				<input type="button"class="butt" id="su"><img src="/img/heb/image_66.png" onclick="su.click()" ></p>
+			</div>
+		</div>
+		<div class="header" id="noLogin" style="display:none ">
+			<a href="/"><img class="logo" src="/img/heb//LOGO.png"></a>
+			<div class="form">
+				<select class="nav_btn_if">
+					<option>数据资源</option>
+					<option>方案/技术</option>
+					<option>数据需求</option>
+					<div class="arrow-down"></div>
+				</select>
+				<input type="text" id="kw" class="all" name="" placeholder="请输入关键词，例如：终端数据">
+				<input type="button" id="su" class="butt"><img src="/img/heb/image_66.png" onclick="su.click()" ><p></p>
+			</div>
+			<div class="nav_btn-group">
+				<ul><li><a href="/">首页</a></li>
+				<li><a href="/clientDownload">工具</a></li>
+				<li class="inLoginfLiF" style="position: relative;">
+					<a  data-toggle="dropdown"  class="dropdown-toggle js-activated" aria-haspopup="true" aria-expanded="false"  href="javaScript:void(0);" title='帮助' >帮助</a>
+					<ul class="dropdown-menu navMenu" style="right: -4px; left: -119px;">
+						<li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/client" target="_blank">客户端命令介绍</a></li>
+						<li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/member" target="_blank">用户入驻</a></li>
+						<li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/supplier" target="_blank">数据发布</a></li>
+						<li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/demander" target="_blank">数据获取</a></li>
+					</ul>
+				</li>
+				</ul>
+				<div class="nav_btn">
+					<a><model m-text="登录" m-title="登录" m-href="login" m-width="300"></model></a>
+				</div>
+				<div class="nav_btn"><a href="/reg">注册</a></div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="content">
+			<div class="content_left">
+				<ul>
+					<li style="background-color: #053f6d">
+						<a target="_blank" href="/selects">
+							<span style="margin: 15px 10px 15px 72px;">全部分类</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="/selects/terminal">
+							<img src="/img/heb/image_03.png" />
+							<span >终端数据</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="/selects/weather">
+							<img src="/img/heb/image_17.png" />
+							<span>气象环保</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="/selects/finance">
+							<img src="/img/heb/image_23.png" />
+							<span >金融理财</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="/selects/internet">
+							<img src="/img/heb/image_30.png" />
+							<span>互联网</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="/selects/life">
+							<img src="/img/heb/image_32.png" />
+							<span>生活服务</span>
+						</a>
+					</li>
+					<li style="background-color: #037bb1">
+						<a target="_blank" href="/selects">
+							<span style="color:#fff;padding-left: 72px;">更多>></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<img src="/img/heb/xct.png" class="content_right" />
+		</div>
+		<div class="sliders">
+			<a href="/selects"><div class="slider">
+				<img src="/img/heb/image_09.png" />
+				<span style="line-height: 55px">数据资源</span>
+			</div></a>
+			<div class="slider">
+				<img src="/img/heb/image_11.png" />
+				<span style="line-height: 55px">方案/技术</span>
+			</div>
+			<a href="/selects/api"><div class="slider">
+				<img src="/img/heb/image_14.png" style="margin-left:30px"/>
+				<span style="line-height: 55px">API</span>
+			</div></a>
+			<div class="slider">
+				<img src="/img/heb/image_06.png" />
+				<span style="line-height: 55px">数据定制</span>
+			</div>
+		</div>
+
+		<div style="width: 100%;margin: 50px 0px;float: left">
+			<div class="table_left">
+				<div style="float: left">
+					<div class="table_left_zong">
+						<div class="table_title">数据精选</div>
+						<a href="/selects"><img src="/img/heb/image_27.png" onmouseout="this.src='/img/heb/image_27.png'"
+							 onmouseover="this.src='/img/heb/image_24.png'" style="margin-top: 15px"/></a>
+						<img src="/img/heb/image_59.png"onmouseout="this.src='/img/heb/image_59.png'"
+							 onmouseover="this.src='/img/heb/image_55.png'" style="float: right;margin-right: 20px;margin-top: 15px"/>
+						<img src="/img/heb/image_57.png"onmouseout="this.src='/img/heb/image_57.png'"
+							 onmouseover="this.src='/img/heb/image_53.png'" style="float: right;margin-right: 10px;margin-top: 15px"/>
+					</div>
+					<div style="float: left">
+						<a href="/itemdet/Ecommerce_access/Ecommerce_access"><div class="table_left_fen">
+							<img src="/img/heb/image_37.png" style="margin: 10px 72px"/>
+							<div class="table_fen_zi">智能终端访问电商情况数据</div>
+						</div></a>
+						<a href="/itemdet/Base_station_location/Base_station_location"><div class="table_left_fen">
+							<img src="/img/heb/image_40.png" style="margin: 10px 72px"/>
+							<div class="table_fen_zi">基站信息</div>
+						</div></a>
+						<a href="/itemdet/Internet_stats/Ecommerce_goods"><div class="table_left_fen">
+							<img src="/img/heb/image_43.png" style="margin: 10px 72px"/>
+							<div class="table_fen_zi">电商平台商品信息</div>
+						</div></a>
+						<a href="/itemdet/Meteorological/Haerbin_Air_Quality"><div class="table_left_fen" style="border-right: 1px solid #1c94df;">
+							<img src="/img/heb/image_45.png" style="margin: 10px 72px"/>
+							<div class="table_fen_zi">哈尔滨空气质量</div>
+						</div></a>
+					</div>
+				</div>
+				<div style="float: left;margin-top: 30px">
+					<div class="table_left_zong">
+						<div class="table_title">推荐需求</div>
+						<img src="/img/heb/image_27.png" onmouseout="this.src='/img/heb/image_27.png'"
+							 onmouseover="this.src='/img/heb/image_24.png'" style="margin-top: 15px"/>
+						<img src="/img/heb/image_59.png"onmouseout="this.src='/img/heb/image_59.png'"
+							 onmouseover="this.src='/img/heb/image_55.png'" style="float: right;margin-right: 20px;margin-top: 15px"/>
+						<img src="/img/heb/image_57.png"onmouseout="this.src='/img/heb/image_57.png'"
+							 onmouseover="this.src='/img/heb/image_53.png'" style="float: right;margin-right: 10px;margin-top: 15px"/>
+					</div>
+					<div style="float: left">
+						<div class="table_left_fen">
+							<img src="/img/heb/image_35.png" style="margin: 10px 72px"/>
+							<div class="table_fen_zi">征信产品核验</div>
+						</div>
+						<div class="table_left_fen">
+							<img src="/img/heb/image_35.png" style="margin: 10px 72px"/>
+							<div class="table_fen_zi">风控需求</div>
+						</div>
+						<div class="table_left_fen">
+							<img src="/img/heb/image_35.png" style="margin: 10px 72px"/>
+							<div class="table_fen_zi">身份证核验API接口</div>
+						</div>
+						<div class="table_left_fen" style="border-right: 1px solid #1c94df;">
+							<img src="/img/heb/image_35.png" style="margin: 10px 72px"/>
+							<div class="table_fen_zi">手机信令API接口</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="table_right">
+				<div class="table_right_zong">
+					<div class="table_title">热门数据</div>
+					<a href="/selects"><img src="/img/heb/image_27.png" onmouseout="this.src='/img/heb/image_27.png'"
+						 onmouseover="this.src='/img/heb/image_24.png'" style="margin-top: 15px"/></a>
+				</div>
+				<a href="/itemdet/Internet_stats/Ecommerce_goods"><div class="table_right_fen">
+					<div class="table_right_fen_number">1</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">电商平台商品信息</div>
+			    </div></a>
+				<a href="/itemdet/Base_station_location/Base_station_location"><div class="table_right_fen">
+					<div class="table_right_fen_number">2</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">基站信息</div>
+				</div></a>
+				<a href="/itemdet/Meteorological/Haerbin_Air_Quality"><div class="table_right_fen">
+					<div class="table_right_fen_number">3</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">哈尔滨空气质量</div>
+				</div></a>
+				<a href="/itemdet/Ecommerce_access/Ecommerce_access"><div class="table_right_fen">
+					<div class="table_right_fen_number">4</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">智能终端访问电商</div>
+				</div></a>
+				<a href="/itemdet/Meteorological/Synthetic_pollution_index"><div class="table_right_fen">
+					<div class="table_right_fen_number">5</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">综合污染指数</div>
+				</div></a>
+				<a href="/itemdet/Financial_Statistics/Financial_Market_Statistics"><div class="table_right_fen" style="margin-bottom: 20px">
+					<div class="table_right_fen_number">6</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">股票每日市值</div>
+				</div></a>
+		     </div>
+		</div>
+
+
+		<div style="width: 100%;margin: 0px 0px 50px 0px;float: left">
+			<div class="table_left">
+				<div style="float: left">
+					<div class="table_left_zong">
+						<div class="table_title">成功案例</div>
+						<img src="/img/heb/image_27.png" onmouseout="this.src='/img/heb/image_27.png'"
+							 onmouseover="this.src='/img/heb/image_24.png'" style="margin-top: 15px"/>
+					</div>
+					<div style="float: left">
+						<div class="table_left_fen" style="width: 420px;height: 318px">
+							<img src="/img/heb/image_73.png" style="margin: 40px 187px 20px;"/>
+							<div class="table_fen_zi">贷款风控管理</div>
+							<div class="table_text">哈尔滨数据交易中心 , 整合多家会员单位的资源 , 利用第三方数据服务提供商及征信公司评级机构 , 基于运营商数据、银联数据、第三方黑名单数据等 , 为某金融公司提供风控报告 , 实现了基于大数据的贷款风险控制管.</div>
+						</div>
+						<div class="table_left_fen" style="width: 420px;height:318px;border-right: 1px solid #1c94df;">
+							<img src="/img/heb/image_75.png" style="margin: 40px 187px 20px;"/>
+							<div class="table_fen_zi">智能交通应用</div>
+							<div class="table_text">基于运营商基站位置信息数据 , 包括基站LAC/CI对应经纬度信息 , 通过输入省份信息 , 获取该省份范围内基站扇区信息 , 进行人群分布流动分析 , 刻画人群流动轨迹 , 实现智能交通应用.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="table_right">
+				<div class="table_right_zong">
+					<div class="table_title">平台动态</div>
+					<img src="/img/heb/image_27.png" onmouseout="this.src='/img/heb/image_27.png'"
+						 onmouseover="this.src='/img/heb/image_24.png'" style="margin-top: 15px"/>
+				</div>
+				<div class="table_right_fen">
+					<div class="table_news">[新闻]</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">哈尔滨空气质量数据</div>
+				</div>
+				<div class="table_right_fen">
+					<div class="table_news">[新闻]</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">电商平台数据</div>
+				</div>
+				<div class="table_right_fen">
+					<div class="table_news">[新闻]</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">哈尔滨金融大数据</div>
+				</div>
+				<div class="table_right_fen">
+					<div class="table_news">[新闻]</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">全国污染源企业排放数据</div>
+				</div>
+				<div class="table_right_fen">
+					<div class="table_news">[新闻]</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">哈尔滨空气质量数据</div>
+				</div>
+				<div class="table_right_fen" style="margin-bottom: 16px">
+					<div class="table_news">[新闻]</div>
+					<div class="table_fen_zi" style="float: left;margin-top: 15px">哈尔滨空气质量数据</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="width: 100%;margin: 0px 0px 50px 0px;float: left">
+			<div class="table_partner">
+				<div style="float: left;width: 100%">
+					<div class="table_left_zong">
+						<div class="table_title">合作伙伴</div>
+					</div>
+					<div class="table_partner_left">
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	 <!--模态框 -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog" ID="origin">
+	        <div class="modal-content" style="padding:30px;font-size: 14px;">
+	            <div class="modal-header" style="border-bottom:1px solid #cacaca;padding: 0px 0px 10px 0px;">
+	            	<button style='float: right;margin-top: 5px;' type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+	                <h4 class="modal-title" id="myModalLabel1" style="font-size: 20px;color: #333;"></h4>
+	            </div>
+	            <div class="modal-body" style="padding: 0px;" ></div>
+	        </div>
+	    </div>
+	</div>
+	 <!--/模态框 -->
+<div class="footer">
+	<div class="container">
+		<div class="footer_main">
+			<div class="footer_one">
+				<p>关于我们</p>
+				<p>帮助中心</p>
+				<p  style="margin-bottom: 0px">平台动态</p>
+			</div>
+			<div class="footer_two">
+				<img src="/img/heb/image_70.png" />
+				<div class="text-center">关注官方微信</div>
+			</div>
+			<div style="border: 1px solid #fff;height: 135px;float: left;margin-top: 30px"></div>
+			<div class="footer_three">
+				<div class="footer_three_title">联系我们</div>
+				<p>电话 : 0451-51975699</p>
+				<p>邮箱 : info@hrbdataex.com</p>
+				<p>地址 : 哈尔滨哈南工业新城松花路9号中国云谷A1栋125室</p>
+			</div>
+		</div>
+		<div class="text-center">
+			<p style="color: #aeb6c2;font-size: 14px">请使用IE10及以上内核浏览器，建议使用Chrome、Firefox、360最新版等</p>
+			<p style="color: #aeb6c2;font-size: 12px;margin:20px 0px 25px 0px ">© 2016 版权所有 哈尔滨数据交易服务有限公司 京ICP备xxxxxxxxxx号-15 京公网安备xxxxxxxxxx号</p>
+		</div>
+	</div>
+</div>
+</body>
+	<!-- build:js /js/full.js -->
+	<script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/plugin/jquery.cookie.js"></script>
+    <script src="/js/vue.js"></script>
+    <script src="/plugin/base64.js"></script>
+    <script src="/js/widget/footTops.js"></script>
+	<!-- endbuild -->
+	<script src="/js/bootstrap-hover-dropdown.js"></script>
+	<script src="/js/widget/bAnalysis.js"></script>
+    <script src="/js/widget/growAnalysis.js"></script>
+    <script src="/js/widget/daovoice.js"></script>
+	<script src="/plugin/jquery.stellar.js"></script>
+    <script src="/js/widget/model.js"></script>
+	<!--<script src="/plugin/countUp.min.js"></script>-->
+	<script src="/plugin/jquery.SuperSlide.2.1.1.js"></script>
+	<script src="/plugin/TouchSlide.1.1.js"></script>
+	<script src="/js/util/terminal.js"></script>
+	<script src="/js/pagescript/index.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.js-activated').dropdownHover().dropdown();
+			if($.cookie("token")!=null&&$.cookie("tname")!=null&&$.cookie("tname")!="null"&&$.cookie("tname")!="null"){
+				$("#noLogin").hide();
+				$("#loginAfterHeader").show();
+				$("#innames").text($.cookie("tname"));
+			}else{
+				$("#noLogin").show();
+				$("#loginAfterHeader").hide();
+			}
+		});
+	</script>
+</html>

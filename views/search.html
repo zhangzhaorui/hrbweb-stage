@@ -1,0 +1,17 @@
+<% layout('tpl/layout.html') -%>
+
+<% block('css').append('<link rel="stylesheet" href="/plugin/pagination/pagination.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/module/publicRepoList.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/module/search.css" />') %>
+<script>
+    var vals='<%=sname %>';
+</script>
+<% block('js').append('<script src="/js/publicRepoList.js"></script>') %>
+<% block('js').append('<script src="/plugin/pagination/jquery.pagination.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/search.js"></script>') %>
+<div id="terminal-content-head">
+    <b id="bmarks">为您找到相关结果</b>&nbsp;<b style="color: #333;" id="searchnums"></b>&nbsp;<b>个</b>
+</div>
+<div id='repoactive'></div>
+<div class="pages"></div>
+

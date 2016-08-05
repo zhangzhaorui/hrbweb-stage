@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="utf-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="keywords" content="哈尔滨大数据交易中心,批量数据,API数据,流式数据,数据流动,数据交易,运营商数据,空气质量数据,免费数据调用,数据版权保护,大数据,电商大数据,物流大数据,交通大数据,企业大数据,政府大数据,科研大数据,征信大数据,竞赛数据,数据竞赛,用户画像,画像数据,个人数据,物联网数据,数据资产,数据资源,数据商品,大数据交换标准委员会,去中心化(P2P),数据市场,数据中介,数据集市,数据银行,数据交易所,一站式数据,数据咖啡馆,数据共享,数据交换,跨领域数据,跨域数据,多源数据,数据链接,数据权利,数据权属,数据隐私,数据许可,数据审计,数据使用,数据拥有,数据安全,数据定价,数据估值,数据质量,数据溯源,数据脱敏,数据流通,数据采购,数据合作,数据开放,区块链(Blockchain),数字网络(Digital Mesh),万物互联(Internet of Everything,IoE),PDS(Personal Data Store, OpenPDS),机器学习(Machine Learning),深度学习(Deep Learning),增强学习(Reinforcement Learning),监督学习(Supervised Learning),非监督学习(Unsupervised Learning),人工智能(Artificial Intelligence,AI),智能增强(Intelligence Augmentation,IA),数据开放平台,开放式创新,社会化分析,数据服务,数据价值链,价值链共享交换,数据经济,信息经济,数据即服务(Data as a service,DaaS),数据思维,数据驱动,数据科学,数字化生存(Being Digital),数据生态,数据互联网,数据骨干网,大数据应用" />
+		<meta name="description" content="哈尔滨大数据交易中心是在哈尔滨市委市政府支持下设立的、第三方中立的、具有公信力的大数据交易中心。哈尔滨大数据交易中心以大数据应用为导向，汇聚数据清洗、数据加工、数据咨询、数据创意等全产业链资源，沉淀数据分析技术和供需场景，将多维度数据源与业务逻辑无缝衔接，逐步构建大数据交易生态，解决数据流通困局，让大数据真正成为推动区域经济转型升级的强大动力。">
+	    <!-- build:css /css/full.css -->
+	    <link href="/css/include/bootstrap.min.css" rel="stylesheet" />
+	    <link href="/css/include/bootstrap-theme.min.css" rel="stylesheet" />
+	    <link href="/css/include/reset.css" rel="stylesheet" />
+	    <link href="/css/include/function.css" rel="stylesheet" />
+	    <link href="/css/module/loader.css" rel="stylesheet" >
+	    <link href="/css/include/animate.css" rel="stylesheet" >
+	    <!-- endbuild -->
+	    <link href="/css/include/header.css" rel="stylesheet" />
+		<link href="/css/module/layout.css" rel="stylesheet" />
+
+	    <%- block('css').toString() %>
+	    <title><%=title %></title>
+		<style>
+			/*.nav_btn-group{*/
+				/*float: left; width:245px;margin: 20px 0px 45px -30px;;*/
+			/*}*/
+			.nav_btn-group {
+				float: left;
+				margin: 20px 0 45px -30px;
+				width: 245px;
+			}
+			.nav_btn-group > ul{
+				padding-left: 0px;
+			}
+			.nav_btn-group > ul, .nav_btn-group > ul > li {
+				display: inline-block;
+				float: left;
+			}
+			.nav_btn-group > ul > li > a {
+				line-height: 33px;
+				margin-right: 10px;
+			}
+			a {
+				color: #545454;
+			}
+
+			/**/
+			/*.nav_btn{*/
+				/*margin-right: 20px;*/
+				/*padding: 5px 4px;*/
+				/*text-align: center;*/
+				/*border: 1px solid #0000cc;*/
+				/*border-radius: 2px;*/
+				/*float: left;*/
+				/*font-size: 15px;*/
+				/*background-color:white;*/
+			/*}*/
+
+			.nav_btn {
+				background-color: white;
+				border: 1px solid #0000cc;
+				border-radius: 2px;
+				float: right;
+				font-size: 15px;
+				margin-right: 20px;
+				padding: 5px 4px;
+				text-align: center;
+			}
+
+			.nav_btn>a{
+				color:#0000cc;
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+			}
+
+			.nav_btn:hover{
+				background-color:#0000cc;
+				color:white;
+			}
+			.nav_btn>a:hover{
+				color:white;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			.nav_btn-group a:hover{
+				text-decoration: none;
+			}
+
+		</style>
+    </head>
+    <body>
+
+    <!-- load开始 -->
+	<div class="be-loader">
+	   	<div class="spinner">
+			<div class="spinner-container container1">
+			    <div class="circle1"></div>
+			    <div class="circle2"></div>
+			    <div class="circle3"></div>
+			    <div class="circle4"></div>
+			</div>
+		  	<div class="spinner-container container2">
+			    <div class="circle1"></div>
+			    <div class="circle2"></div>
+			    <div class="circle3"></div>
+			    <div class="circle4"></div>
+		  	</div>
+		  	<div class="spinner-container container3">
+			    <div class="circle1"></div>
+			    <div class="circle2"></div>
+			    <div class="circle3"></div>
+			    <div class="circle4"></div>
+			</div>
+		</div>
+	</div>
+	<!-- /load结束 -->
+
+    	<!-- 头部 -->
+
+<div id="menu-nav" class="navbar navbar-fixed-top" style="background-color:#e6ebf0;border: none;">
+      <div style="padding: 0px" class="container">
+		  <div class="header" id="loginAfterHeader" style="display:none ">
+			  <a href="/"><img src="/img/heb//LOGO.png" class="logo"></a>
+
+			  <div class="g-iLoginf">
+				  <div class="navbar-collapse collapse navbar-right">
+					  <ul class="nav navbar-nav">
+						  <li class="active"><a href="/">首页</a></li>
+
+						  <!--<li class="active"><a href="/selects" id="u-selectLoginb">数据精选</a></li>-->
+						  <li class="inLoginfLiF"><a href="/my/publish" title="我的发布">我的发布</a></li>
+						  <li class="inLoginfLiF"><a href="/my/mysub" title="我的订购">我的订购</a></li>
+
+						  <li class="inLoginfLiF"><a title="工具" href="/clientToolDownload" target="_blank">工具</a></li>
+						  <li class="inLoginfLiF">
+							  <a  data-toggle="dropdown"  class="dropdown-toggle js-activated" aria-haspopup="true" aria-expanded="false"  href="javaScript:void(0);" title='帮助' >帮助</a>
+							  <ul class="dropdown-menu">
+								  <li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/client" target="_blank">客户端命令介绍</a></li>
+								  <li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/member" target="_blank">用户入驻</a></li>
+								  <li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/supplier" target="_blank">数据发布</a></li>
+								  <li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/demander" target="_blank">数据获取</a></li>
+							  </ul>
+						  </li>
+						  <li class="inLoginfLiF">
+							  <a href="javaScript:void(0);" title="会员中心" aria-expanded="false" aria-haspopup="true"  class="dropdown-toggle js-activated">会员中心
+								  <span class="badgeHeader" style="display: none;">&nbsp;</span>
+							  </a>
+							  <ul class="dropdown-menu">
+								  <li><a style="cursor: default;color: #333;font-size: 1em" href="javaScript:void(0);" id="innames"></a></li>
+								  <li class="divider" role="separator"></li>
+								  <li><a style="color: #333;font-size: 1em" target="_blank" href="/my/member">会员升级</a></li>
+								  <li><a style="color: #333;font-size: 1em" target="_blank" href="/my/pwd">修改密码</a></li>
+								  <li><a style="color: #333;font-size: 1em" target="_blank" href="/my/basicInfo">基本信息</a></li>
+								  <li><a style="color: #333;font-size: 1em" target="_blank" href="/monitor">监控中心</a></li>
+								  <li><a style="color: #333;font-size: 1em" target="_blank" href="/my/myaccount">账务中心</a></li>
+								  <li><a style="color: #333;font-size: 1em" target="_blank" href="/my/msgreq">消息中心</a></li>
+								  <li><a style="color: #333;font-size: 1em" target="_blank" href="/my/ca">认证中心</a></li>
+								  <li class="divider" role="separator"></li>
+								  <li><a style="color: #333;font-size: 1em" href="javaScript:void(0);" id="logout">退出</a></li>
+							  </ul>
+						  </li>
+						  <!--<li id="u-phoneshowblog"><a title="博客" href="http://blog.hub.dataos.io" target="_blank">博客</a></li>-->
+						  <li id="u-phoneshowlogout"><a title="退出" href="javaScript:void(0);">退出</a></li>
+					  </ul>
+				  </div>
+			  </div>
+			  <div class="form">
+				  <select class="nav_btn_if">
+					  <option>数据资源</option>
+					  <option>方案/技术</option>
+					  <option>数据需求</option>
+					  <div class="arrow-down"></div>
+				  </select>
+				  <input type="text" placeholder="请输入关键词，例如：终端数据" name="" class="all" id="kw">
+				  <input type="button"class="butt" id="su"><img src="/img/heb/image_66.png" onclick="su.click()">
+			  </div>
+		  </div>
+
+
+		  <div class="header" id="noLogin" style="margin-top: 0px;display:none ">
+			  <a href="/"><img class="logo" src="/img/heb//LOGO.png"></a>
+			  <div class="form">
+				  <select class="nav_btn_if">
+					  <option>数据资源</option>
+					  <option>方案/技术</option>
+					  <option>数据需求</option>
+					  <div class="arrow-down"></div>
+				  </select>
+				  <input type="text" id="kw" class="all" name="" placeholder="请输入关键词，例如：终端数据">
+				  <input type="button" id="su" class="butt"><img src="/img/heb/image_66.png" onclick="su.click()" ><p></p>
+			  </div>
+			  <div class="nav_btn-group">
+				  <ul><li><a href="/">首页</a></li>
+					  <li><a href="/clientDownload">工具</a></li>
+					  <li class="inLoginfLiF" style="position: relative;">
+						  <a  data-toggle="dropdown"  class="dropdown-toggle js-activated" aria-haspopup="true" aria-expanded="false"  href="javaScript:void(0);" title='帮助' >帮助</a>
+						  <ul class="dropdown-menu navMenu" style="right: -4px; left: -119px;">
+							  <li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/client" target="_blank">客户端命令介绍</a></li>
+							  <li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/member" target="_blank">用户入驻</a></li>
+							  <li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/supplier" target="_blank">数据发布</a></li>
+							  <li><a style="color: #333;font-size: 1em" href="http://docs.hub.dataos.io/demander" target="_blank">数据获取</a></li>
+						  </ul>
+					  </li>
+				  </ul>
+				  <div class="nav_btn">
+					  <a><model m-text="登录" m-title="登录" m-href="login" m-width="300"></model></a>
+				  </div>
+				  <div class="nav_btn"><a href="/reg">注册</a></div>
+			  </div>
+		  </div>
+      </div>
+  </div>
+    	<!-- /头部 -->
+    	<div class="container g-body">
+		<%-body -%>
+		</div>
+		<!-- 尾部 -->
+		<div class="container-fluid navbar-fixed-bottom g-ft">
+			<p class="text-center">© 2016 版权所有  北京亚信智慧数据科技有限公司  京ICP备11005544号-15 京公网安备110108007119号</p>
+		</div>
+		<!-- /尾部 -->
+		<!-- 模态框 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog" ID="origin">
+		        <div class="modal-content" style="padding:30px;font-size: 14px;">
+		            <div class="modal-header" style="border-bottom:1px solid #cacaca;padding: 0px 0px 10px 0px;">
+		                <button style='float: right;margin-top: 5px;' type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+		                <h4 class="modal-title" id="myModalLabel1" style="font-size: 20px;color: #333;"></h4>
+		            </div>
+		            <div class="modal-body" style="padding: 0px;" ></div>
+		        </div>
+		    </div>
+		</div>
+		<!-- /模态框 -->
+    </body>
+    <!-- build:js /js/full.js -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/plugin/jquery.cookie.js"></script>
+    <script src="/js/vue.js"></script>
+    <script src="/plugin/base64.js"></script>
+    <script src="/js/widget/footTops.js"></script>
+    <!-- endbuild -->
+    <%- block('js').toString() %>
+	<script src="/js/bootstrap-hover-dropdown.js"></script>
+    <script src="/js/widget/bAnalysis.js"></script>
+    <script src="/js/widget/growAnalysis.js"></script>
+    <script src="/js/widget/daovoice.js"></script>
+    <script src="/js/widget/model.js"></script>
+	<script src="/js/pagescript/layout.js"></script>
+	<script src="/js/util/ajaxSetup.js"></script>
+	<script>
+		$(function() {
+			$('.js-activated').dropdownHover().dropdown();
+			if($.cookie("token")!=null&&$.cookie("tname")!=null&&$.cookie("tname")!="null"&&$.cookie("tname")!="null"){
+				$("#noLogin").hide();
+				$("#loginAfterHeader").show();
+				$("#innames").text($.cookie("tname"));
+			}else{
+				$("#noLogin").show();
+				$("#loginAfterHeader").hide();
+			}
+		});
+	</script>
+</html>

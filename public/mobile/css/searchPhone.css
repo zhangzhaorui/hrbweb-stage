@@ -1,0 +1,91 @@
+.boxwrop{
+    padding-left: 6%;
+    padding-bottom: 50px;
+    padding-top:50px;
+}
+.repinfo{
+    padding:20px 0px;
+}
+.repinfoList li{
+    width: 100%;
+    padding-right: 70px;
+    padding:15px 0px;
+    position: relative;
+}
+#terminal-content-body div.lsitli{
+    width: 100%;
+    padding-right: 70px;
+    padding:20px 0px;
+    position: relative;
+    float: left;
+}
+.listTop{
+    line-height: 20px;
+    font-size: 1.2em;
+    color: #0077aa;
+    width: 55%;
+    word-wrap:break-word;
+    /*overflow: hidden;*/
+}
+.listbt{
+    line-height: 25px;
+    font-size: 1em;
+    color: #989898;
+    width: 90%;
+    word-wrap:break-word;
+}
+.listicon{
+    width: 20px;
+    height: 30px;
+    background: url("../images/phonepic1.png") no-repeat right center;
+    background-size: contain;
+    position: absolute;
+    top:34%;
+    right: 6%;
+}
+.listicon a{
+    /*width: 25px;*/
+    /*height: 39px;*/
+    /*display: block;*/
+}
+.repinfo{
+    font-size: 1.2em;
+    color: #000;
+}
+.listTop a:hover{
+    color: #337ab7;
+}
+.searchNum{
+    color: #0077aa;
+}
+.borderb{
+    border-bottom: 1px solid #e6e6e6;
+}
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.pricestate{
+    position: absolute;
+    right: 26%;
+    top: 15px;
+
+    padding:0px 5px;
+}
+.freedata{
+    border: 1px solid #ff1c1c;
+    border-radius: 2rem;
+    color: #f49f12;
+    border-color: #f49f12;
+}
+.paydata{
+    border: 1px solid #ff1c1c;
+    border-radius: 2rem;
+    color: #f06f9c;
+    border-color: #f06f9c;
+}
+.limitdata{
+    border: 1px solid #ff1c1c;
+    border-radius: 2rem;
+    color: #ed4855;
+    border-color: #ed4855;
+}

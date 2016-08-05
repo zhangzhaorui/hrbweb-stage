@@ -1,0 +1,487 @@
+.pomisiondelwrop {
+    border-top: 1px solid #e5e5e5;
+    margin-top: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+.ListboxLeft, .ListboxRight {
+    width: 300px;
+}
+.ListboxLeft, .ListboxCenter, .ListboxRight {
+    float: left;
+    overflow: hidden;
+    margin-top:20px;
+}
+#delmorecooper,#delallcooper{
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    color: #0077aa;
+    cursor: pointer;
+    font-size: 14px;
+}
+.privatelistboxwrop {
+    border: 1px solid #c8c8c8;
+    float: left;
+    overflow: hidden;
+    padding: 0 20px 20px;
+    width: 100%;
+}
+.pomisionesearchwrop {
+    overflow: hidden;
+    width: 100%;
+}
+#privatecooper,#privatepomision {
+    border-radius: 4px 0 0 4px;
+    border-right: medium none;
+    box-shadow: none;
+    float: left;
+    height: 30px;
+    width: 80%;
+}
+.searchcooper{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    float: left;
+    height: 30px;
+    width: 18%;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background-image: url("/img/lens.png");
+    background-position: 53% 48%;
+    background-repeat: no-repeat;
+    border-left:none;
+    box-shadow: 0;
+    cursor: pointer;
+}
+.perList {
+    background: #e5e5e5 none repeat scroll 0 0;
+    float: left;
+    height: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.perListcon {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+.delthisper {
+    float: right;
+    height: 30px;
+    line-height: 30px;
+}
+.delper,.delcooper,.delpubcooper {
+    margin-right: 10px;
+}
+.ListboxCenter {
+    width: 130px;
+    min-height: 200px;
+}
+#addpricoo {
+    background: #29abe2 none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    height: 25px;
+    line-height: 25px;
+    margin: 80px auto 0;
+    text-align: center;
+    width: 80%;
+}
+.errorMess {
+    /*background-color: #ffd1d1;*/
+    color: #ff0000;
+    font-size: 14px;
+    text-align: left;
+    /*width: 300px;*/
+    padding-left: 25px;
+    background:url("/img/repname_n.png") no-repeat left center;
+
+}
+.labelerrorwrop{
+    padding-left:30px;
+    height:24px;
+    width:50%;
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+.labelerrorwrop span{
+    padding-top:3px;
+    padding-bottom:3px;
+}
+.successMess {
+    /*background-color: #e8f7e6;*/
+    color: #1bd506;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: left;
+    /*width: 200px;*/
+    padding-left: 25px;
+    background:url("/img/repname_y.png") no-repeat left center;
+
+}
+.gobackbtnwropcoo,.privategobackbtnwrop{
+    display: none;
+}
+.gobackprivatecooperList,.gobackcooperator{
+    color: #0077aa;
+    cursor: pointer;
+}
+.modal-content{
+    overflow: hidden;
+}
+#myModalPriCooper .modal-dialog{
+    width: 800px;
+    margin-top:50px;
+}
+.coopage .pagination a,.coopage .pagination span ,.perpage .pagination a,.perpage .pagination span{
+    padding: 0.2em 0.3em;
+}
+.pagination a {
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    color: #666;
+}
+.pagination span.current {
+    background: #29abe2 none repeat scroll 0 0;
+    border-radius: 3px;
+}
+.pagination {
+    text-align: right;
+    width: 100%;
+}
+.pagination a, .pagination span {
+    display: inline;
+    float: none;
+}
+.pagination {
+    text-align: right;
+    width: 100%;
+}
+#emailTest {
+    float: left;
+    height: 30px;
+    margin-right: 10px;
+    width: 220px;
+}
+.perBtn {
+    background: #29abe2 none repeat scroll 0 0;
+    border: medium none;
+    float: left;
+    height: 30px;
+    line-height: 22px;
+    margin-left: 25px;
+
+}
+#modalRep_list {
+    overflow: hidden;
+    width: 100%;
+}
+.pomisiondelwrop {
+    border-top: 1px solid #e5e5e5;
+    margin-top: 12px;
+    overflow: hidden;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.back_btn {
+    color: #0077aa;
+    cursor: pointer;
+}
+.gobackWrop{
+    display: none;
+}
+button.close {
+    background: rgba(0, 0, 0, 0) url("/img/closebox.png") no-repeat scroll 0 0;
+    height: 18px;
+    opacity: 1;
+    width: 18px;
+}
+#editItem .head {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 15px;
+}
+#editItem .head span {
+    color: #333;
+    font-size: 20px;
+}
+#editItem .itemname .value input {
+    background-color: #f5f5f5;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    color: #666;
+    font-size: 14px;
+    height: 38px;
+    padding: 0 10px;
+    width: 100%;
+}
+#editItem .itemcomment{
+    margin-top:30px;
+}
+#editItem .itemcomment .value textarea {
+    background-color: #fff;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    color: #666;
+    font-size: 14px;
+    height: 112px;
+    padding: 0 10px;
+    width: 100%;
+}
+#editItem .itempro .key {
+    overflow: hidden;
+    width: 100%;
+}
+.itemcomment .key,.itemname .key{
+    color: #29abe2;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.itemcomment .key span{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+}
+#editItem .itempro .key span {
+    color: #29abe2;
+    float: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+#messcooperatorpublic{
+    color: #ff0000;
+    padding-top:3px;
+    padding-bottom:3px;
+    display: none;
+}
+#editItem .itemtag {
+    margin-bottom: 30px;
+}
+#editItem .itemtag .key {
+    border-bottom: 1px solid #c5c5c5;
+    height: 24px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+#editItem .itemtag .key .tagname {
+    float: left;
+}
+.errorMesslabels {
+    background-color: #ffd1d1;
+    color: #ff0000;
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+}
+#editItem .itemtag .key .addbtn {
+    display: inline-block;
+    font-size: 0;
+    color: #666;
+    float: right;
+}
+#editItem .itemtag .addbtn > span {
+    display: inline-block;
+    font-size: 12px;
+}
+#editItem .itemtag .key .btnicon {
+    background-image: url("/img/myPublish.png");
+    background-position: -92px -27px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 18px;
+    position: relative;
+    left:5px;
+    width: 18px;
+    display: inline-block;
+    font-size: 12px;
+}
+#editItem .itemtag .key .btnicon:hover{
+    background-image: url("/img/add_hover.png");
+    background-position: 0;
+}
+#editItem .itemtag .value {
+    overflow: hidden;
+}
+#editItem .itemtag .value .persontag {
+    float: left;
+    margin-top: 10px;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 3px;
+    width: 260px;
+}
+#editItem .itemtag .value .persontag .tagkey, #editItem .itemtag .value .persontag .tagvalue {
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    color: #666;
+    font-size: 12px;
+    height: 22px;
+    text-align: center;
+    width: 95px;
+}
+#editItem .itemtag .value .persontag input, #editItem .itemtag .value .persontag div {
+    float: left;
+}
+#editItem .itemtag .value .persontag .tagequal {
+    margin: 0 4px;
+}
+#editItem .itemtag .value .persontag .tagkey, #editItem .itemtag .value .persontag .tagvalue {
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    color: #666;
+    font-size: 12px;
+    height: 22px;
+    text-align: center;
+    width: 95px;
+}
+#editPrice .valuemoney .persontag .isnimitid {
+    margin: 3px 3px 0;
+}
+.delitemlabelicon {
+    background-image: url("/img/item_close.png");
+    cursor: pointer;
+    float: left;
+    height: 16px;
+    margin-left: 10px;
+    margin-top: 3px;
+    width: 16px;
+}
+.delitemlabelicon:hover{
+    background-image: url("/img/delete_hover1.png");
+}
+.colsepricebox,.submit input {
+    background-color: #29abe2;
+    border: 0 none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    line-height: 40px;
+    cursor: pointer;
+}
+.submit input:hover {
+    background-color: #1998ce;
+}
+.itemexceednum{
+    color: #fa5e61;
+}
+.itemsurplusnum{
+    color: #000000;
+}
+.reptypeicon {
+    background: rgba(0, 0, 0, 0) url("/img/reptypeicon.png") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 15px;
+    position: relative;
+    left: 5px;
+    top:3px;
+    width: 15px;
+}
+.reptypeicon:hover {
+    background: rgba(0, 0, 0, 0) url("/img/reptypeicon_hover.png") no-repeat scroll 0 0;
+}
+.property .tooltip-inner {
+    max-width: 500px;
+    text-align: left;
+}
+.itempro .tooltip-inner{
+    max-width:500px;
+    text-align: left;
+    /*background: #cccccc;*/
+}
+.btniconmoney {
+    background-image: url("/img/myPublish.png");
+    background-position: -91px -28px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    top:3px;
+    height: 18px;
+    margin-left: 5px;
+    margin-top: 4px;
+    width: 18px;
+}
+#editPrice .modal-title{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+}
+#editPrice  .close{
+    margin-top:6px;
+}
+.itempricew{
+    height: 30px;
+    line-height: 30px;
+    color: #666666;
+}
+.itemmesswrop{
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+}
+.itemmesswrop span{
+    padding-top:2px;
+    padding-bottom:2px;
+}
+#editPrice .valuemoney .persontag {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    padding-right: 3px;
+    width: 100%;
+}
+#editPrice .valuemoney .persontag .limitnum, #editPrice .valuemoney .persontag .tagtime, #editPrice .valuemoney .persontag .tagmoney, #editPrice .valuemoney .persontag .tagexpire {
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    color: #666;
+    font-size: 12px;
+    height: 22px;
+    margin: 0 5px;
+    text-align: center;
+    width: 45px;
+    line-height: 12px;
+}
+#editPrice .valuemoney{
+    margin-top:8px;
+}
+#editPrice .valuemoney .persontag input, #editPrice .valuemoney .persontag div {
+    float: left;
+}
+.tagtime {
+    line-height: 25px;
+    text-align: center;
+}
+.tagtime, .tagpullNum {
+    float: left;
+    overflow: hidden;
+    width: 25%;
+}
+#editPrice .valuemoney .persontag div.delitemmoneyicon {
+    background-image: url("/img/item_close.png");
+    cursor: pointer;
+    float: left;
+    height: 16px;
+    margin-left: 10px;
+    margin-top: 3px;
+    width: 16px;
+}
+.valuemoney{
+    border: 1px dashed #cccccc;
+    padding-left:5px;
+    margin-bottom: 20px;
+}
+#editPrice .valuemoney .persontag .redborder{
+    border: 1px solid red;
+}
+#myModalPer .modal-dialog, #editItem .modal-dialog, #editPrice .modal-dialog {
+    margin-top: 50px;
+}

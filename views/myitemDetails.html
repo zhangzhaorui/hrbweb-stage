@@ -1,0 +1,98 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/include/jquery-ui.min.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/plugin/pagination/pagination.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/module/modelitempermissionBox.css"/>') %>
+<% block('css').append('<link rel="stylesheet" href="/css/include/editormd.css"/>') %>
+<% block('css').append('<link rel="stylesheet" href="/css/include/myitemDetails.css"/>') %>
+<% block('css').append('<link rel="stylesheet" href="/css/include/replyto.css"/>') %>
+<% block('css').append('<link rel="stylesheet" href="/css/include/myOder.css" />') %>
+<% block('js').append('<script src="/js/jquery-ui.min.js"></script>') %>
+<% block('js').append('<script src="/js/util/ajaxSetup.js"></script>') %>
+<% block('js').append('<script src="/plugin/pagination/jquery.pagination.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/modelitempermissionBox.js"></script>') %>
+<% block('js').append('<script src="/js/replyTo.js"></script>') %>
+<% block('js').append('<script src="/plugin/marked.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/myitemDetails.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/modelitempermission.js"></script>') %>
+<script>
+    var thisreponame='<%=repnames %>';
+    var thisitemname='<%=itemnames %>'
+</script>
+<div class="isdelperBox">
+    <div style="border-bottom:0px;padding:0px;padding-bottom:8px;border-bottom: 1px solid #666" class="modal-header">
+        <button aria-hidden="true" data-dismiss="modal" class="close closedelper" type="button"></button>
+        <h4 id="myModalLabel" class="modal-title">确认删除</h4>
+    </div>
+    <div id="delPremissionCon">确认删除选中的白名单吗？</div>
+    <div class="delperbtnwrop">
+        <span class="nodelper" datadelper="1" datadeluser="">取消</span><span class="yesdelper" datadelper="1">确认</span>
+    </div>
+</div>
+<div class="itemtop">
+    <div class="itemtopLeft">
+        <div class="itemandrepName">
+            <span style="color:#43609f" class="renameitem"></span><span class="itemnameitem"></span>
+        </div>
+        <div class="thisiscooperatestatname"></div>
+        <div class="itemComment">
+               wertyuio
+        </div>
+    </div>
+    <div class="itemtopRight">
+        <p class="baimingdan">白名单管理（0）</p>
+        <!--<p class="chakanbaimingdan">查看白名单（0）</p>-->
+        <p class="xiugairep itemListName-icon">DataItem修改</p>
+        <p class="chekcprice">价格管理</p>
+    </div>
+</div>
+<div class="itemtopbt">
+    <div class="topbtleft">
+        <img data-original-title="更新时间" class="iconiamg1 iconiamg2" src="/img/newpic004.png" data-toggle="tooltip" datapalecement="       top">
+        <span   data-original-title=" 18:57:39" data-toggle="tooltip" datapalecement="top" class="itemoptime">3天前</span>
+        <img class="iconiamg1" src="/img/sx.png" data-original-title="属性" data-toggle="tooltip" datapalecement="top"/>
+        <span class="itemaccesstype">私有</span>
+
+    </div>
+    <div class="topbtcenter">
+        <span id="supply_style" class="period">dsds</span>
+    </div>
+    <div class="topbtright">
+        <img data-original-title="点赞量" class="iconiamg1 iconiamg2" src="/img/newpic001.png" data-toggle="tooltip" datapalecement="top">
+        <span class="myitemstar"></span>
+        <img data-original-title="订购量" class="iconiamg1" src="/img/newpic002.png" data-toggle="tooltip" datapalecement="top"/>
+        <span class="myitemdy"></span>
+        <img data-original-title="下载量" class="iconiamg1" src="/img/newpic003.png" data-toggle="tooltip" datapalecement="top">
+        <span class="myitempull"></span>
+    </div>
+</div>
+<div class="itembottom" style="margin-bottom:100px;">
+    <ul class="itembtNav">
+        <li class="borderBt">详细说明</li>
+        <li>Tag<sup><span class="alltagnums">0</span></sup></li>
+        <li>下载记录</li>
+        <li>评论<sup><span class="commentallnum">0</span></sup></li>
+    </ul>
+    <ol class="itembottomcon">
+        <li class="metaList" style="display:block">
+
+        </li>
+        <li class="tagList"  >
+            <div class="tagListcomment"></div>
+
+            <div class="pagestag"></div>
+        </li>
+
+        <li class="pullList">
+            <div class="pullListcomment"></div>
+
+            <div class="tagpages"></div>
+        </li>
+
+        <li class="myreplyList" id="repoactive">
+            <!-- 评论-------------------------------------------------------------------------------------->
+
+            <!-- 评论-------------------------------------------------------------------------------------->
+        </li>
+    </ol>
+</div>
+

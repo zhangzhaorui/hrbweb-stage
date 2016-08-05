@@ -1,0 +1,110 @@
+/*导航stylesheet*/
+.m-navselect{
+    width:180px;
+    margin: 45px 0px 45px 40px;
+    float: left
+}
+.m-navselect>ul{
+    border-top: 1px solid #748ab8;
+    padding: 0;
+}
+.m-navselect>ul>li{
+    border-bottom: 1px solid #748ab8;
+    font-size: 16px;
+    height: 60px;
+    line-height: 60px;
+    text-align: left;
+    color:#29abe2;
+    list-style-type:none;
+    padding-left: 20px;
+}
+.m-navselect>ul>li>span{
+    margin-left: 26px;
+}
+/*.m-navselect>ul>li:hover{
+    color: #43609f;
+    cursor:pointer
+}*/
+
+/*
+.m-navselect .li00{
+    background: url("../img/arrow_crt.png") no-repeat;
+}
+.m-navselect .li01{
+    background: url("img/navselects/images_30.png") no-repeat;
+}
+.m-navselect .li02{
+    background: url("ccimages_54.png") no-repeat;
+}
+.m-navselect .li03{
+    background: url("../images/selects/images_114.png") no-repeat;
+}
+.m-navselect .li04{
+    background: url("../images/selects/images_110.png") no-repeat;
+}
+.m-navselect .li05{
+    background: url("../images/selects/images_96.png") no-repeat;
+}
+.m-navselect .li06{
+    background: url("../images/selects/images_125.png") no-repeat;
+}
+.m-navselect .li07{
+    background: url("../images/selects/images_129.png") no-repeat;
+}
+.li08{
+    background: url("../images/selects/images_122.png") no-repeat;
+}
+.li09{
+    background: url("../images/selects/images_153.png") no-repeat;
+}
+.li010{
+    background: url("../images/selects/images_157.png") no-repeat;
+}
+
+
+
+
+.li10{
+    background: url("../images/selects/images_03.png") no-repeat;
+    color:#29abe2;
+}
+.li11{
+    background: url("../images/selects/images_29.png") no-repeat;
+    color:#29abe2;
+}
+.li12{
+    background: url("../images/selects/images_53.png") no-repeat;
+    color:#29abe2;
+}
+.li13{
+    background: url("../images/selects/images_113.png") no-repeat;
+    color:#29abe2;
+}
+.li14{
+    background: url("../images/selects/images_109.png") no-repeat;
+    color:#29abe2;
+}
+.li15{
+    background: url("../images/selects/images_95.png") no-repeat;
+    color:#29abe2;
+}
+.li16{
+    background: url("../images/selects/images_126.png") no-repeat;
+    color:#29abe2;
+}
+.li17{
+    background: url("../images/selects/images_130.png") no-repeat;
+    color:#29abe2;
+}
+.li18{
+    background: url("../images/selects/images_121.png") no-repeat;
+    color:#29abe2;
+}
+.li19{
+    background: url("../images/selects/images_152.png") no-repeat;
+    color:#29abe2;
+}
+.li110{
+    background: url("../images/selects/images_156.png") no-repeat;
+    color:#29abe2;
+}*/

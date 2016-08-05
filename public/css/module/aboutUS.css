@@ -1,0 +1,51 @@
+.g-body {
+    margin-bottom: 90px;
+}
+.itemLine{
+    width: 100%;
+    border-bottom: 1px solid #c9c9c9;
+}
+.itemText ul{
+    /*margin: 30px auto;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+
+li{
+    color: #b91d24;
+}
+
+.itemText ul li span{
+    font-size: 14px;
+    color: #333333;
+    padding-left: 10px;
+    float: left;
+    line-height: 20px;
+}
+/*.itemCenter{*/
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*float: left;*/
+/*}*/
+
+.itemName{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    color: #b91d24;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.itemText{
+    width: 100%;
+    float: left;
+    height: auto;
+    padding: 30px auto;
+
+}
+.zi{
+    font-size: 16px;
+    padding-top: 15px;
+}

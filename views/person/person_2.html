@@ -1,0 +1,50 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/module/companyCertify.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/include/mypublish.css"/>') %>
+<style>
+    .nextStepBtn{
+        background-color: #29abe2;
+        border: none;
+    }
+    .nextStepBtn:hover{
+        background-color: #00a8c6;
+    }
+</style>
+
+<div class="container g-body">
+    <div class="companyCertify">
+        <div class="cc_title"><p>个人认证</p></div>
+
+        <div class="cc_content">
+            <ul class="nav nav-tabs">
+                <li class="li_one" style="width: 33.3%">填写个人信息</li>
+                <li class="li_two selected" style="width: 33.3%">填写银行账号信息</li>
+                <li class="li_three" style="width: 33.3%">等待审核</li>
+            </ul>
+        </div>
+
+        <div class="cc_title"style="font-size: 15px;margin-top: 10px;border-bottom: solid 1px grey">银行账户信息</div>
+
+        <div class="form-group">
+            <label for="comName">银行账户名称<span>*<span style="float: right"> ⊖ 请输入银行账户名称</span></span></label>
+            <input id="comName" class="form-control" type="text" placeholder="">
+
+            <label for="comNum">银行账号<span> * <span style="float: right">⊖ 请输入公司银行账号</span> </span></label>
+            <input id="comnum" class="form-control" type="text" placeholder="">
+
+            <label for="kfmc">开户银行名称<span>*<span style="float: right">⊖ 请输入开户银行名称</span></span></label>
+            <select class="form-control">
+                <option>建设银行</option>
+                <option>工商银行</option>
+                <option>中国银行</option>
+            </select>
+
+            <label for="kfzhmc">开户支行银行名称<span>*<span style="float: right">⊖ 请输入开户银行支行名称</span></span></label>
+            <input id="kfzhmc" class="form-control" type="text" placeholder="">
+
+            <button class="nextStepBtn" style="width: 45%;">上一步</button>
+            <button class="nextStepBtn" style="width: 45%;float: right" >提交认证申请</button>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script>
+	    function getParam(key) {
+	        var value='';
+	        var itemid = new RegExp("\\?.*"+key+"=([^&]*).*$");
+	        if (itemid.test(decodeURIComponent(window.location.href))) {
+	            value = itemid.exec(decodeURIComponent(window.location.href))[1];
+	        }
+	        return value;
+	    }
+	    
+	    function browserRedirect() {
+	        var pcorphone;
+	        var sUserAgent = navigator.userAgent.toLowerCase();
+	        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+	        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+	        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+	        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+	        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+	        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+	        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+	        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+	        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+	            pcorphone = 'phone';
+	            return pcorphone;
+	        } else {
+	            pcorphone = 'pc';
+	            return pcorphone;
+	        }
+	    }
+    
+        var ispc = browserRedirect();
+        if(ispc == 'pc') {     	
+            if(getParam("rtext")!=""){
+            	location.href="/search/"+getParam("rtext");
+            }else{
+            	location.href="/search";
+            }
+        }
+
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <meta name="keywords" content="DataHub，批量数据，API数据，流式数据，数据流动，数据交易，运营商数据，空气质量数据，免费数据调用，数据版权保护，大数据，电商数据，物流数据，交通数据" />
+    <meta name="description" content="DataHub是国内首个去中心化、P2P大数据流通平台，通过将DataHub协议开源，致力于与全社会一起共建一套数据流通协议，打造数据互联网，让数据流通在阳光下流通。" />
+    <title>dataHub-搜索手机页_DataHub阳光下的数据流通平台 全国首个去中心化、P2P大数据流通平台_数据共享经济_ 开源协议_数据互联网_免费数据</title>
+    <link rel="stylesheet" href="/mobile/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/mobile/css/command.css">
+    <link rel="stylesheet" href="/mobile/css/searchPhone.css">
+
+    <script language="JavaScript" src="/mobile/js/jquery.min.js"></script>
+    <script language="JavaScript" src="/mobile/js/ngUrl.js"></script>
+    <script src="/mobile/js/bootstrap.min.js"></script>
+    <script src="/mobile/js/ngUrl.js"></script>
+    <script src="/mobile/js/login.js"></script>
+    <script src="/mobile/js/base64.js"></script>
+    <script src="/mobile/js/md5.js"></script>
+    <script src="/mobile/js/jquery.cookie.js"></script>
+    <script src="/mobile/js/ajaxSetup.js"></script>
+    <script src='/mobile/js/errorDialog.js'></script>
+    <script src="/mobile/js/searchPhone.js"></script>
+
+</head>
+<body>
+<!-- 头部导航 -->
+<header></header>
+
+
+<div class="boxwrop">
+    <div class="repinfo borderb">为您找到相关结果 <span class="searchNum">111</span>个</div>
+    <ul class="repinfoList">
+    </ul>
+</div>
+<!-- 尾部 -->
+<footer></footer>
+<div id="loginTem"></div>
+</body>
+</html>
+
+<script>
+
+
+	$(document).ready(function(){
+		
+ 	    $(document).on('touchstart','.borderb',function(){
+	        $(this).css('background-color','#e8e8e8');
+	    });
+	    $(document).on('touchend','.borderb',function(){
+	        $(this).css('background-color','#ffffff');
+	    });
+	    $("a").focus(function(){this.blur()});
+	    $("header").load("/mobile/common/header.html"); 
+	    $("footer").load("/mobile/common/footer.html");
+ 	    $("#loginTem").load("/mobile/common/login.html"); 
+	    
+	});
+	
+  
+</script> 

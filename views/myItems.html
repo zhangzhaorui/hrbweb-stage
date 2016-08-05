@@ -1,0 +1,23 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/module/myItemListModel.css"/>') %>
+
+<% block('css').append('<link rel="stylesheet" href="/plugin/pagination/pagination.css"/>') %>
+<% block('css').append('<link rel="stylesheet" href="/css/include/myItems.css"/>') %>
+<% block('js').append('<script src="/plugin/pagination/jquery.pagination.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/myItemListModel.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/myItems.js"></script>') %>
+
+<script>
+    var vals='<%=sname %>'
+</script>
+<div id="list_title">
+    <!--<a href="/mypublish"></a>-->
+    <a></a>
+</div>
+<div class="itemAllnums">
+DataItem : <span>00</span>
+</div>
+<div id="itemList">
+
+</div>
+<div class="itemPages"></div>

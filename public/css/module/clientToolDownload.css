@@ -1,0 +1,332 @@
+
+.clientTop{
+    width: 100%;
+    margin: 50px auto;
+    font-size: 28px;
+    color: #000;
+    /*border-bottom: 1px solid #c8c8c8;*/
+}
+
+.container{
+    border-top: 0 none;
+    padding:0px;
+    /*padding-bottom: 100px;*/
+}
+.clientTitle{
+    width: 100%;
+
+    line-height: 26px;
+    margin-top:40px;
+    padding-bottom: 15px;
+}
+.clientintroduce a{
+    color: #337ab7;
+}
+.clientTitle a,.sub-nav a{
+    color:#000;
+}
+.clientTitle a:hover,.sub-nav a:hover{
+    color:#000;
+}
+
+.titleImg{
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    float: left;
+    background:url("/img/down_icon.png") no-repeat;
+
+}
+.title1{
+    background-position: 0px 0px;
+}
+.title2{
+    background-position: -37px 0px;
+}
+.title3{
+    background-position: -74px 0px;
+}
+.clientTitle strong{
+    margin-left:10px;
+    font-size: 24px;
+
+}
+.clientTitle strong a{
+    color: #000;
+}
+.boxworp{
+    margin-left: 20px;
+}
+.nobg_p{
+    line-height: 18px;
+    color: #666;
+    font-size: 14px;
+    margin-top:20px;
+}
+.bg_p{
+    width: 100%;
+    margin-top: 30px;
+}
+.bg_pp {
+    width: 750px;
+    background: #f5f5f5 none repeat scroll 0 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.sfont{
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+}
+.zfont{
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.xfont{
+    font-size: 16px;
+    color: #000;
+}
+.afont{
+    font-size: 16px;
+    color: #39589a;
+}
+.afont:hover{
+    color: #265a88;
+    cursor: pointer;
+}
+
+.bddashed{
+    border: 1px dashed #e5e5e5;
+}
+.notebox{
+    padding: 10px;
+    margin-top:20px;
+}
+.notebox ul{
+    padding-left:25px;
+    width: 100%;
+    overflow: hidden;
+    list-style: outside;
+
+}
+.notebox ul li{
+    width: 100%;
+    line-height: 30px;
+}
+.smallbg{
+    width: 8px;
+    height: 8px;
+    display:inline-block;
+    background: #29abe2;
+    border-radius:4px;
+    margin-right: 10px;
+}
+.smalltitle{
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    margin-top:30px;
+}
+
+.clientintroduce{
+    margin-top:40px;
+    font-size: 24px;
+    color: #0077aa;
+    font-weight: bold;
+    padding-bottom:10px;
+}
+.fonttsize16{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.downway{
+    width: 100%;
+    overflow: hidden;
+}
+
+.downway_con {
+    border: 1px solid #c8c8c8;
+    float: left;
+    height: 230px;
+    width: 330px;
+    margin: 30px 90px 0px 0px;
+}
+.downwayname{
+    text-align: center;
+    font-size: 22px;
+    margin: 40px auto 20px;
+}
+.downwaytext{
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+    text-align: center;
+}
+.goway{
+    width: 288px;
+    height: 36px;
+    background-color: #5471a2;
+    margin:30px auto;
+    color: #fff;
+    line-height: 36px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.goway:hover{
+    background-color:#265a88 ;
+}
+.box{
+    width: 100%;
+    border: 1px solid #c8c8c8;
+    margin-top: 30px;
+}
+.boxcontent{
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+
+
+.sub-nav{
+    font-size: 16px;
+    color: #333;
+    margin-top: 30px;
+}
+.sub-navicon{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    float: left;
+    border-radius: 5px;
+    background:#29abe2;
+    margin-top:8px;
+    margin-right: 10px;
+}
+.monitorbox{
+    overflow: hidden;
+    width: 500px;
+    margin-top:20px;
+}
+.monitorboxTop{
+    height: 30px;
+    width: 100%;
+    background: #999999;
+}
+.monitorboxCon{
+    width: 100%;
+    overflow: hidden;
+    background:#000000;
+    padding-bottom:20px;
+    padding-left:20px;
+}
+.monitorboxCon div{
+    color: #ffffff;
+    font-size: 18px;
+}
+.monitorboxCon div span{
+    font-size: 14px;
+}
+.stateicon{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 8px;
+    margin:0px 10px 0px 7px;
+}
+.stateiconrgre{
+    background: #59d11e;
+}
+.statecolorgre{
+    color:  #59d11e;
+}
+.stateiconrgred{
+    background: red;
+}
+.statecolorgred{
+    color:  red;
+}
+.fontw{
+    font-weight: bold;
+}
+
+.right_p{
+    width: 100%;
+    padding-left:20px;
+    line-height: 30px;
+    border-left: 2px solid #ffffff;
+}
+
+.right_p a{
+    color: #333;
+}
+
+.waygo{
+    width: 100%;
+    overflow: hidden;
+    list-style: inside;
+}
+.waygo li{
+    padding-left:20px;
+    line-height: 30px;
+    border-right: 2px solid #ffffff;
+}
+
+.waygo li a{
+    color: #333;
+}
+
+.rightwrop{
+    position: fixed;
+    top: 150px;
+    right:8%;
+}
+
+.activecur{
+    border-left: 2px solid #0077aa;
+    color: #0077aa;
+}
+.activecur a{
+    color: #0077aa;
+}
+.rboxicon{
+    width: 8px;
+    height: 8px;
+    margin-left: 10px;
+    display: inline-block;
+    float: left;
+    border-radius: 5px;
+    background:#333;
+    margin-top:11px;
+    margin-right: 10px;
+}
+
+.twobg{
+    background: #337ab7;
+}
+.fcolor0{
+    color: #000000;
+}
+.fcolor3{
+    color: #333333;
+}
+.fcolor6{
+    color: #666;
+    line-height: 24px;
+}
+.marginT10{
+    margin-top:10px;
+}
+.marginT15{
+    margin-top:10px;
+}
+.marginT20{
+    margin-top:10px;
+}

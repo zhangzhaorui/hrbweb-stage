@@ -1,0 +1,78 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/module/clientDownload.css" />') %>
+<% block('js').append('<script src="/js/pagescript/clientDownload.js"></script>') %>
+<div class="clientTop">
+    Client端工具下载
+</div>
+<div class="">
+    <div class="leftbox">
+<div class="clientintroduce"><a href="javascript:void(0)"  id="001">DataHub Client端是一个P2P数据传输工具</a></div>
+<div class="bg_p" style="padding-bottom:20px;">
+    <div class="bmargin fcolor0 bfont">便捷、快速的获取数据</div>
+    <div class="smargin fcolor6">DataHub链接的任意数据，均可通过Client端一键获取</div>
+    <div class="bmargin fcolor0 bfont">一键发布数据</div>
+    <div class="smargin fcolor6">DataHub支持任意批量数据（如文本文件、HDFS、S3、DB等 ）、API、流数据的发布，支持数据时时在线链接</div>
+    <div class="bmargin fcolor0 bfont">免费获取公开数据</div>
+    <div class="smargin fcolor6">DataHub上链接的免费数据，均可通过Client端免费获取</div>
+</div>
+<div class="clientTitle bdbs" style="margin-top:80px;">
+    <div class="titleImg title1"></div><strong><a href="javascript:void(0)"  id="002">支持三种Client端安装方式</a></strong>
+</div>
+<div class="downway bdbs">
+    <div class="downway_con">
+        <div class="downwayname  fcolor0">脚本安装</div>
+        <div class="goway" id="gosetup_1">Set&nbsp;up</div>
+    </div>
+    <div class="downway_con">
+        <div class="downwayname  fcolor0" >源码安装</div>
+        <div class="goway" id="gosetup_2">Set&nbsp;up</div>
+    </div>
+    <div class="downway_con">
+        <div class="downwayname  fcolor0" >Docker镜像安装</div>
+        <div class="goway" id="gosetup_3">Set&nbsp;up</div>
+    </div>
+</div>
+<div class="sub-nav" id="setup_1" style="padding-bottom:15px;"> <span class="sub-navicon"></span><a href="javascript:void(0)"  id="003">使用脚本安装</a></div>
+<div class="boxworp bdbs">
+    <div class="nobg_p">支持64位Debian，ubuntu，freebsd操作系统。打开终端，输入：</div>
+    <div class="bg_p">curl -sSL https://hub.dataos.io/install.sh | sh -s <span class="havetoken"></span></div>
+    <div class="nobg_p  fcolor0">安装过程约持续1分钟，完成安装后DataHub服务会自动启动.</div>
+    <div class="nobg_p  fcolor0">安装完成后：</div>
+    <div class="nobg_p">停止DataHub 服务:</div>
+    <div class="bg_p">sudo datahub stop</div>
+    <div class="nobg_p">启动DataHub 服务:</div>
+    <div class="bg_p">sudo datahub --daemon --token <span class="havetoken"></span></div>
+</div>
+<div class="sub-nav" id="setup_2" style="padding-bottom:15px;"> <span class="sub-navicon"></span><a href="javascript:void(0)"  id="004">使用源码安装:</a></div>
+<div class="boxworp bdbs">
+    <div class="nobg_p">在安装GO(go1.4以上版本)语言和设置完GOPATH环境变量之后，安装DataHub Client：</div>
+    <div class="bg_p">go get github.com/asiainfoLDP/datahub</div>
+    <div class="nobg_p">启动DataHub服务</div>
+    <div class="bg_p">sudo $GOPATH/bin/datahub --daemon --token <span class="havetoken"></span></div>
+    <div class="nobg_p">停止DataHub服务</div>
+    <div class="bg_p">sudo $GOPATH/bin/datahub stop</div>
+</div>
+<div class="sub-nav" id="setup_3" style="padding-bottom:15px;"> <span class="sub-navicon"></span><a href="javascript:void(0)"  id="005">使用Docker镜像:</a></div>
+<div class="boxworp bdbs">
+    <div class="bg_p">
+        <p>git clone https://github.com/asiainfoLDP/datahub</p>
+        <p>cd datahub</p>
+        <p>docker build -t datahub .</p>
+    </div>
+    <div class="nobg_p">启动Docker镜像:</div>
+    <div class="bg_p">docker run -d -e "DAEMON_TOKEN=<span class="havetoken"></span>"  datahub</div>
+    <div class="nobg_p fcolor0">网络策略要求：</div>
+    <div class="smargin fcolor0">若需要向DataHub发布数据，需提供ENTRYPOINT，同时修改防火墙，使得Docker镜像的35800映射到的主机端口可以被外部访问。</div>
+    <div class="smargin">例如:docker run -d -e "DAEMON_TOKEN=<span class="havetoken"></span>" -e "DAEMON_ENTRYPOINT=http://example.com:35800" -p 35800:35800 datahub</div>
+</div>
+</div>
+<div class="rightbox">
+    <div class="rightwrop">
+        <div class="right_p activecur"><a href="javascript:void(0)">DataHub Client端介绍</a></div>
+        <div class="right_p"><a href="javascript:void(0)">DataHub Client端安装方式</a></div>
+        <div class="right_p"><span class="rboxicon"></span><a href="javascript:void(0)">脚本安装</a></div>
+        <div class="right_p"><span class="rboxicon"></span><a href="javascript:void(0)">源码安装</a></div>
+        <div class="right_p"><span class="rboxicon"></span><a href="javascript:void(0)">Docker镜像安装安装</a></div>
+    </div>
+</div>
+</div>

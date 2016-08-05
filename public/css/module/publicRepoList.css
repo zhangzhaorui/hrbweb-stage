@@ -1,0 +1,194 @@
+.listBox{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #c8c8c8;
+    border-top: 1px solid #c8c8c8;
+    margin-bottom: 60px;
+    padding: 0px 30px;
+}
+.listBox:hover {
+    background-color: #f4fbfe;
+    border-color: #f4fbfe;
+}
+.listLeftBox,.listRightBox{
+
+    overflow: hidden;
+}
+.listLeftBox{
+    width: 60%;
+    float: left;
+}
+.listRightBox{
+    width: 20%;
+}
+.listNameTitle{
+    overflow: hidden;
+    width: 100%;
+    color: #43609f;
+    padding-bottom: 25px;
+    padding-top: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.listNameTitle a:link,.listNameTitle a:visited{
+    color: #43609f;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.listComment{
+    width: 100%;
+    overflow: hidden;
+    color: #333333;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.listbtIconWrop{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.listlable,.listbtIcon{
+    display:inline;
+}
+.listlable{
+    float: left;
+}
+.listlable span {
+    border-radius: 3px;
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 1px 10px;
+}
+.listbtIcon{
+    float:left;
+    margin-left:8%;
+}
+
+.listCursers{
+    color: #666666;
+    font-size: 12px;
+    margin-bottom: 22px;
+    overflow: hidden;
+    width: 100%;
+}
+.listCursers a:link,.listCursers a:visited{
+    color: #43609f;
+    font-size: 12px;
+}
+.listRightBox{
+    width: 20%;
+    overflow: hidden;
+    float: right;
+}
+.listPrice{
+
+    margin-bottom: 29px;
+    margin-top: 30px;
+}
+.listPrice span{
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 0 10px;
+}
+.freetype {
+    border: 2px solid #f49f12;
+    color: #f49f12;
+}
+.chargetype {
+    border: 2px solid #e5004f;
+    color: #e5004f;
+}
+.limitedfreetype {
+    border: 2px solid #e60012;
+    color: #e60012;
+}
+.iconGroup{
+    border-top: 1px solid #c8c8c8;
+    color: #b5b5b5;
+    float: left;
+    font-size: 12px;
+    width: 100%;
+}
+.like {
+    float: left;
+    margin-top: 20px;
+    width: 50%;
+}
+.cart {
+    float: left;
+    margin-top: 20px;
+    width: 50%;
+}
+.download {
+    float: left;
+    padding-top: 15px;
+    width: 50%;
+}
+.comment {
+    float: right;
+    padding-top: 15px;
+    width: 50%;
+}
+.like span, .cart span, .download span, .comment span {
+    margin-left: 20px;
+}
+.noborder{
+    border: none;
+}
+.tagsIcon {
+    margin-left: 60px;
+    margin-right: 15px;
+}
+.period {
+    border: 1px solid #8fc31f;
+}
+.thislabels {
+    border: 1px solid #666666;
+}
+.api {
+    border: 1px solid #eb6877;
+}
+.flotData {
+    border: 1px solid #f8b551;
+}
+.activeBOX{
+    width: 100%;
+    overflow: hidden;
+}
+.pagination a, .pagination span {
+    padding: 0.5em 1em;
+}
+.pagination a {
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    color: #666;
+}
+.pagination span.current {
+    background: #29abe2 none repeat scroll 0 0;
+    border-radius: 3px;
+}
+.pagination {
+    text-align: right;
+    width: 100%;
+}
+.pagination a, .pagination span {
+    display: inline;
+    float: none;
+}
+.repodetailsWrop{
+    width: 870px;
+    float: left;
+    overflow: hidden;
+}
+.dataOwnerListIcon{
+    margin-left:0px;
+}
+.dataOwnerIcon{
+    margin-left:0px;
+}

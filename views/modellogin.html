@@ -1,0 +1,82 @@
+<style>
+	.m-btnlogin{
+		width:240px;height:40px;background-color: #29abe2;font-size:18px; font-weight:blod; color: #fff; 
+	}
+	.m-btnlogin:hover{
+		 color: #fff;
+		 background-color: #1998ce;
+	}
+	.form-control{
+		font-size: 12px;
+	}
+	.m-fspan{
+		color: #29abe2;
+	}
+	.m-fspan:hover{
+		color: #1998ce;
+	}
+	.shens {
+	  margin-left: 10px;
+	  margin-top: -5px;
+	  cursor: pointer;
+	}
+	.back_icon {
+	    background-image: url("/img/error_span.png");
+	    background-repeat: no-repeat;
+	    display: inline-block;
+	    height: 15px;
+	    margin-right: 10px;
+	    vertical-align: text-bottom;
+	    width: 15px;
+	    float: left;
+	}
+	.register{
+		color:#29abe2;
+	}
+	.register:hover{
+		color:#1998ce;
+	}
+	
+</style>
+<div style="min-height: 34px;">
+	<p id="messageModal" style="color:#ea0c1d;font-size:14px;display:none;line-height: 14px;margin: 10px 0px;float: left;"><span class="back_icon"></span>账户名与密码不匹配，请重新输入</p>
+	<p id="messageModa2" style="color:#ea0c1d;font-size:14px;display:none;line-height: 14px;margin: 10px 0px;float: left;"><span class="back_icon"></span>邮箱格式不正确</p>
+	<p id="messageModa3" style="color:#ea0c1d;font-size:14px;display:none;line-height: 14px;margin: 10px 0px;float: left;"><span class="back_icon"></span>服务器内部错误</p>
+	<p id="messageModa4" style="color:#ea0c1d;font-size:14px;display:none;line-height: 14px;margin: 10px 0px;float: left;"><span class="back_icon"></span></p>
+</div>
+  <div class="form-group">
+  	<input @blur="tt" type="email" name="email" value="" class="form-control" id="exampleInputEmail1" placeholder="邮箱" v-model="user.email" >
+  </div>  
+  <div class="form-group">
+    <input  @keyup.enter="login" type="password" name="password" value="" class="form-control" id="exampleInputPassword1" placeholder="密码" v-model="user.pwd">
+  </div>
+  <div class="checkbox" style="margin:30px 0px 30px 0px;">
+  <label style='color: #666;'>
+    <input type="checkbox" v-model="user.reme"> 记住我
+  </label>
+  <span ID="click" style="float:right; color: #43609f;" data-dismiss="modal" >
+    <a style="cursor: pointer;" class="m-fspan"> <model m-text="忘记密码？" m-title="忘记密码" m-href="pw" m-width="300"></model></a>
+  </span>
+</div>
+
+<button id='signs' class="btn m-btnlogin" @click="login">登录</button>
+     
+<!--<div style="margin-top: 20px;">
+	<p class="text-center" style="margin-bottom: 0px;">
+	还没有账号？申请成为会员
+		<a href="mailto:datahub@asiainfo.com?subject=申请成为Datahub会员">
+	  		<img title="申请注册" class="shens" >
+	  	</a>
+	</p>
+</div>-->
+
+
+<div style="margin-top: 20px;">
+	<p class="text-center" style="margin-bottom: 0px;">
+		还没有账号？<a href="/reg" class="register">马上注册</a>
+	</p>
+</div>
+<script src="/js/util/formattime.js"></script>
+<script src="/js/widget/modellogin.js"></script>
+<script src="/plugin/base64.js"></script>
+<script src="/plugin/md5.js"></script>

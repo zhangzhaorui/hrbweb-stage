@@ -1,0 +1,23 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/include/monitor.css" />') %>
+<% block('js').append('<script src="/js/widget/monitor.js"></script>') %>
+
+<div class="montop">监控中心</div>
+<div class="montitle montitle1 borderb">DataHub Client端运行状态监控</div>
+<div class="monitorbox">
+    <div class="monitorboxTop"></div>
+    <div class="monitorboxCon">
+        <div class="nobg_p">Daemon Id：<span class="havetoken"></span></div>
+        <div class="nobg_p">EntryPoint：<span class="havePoint">N/A</span></div>
+        <div class="nobg_p">连接状态：<strong class="stateicon stateiconrgred"></strong><span class="statecolor statecolorgred">Client端失去连接</span></div>
+    </div>
+</div>
+<div class="montitle montitle2 borderb">DataHub Client端运行日志</div>
+<div class="monitorbox">
+    <div class="monitorboxTop"></div>
+    <div class="monitorboxCon recordcon">
+        <div id="conList">
+
+        </div>
+    </div>
+</div>

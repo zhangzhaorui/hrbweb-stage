@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="utf-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	    <meta name="keywords" content=""/>
+	    <meta name="description" content=""/>
+	    <link href="/css/include/bootstrap.min.css" rel="stylesheet" />
+	    <link href="/css/include/reset.css" rel="stylesheet" />
+	    <link href="/css/include/function.css" rel="stylesheet" />
+	    <link href="/css/module/error.css" rel="stylesheet"/>
+	    <%- block('css').toString() %>
+	    <title>路径错误了</title>
+	    <meta http-equiv="refresh" content="60;url=http://hub.dataos.io/">
+    </head>
+    <body>
+		<div id="container">
+			<img class="png" src="/img/error/404.png" /> 
+			<img class="png msg" src="/img/error/404_msg.png" />
+		  	<p>
+		  		<a href="/" target="_blank"><img class="png" src="/img/error/404_to_index.png" /></a> 
+		  	</p>
+		</div>
+		<my-component></my-component>
+		<div id="cloud" class="png"></div>
+    </body>
+</html>

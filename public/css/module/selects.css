@@ -1,0 +1,130 @@
+.g-selects-wrap{
+    margin-top: 45px;
+    float: right;
+    width:900px;
+}
+.g-selects-box{
+    /*float: left;*/
+}
+.sel-page{
+    float: right;
+}
+.u-selects-title{
+    color: #666666;
+    font-size: 27px;
+    margin-bottom: 30px;
+}
+/*分页样式*/
+.g-selects-wrap .sel-page a,.g-selects-wrap .sel-page span{
+    border-radius: 3px;
+    color:#666;
+    min-width: 1em;
+    border: 1px solid #e5e5e5;
+    padding: 0.5em 1em;
+}
+.pagination span.current{
+    color:#FFFFFF;
+    border: hidden;
+}
+
+/*鼠标点击样式*/
+.g-click{
+    color:#43609f !important;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+
+
+.li00{
+    background: url("../images/selects/images_05.png") no-repeat;
+    color:#43609f;
+}
+.li01{
+    background: url("../images/selects/images_30.png") no-repeat;
+    color:#43609f;
+}
+.li02{
+    background: url("../images/selects/images_54.png") no-repeat;
+    color:#43609f;
+}
+.li03{
+    background: url("../images/selects/images_114.png") no-repeat;
+    color:#43609f;
+}
+.li04{
+    background: url("../images/selects/images_110.png") no-repeat;
+    color:#43609f;
+}
+.li05{
+    background: url("../images/selects/images_96.png") no-repeat;
+    color:#43609f;
+}
+.li06{
+    background: url("../images/selects/images_125.png") no-repeat;
+    color:#43609f;
+}
+.li07{
+    background: url("../images/selects/images_129.png") no-repeat;
+    color:#43609f;
+}
+.li08{
+    background: url("../images/selects/images_122.png") no-repeat;
+    color:#43609f;
+}
+.li09{
+    background: url("../images/selects/images_153.png") no-repeat;
+    color:#43609f;
+}
+.li010{
+    background: url("../images/selects/images_157.png") no-repeat;
+    color:#43609f;
+}
+
+
+
+
+.li10{
+    background: url("../images/selects/images_03.png") no-repeat;
+    color:#29abe2;
+}
+.li11{
+    background: url("../images/selects/images_29.png") no-repeat;
+    color:#29abe2;
+}
+.li12{
+    background: url("../images/selects/images_53.png") no-repeat;
+    color:#29abe2;
+}
+.li13{
+    background: url("../images/selects/images_113.png") no-repeat;
+    color:#29abe2;
+}
+.li14{
+    background: url("../images/selects/images_109.png") no-repeat;
+    color:#29abe2;
+}
+.li15{
+    background: url("../images/selects/images_95.png") no-repeat;
+    color:#29abe2;
+}
+.li16{
+    background: url("../images/selects/images_126.png") no-repeat;
+    color:#29abe2;
+}
+.li17{
+    background: url("../images/selects/images_130.png") no-repeat;
+    color:#29abe2;
+}
+.li18{
+    background: url("../images/selects/images_121.png") no-repeat;
+    color:#29abe2;
+}
+.li19{
+    background: url("../images/selects/images_152.png") no-repeat;
+    color:#29abe2;
+}
+.li110{
+    background: url("../images/selects/images_156.png") no-repeat;
+    color:#29abe2;
+}

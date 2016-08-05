@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<script>
+	    function getParam(key) {
+	        var value='';
+	        var itemid = new RegExp("\\?.*"+key+"=([^&]*).*$");
+	        if (itemid.test(decodeURIComponent(window.location.href))) {
+	            value = itemid.exec(decodeURIComponent(window.location.href))[1];
+	        }
+	        return value;
+	    }
+	    
+	    function browserRedirect() {
+	        var pcorphone;
+	        var sUserAgent = navigator.userAgent.toLowerCase();
+	        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+	        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+	        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+	        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+	        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+	        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+	        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+	        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+	        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+	            pcorphone = 'phone';
+	            return pcorphone;
+	        } else {
+	            pcorphone = 'pc';
+	            return pcorphone;
+	        }
+	    }
+    
+        var ispc = browserRedirect();
+        if(ispc == 'pc') {     	
+            if(getParam("repname")!=""){
+            	location.href="/repodet/"+getParam("repname");
+            }
+        }
+
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <meta name="keywords" content="DataHub，批量数据，API数据，流式数据，数据流动，数据交易，运营商数据，空气质量数据，免费数据调用，数据版权保护，大数据，电商数据，物流数据，交通数据" />
+    <meta name="description" content="DataHub是国内首个去中心化、P2P大数据流通平台，通过将DataHub协议开源，致力于与全社会一起共建一套数据流通协议，打造数据互联网，让数据流通在阳光下流通。" />
+    <title>Repo详情手机页_DataHub阳光下的数据流通平台 全国首个去中心化、P2P大数据流通平台_数据共享经济_ 开源协议_数据互联网_免费数据</title>
+    <link rel="stylesheet" href="/mobile/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/mobile/css/command.css">
+    <script language="JavaScript" src="/mobile/js/jquery.min.js"></script>
+    <script language="JavaScript" src="/mobile/js/ngUrl.js"></script>
+    <script src="/mobile/js/bootstrap.min.js"></script>
+    <script src="/mobile/js/ngUrl.js"></script>
+    <script src="/mobile/js/login.js"></script>
+    <script src="/mobile/js/base64.js"></script>
+    <script src="/mobile/js/md5.js"></script>
+    <script src="/mobile/js/jquery.cookie.js"></script>
+    <script src="/mobile/js/ajaxSetup.js"></script>
+    <script src='/mobile/js/errorDialog.js'></script>
+    <script src="/mobile/js/repDetailsPhone.js"></script>
+    <style type="text/css">
+        a:hover{
+            color:#23527e;
+        }
+
+        .borderb{
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .boxwrop{
+            padding-left:6%;
+            /*padding-bottom: 50px;*/
+        }
+        .repNamebg {
+            background: url("images/sliceU1.png") no-repeat scroll -338px center;
+            float: left;
+            height: 50px;
+            margin-right: 7px;
+            width: 20px;
+            display: inline-block;
+        }
+        .reptitle{
+            margin-top:50px;
+        }
+        .repname{
+            line-height: 50px;
+            margin-left:10px;
+            color: #29abe2;
+            font-size: 1.2em;
+            padding-right: 6%;
+            display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+        }
+        .repcomment{
+            padding:15px 0px ;
+            color: #333;
+            font-size:1em;
+            line-height: 25px;
+        }
+        .repnums{
+            width: 100%;
+            padding:15px 0px;
+            font-size:1em;
+            color: #666;
+            overflow: hidden;
+        }
+        .time-icon {
+            background-image: url("images/slice.png");
+            background-position: 1px 5px;
+            background-repeat: no-repeat;
+            padding:10px;
+        }
+        .lefticon{
+           width: 40%;
+            float: left;
+        }
+        .righticon{
+            width: 60%;
+            float: left;
+            text-align: right;
+            padding-right: 40px;
+        }
+        .star-icon {
+            background-image: url("images/slice.png");
+            background-position: -60px 5px;
+            background-repeat: no-repeat;
+            padding:10px;
+        }
+        .subscript-icon {
+            background-image: url("images/slice.png");
+            background-repeat: no-repeat;
+            padding:10px;
+            background-position: -92px 5px;
+        }
+        .downloaded-icon {
+            background-image: url("images/slice.png");
+            background-repeat: no-repeat;
+            padding:10px;
+            background-position: -124px 5px;
+        }
+        .repcreate_user{
+            width: 100%;
+            padding:15px 0px;
+            position: relative;
+            overflow: hidden;
+        }
+        .repcreate_user div{
+            /*height: 90px;*/
+            /*line-height: 90px;*/
+        }
+        .repcreate_user div.cur_link{
+            width: 20px;
+            height: 30px;
+            background: url("../images/phonepic1.png") no-repeat right center;
+            background-size: contain;
+            position: absolute;
+            top:32%;
+            right: 6%;
+        }
+        .repcreate_user div.cur_link a{
+            width: 20px;
+            height: 30px;
+            display: block;
+        }
+        .pricestate{
+            position: absolute;
+            right: 16%;
+            top: 15px;
+            border: 1px solid #ff1c1c;
+            border-radius: 2rem;
+            padding:0px 5px;
+        }
+        .freedata{
+            color: #f49f12;
+            border-color: #f49f12;
+        }
+        .paydata{
+            color: #f06f9c;
+            border-color: #f06f9c;
+        }
+        .limitdata{
+            color: #ed4855;
+            border-color: #ed4855;
+        }
+        .curname{
+            width: 30%;
+            overflow: hidden;
+            float: left;
+            font-size: 1em;
+            color: #666;
+        }
+        .cur_user{
+            width: 60%;
+            overflow: hidden;
+            float: left;
+            font-size: 1em;
+
+        }
+        .cur_user a{
+            color: #337ab7;
+            display: block;
+            width: 100%;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        .cur_user a:hover{
+            color: #000;
+        }
+        .repinfo{
+            padding:15px 0px;
+        }
+        .repinfoList{
+        }
+        .repinfoList li{
+            width: 100%;
+            position: relative;
+            padding-left:6%;
+        }
+        .listTop{
+            line-height: 20px;
+            font-size: 1.2em;
+            color: #0077aa;
+            width: 58%;
+            word-wrap:break-word;
+            word-break:break-all;
+        }
+        .listbt{
+            line-height: 25px;
+            font-size: 1em;
+            color: #989898;
+            width: 90%;
+            word-wrap:break-word;
+        }
+        .listicon{
+            width: 20px;
+            height: 30px;
+            background: url("../images/phonepic1.png") no-repeat right center;
+            background-size: contain;
+            position: absolute;
+            top:34%;
+            right: 6%;
+        }
+        .listicon a{
+            width: 25px;
+            height: 39px;
+            display: block;
+        }
+        .repinfo{
+            font-size: 1.2em;
+            color: #000;
+            margin-left:6%;
+        }
+        .partitionline{
+            width: 100%;
+            height: 30px;
+            background: #f3fefa;
+        }
+        .repcomment{
+            padding-right: 6%;
+        }
+        .navbar-toggle .icon-bar {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+<!-- 头部导航 -->
+<header></header>
+<div class="boxwrop" style="border-bottom: 1px solid #e6e6e6">
+    <div class="reptitle borderb">
+        <div class="repNamebg"></div>
+        <div class="repname"></div>
+    </div>
+    <div class="repcomment borderb"></div>
+    <div class="repnums borderb">
+        <div class="lefticon">
+            <span title="更新时间" class="time-icon"></span>
+            <span  class="showtime"></span>
+        </div>
+        <div class="righticon">
+            <span class="star-icon" title="star量"></span>
+            <span class="star-value">0</span>
+            <span class="subscript-icon" title="订阅量"></span>
+            <span class="subscript-value">0</span>
+            <span class="downloaded-icon" title="pull量"></span>
+            <span class="downloaded-value">0</span>
+        </div>
+    </div>
+    <div class="repcreate_user">
+        <div class="curname">数据拥有方</div>
+        <div class="cur_user"><a id="cur_user" href="#"></a></div>
+        <div class="cur_link"><a href="#"></a></div>
+    </div>
+</div>
+<div class="partitionline"></div>
+
+<div class="boxwrop" style="padding-bottom: 50px;padding-left: 0px;">
+    <div class="repinfo borderb">DataItem</div>
+    <ul class="repinfoList">
+        <!--<li class="borderb">-->
+            <!--<div class="listTop"><a href="#">Film_and_television</a></div>-->
+            <!--<div class="listbt">数据拥有方：<span class="itemcur">亚信</span></div>-->
+            <!--<div class="listicon"><a href="#"></a></div>-->
+        <!--</li>-->
+    </ul>
+</div>
+
+<!-- 尾部 -->
+<footer></footer>
+<div id="loginTem"></div>
+</body>
+</html>
+
+<script>
+    $(function(){
+
+    })
+    $(document).on('touchstart','.liListwrop',function(){
+        $(this).css('background-color','#e8e8e8');
+    });
+    $(document).on('touchend','.liListwrop',function(){
+        $(this).css('background-color','#fff');
+    });
+    $("a").focus(function(){this.blur()});
+    $("header").load("common/header.html");
+    $("footer").load("common/footer.html");
+    $("#loginTem").load("common/login.html");
+</script>

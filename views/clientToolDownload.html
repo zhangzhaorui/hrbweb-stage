@@ -1,0 +1,114 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/module/clientToolDownload.css" />') %>
+<% block('js').append('<script src="/js/pagescript/clientToolDownload.js"></script>') %>
+<div class="clientTop">
+    Client端工具下载
+</div>
+<div style="border-bottom: 1px solid #c8c8c8"></div>
+<div class="container">
+    <div class="bg_p">
+        <div class="sfont">DataHub Client端是一个P2P数据传输工具</div>
+        <div class="zfont">支持DataHub上数据的一键获取,轻松链接海量数据源。</div>
+        <div class="zfont">支持任意批量数据(如文本文件、HDFS、S3、DB等)、API、流数据的发布。</div>
+        <div class="zfont">有效降低数据流通的成本。数据协议、格式的机器可读,轻松构建本地分析环境。</div>
+        <div class="zfont">有效降低数据获取难道。丰富的客户端和SDK,预置各种接口。</div>
+        <div class="xfont">DataHub客户端由Daemon和CLI两部分组成。Daemon作为守护进程,负责完成用户的命令<a href="http://docs.hub.dataos.io/client"><span class="afont"> ( 查看客户端命令介绍 ) </span></a> ,并维护本地数据资源。CLI用于用户输入命令。</div>
+    </div>
+    <div class="downway">
+        <div class="downway_con">
+            <div class="downwayname">Linux环境客户端安装</div>
+            <div style="border-bottom: 1px solid #c8c8c8;margin: 0px 20px;"></div>
+            <div class="downwaytext">包含源码安装、脚本安装、Docker镜像安装</div>
+            <div class="goway" id="gosetup_1">安装</div>
+        </div>
+        <div class="downway_con">
+            <div class="downwayname">Windows环境客户端安装</div>
+            <div style="border-bottom: 1px solid #c8c8c8;margin: 0px 20px;"></div>
+            <div class="downwaytext">Windows环境客户端安装</div>
+            <div class="goway" id="gosetup_2">安装</div>
+        </div>
+        <div class="downway_con" style="margin-right: 0px">
+            <div class="downwayname">OS环境客户端安装</div>
+            <div style="border-bottom: 1px solid #c8c8c8;margin: 0px 20px;"></div>
+            <div class="downwaytext">OS环境客户端安装</div>
+            <div class="goway" id="gosetup_3">安装</div>
+        </div>
+        <div class="downway_con">
+            <div class="downwayname">SDK工具包安装</div>
+            <div style="border-bottom: 1px solid #c8c8c8;margin: 0px 20px;"></div>
+            <div class="downwaytext">包含Python , R , Java , Go</div>
+            <div class="goway" id="gosetup_4">安装</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="boxcontent">
+            <div class="downwayname" style="text-align: left;margin-bottom: 30px" id="setup_1">Linux环境客户端安装</div>
+            <div class="sub-nav"> <span class="sub-navicon"></span><a href="javascript:void(0)"  id="004">源码安装</a></div>
+            <div class="boxworp">
+                <div class="nobg_p">在安装GO(go1.4以上版本)语言和设置完GOPATH环境变量之后，安装DataHub Client：</div>
+                <div class="bg_pp">go get github.com/asiainfoLDP/datahub</div>
+                <div class="nobg_p">启动DataHub服务</div>
+                <div class="bg_pp">sudo $GOPATH/bin/datahub --daemon --token <span class="havetoken"></span></div>
+                <div class="nobg_p">停止DataHub服务</div>
+                <div class="bg_pp">sudo $GOPATH/bin/datahub stop</div>
+            </div>
+
+            <div class="sub-nav"> <span class="sub-navicon"></span><a href="javascript:void(0)"  id="003">脚本安装</a></div>
+            <div class="boxworp">
+                <div class="nobg_p">支持64位Debian，ubuntu，freebsd操作系统。打开终端，输入：</div>
+                <div class="bg_pp">curl -sSL https://hub.dataos.io/install.sh | sh -s <span class="havetoken"></span></div>
+                <div class="nobg_p">安装过程约持续1分钟，完成安装后DataHub服务会自动启动.</div>
+                <div class="nobg_p">安装完成后：</div>
+                <div class="nobg_p">停止DataHub 服务:</div>
+                <div class="bg_pp">sudo datahub stop</div>
+                <div class="nobg_p">启动DataHub 服务:</div>
+                <div class="bg_pp">sudo datahub --daemon --token <span class="havetoken"></span></div>
+            </div>
+
+            <div class="sub-nav"> <span class="sub-navicon"></span><a href="javascript:void(0)"  id="005">Docker镜像</a></div>
+            <div class="boxworp">
+                <div class="bg_pp">
+                    <p>git clone https://github.com/asiainfoLDP/datahub</p>
+                    <p>cd datahub</p>
+                    <p>docker build -t datahub .</p>
+                </div>
+                <div class="nobg_p">启动Docker镜像:</div>
+                <div class="bg_pp">docker run -d -e "DAEMON_TOKEN=<span class="havetoken"></span>"  datahub</div>
+                <div class="nobg_p" style="line-height: 24px">网络策略要求：</div>
+                <div class="fcolor6">若需要向DataHub发布数据，需提供ENTRYPOINT，同时修改防火墙，使得Docker镜像的35800映射到的主机端口可以被外部访问。</div>
+                <div class="fcolor6">例如:docker run -d -e "DAEMON_TOKEN=<span class="havetoken"></span>" -e "DAEMON_ENTRYPOINT=http://example.com:35800" -p 35800:35800 datahub</div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="boxcontent">
+            <div class="downwayname" style="text-align: left;margin-bottom: 30px" id="setup_2">Windows环境客户端安装</div>
+            <div class="nobg_p" style="margin-bottom: 20px">支持Windows64位操作系统。</div>
+            <div class="fcolor6">下载Windows版Client端,安装完成后,设置环境变量。</div>
+            <div class="fcolor6">例如:Client端下载到D:\datahub目录下,给path环境变量添加一个值为 "D:\datahub" 的设置</div>
+            <div class="nobg_p">启动DataHub服务,在CMD命令窗口输入:</div>
+            <div class="bg_pp">sudo datahub --daemon --token <span class="havetoken"></span></div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="boxcontent">
+            <div class="downwayname" style="text-align: left;margin-bottom: 30px" id="setup_3">OS环境客户端安装</div>
+            <div class="sub-nav">安装说明文字</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="boxcontent">
+            <div class="downwayname" style="text-align: left;margin-bottom: 30px" id="setup_4">SDK工具包安装</div>
+            <div class="sub-nav">安装说明文字</div>
+        </div>
+    </div>
+</div>
+    <!--<div class="rightbox">-->
+        <!--<div class="rightwrop">-->
+            <!--<div class="right_p activecur"><a href="javascript:void(0)">DataHub Client端介绍</a></div>-->
+            <!--<div class="right_p"><a href="javascript:void(0)">DataHub Client端安装方式</a></div>-->
+            <!--<div class="right_p"><span class="rboxicon"></span><a href="javascript:void(0)">脚本安装</a></div>-->
+            <!--<div class="right_p"><span class="rboxicon"></span><a href="javascript:void(0)">源码安装</a></div>-->
+            <!--<div class="right_p"><span class="rboxicon"></span><a href="javascript:void(0)">Docker镜像安装安装</a></div>-->
+        <!--</div>-->
+    <!--</div>-->

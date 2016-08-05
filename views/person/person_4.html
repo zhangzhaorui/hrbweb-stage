@@ -1,0 +1,23 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/module/companyCertify.css" />') %>
+<style>
+    .nextStepBtn{
+        background-color: #29abe2;
+        border: none;
+    }
+    .nextStepBtn:hover{
+        background-color: #00a8c6;
+    }
+</style>
+
+<div class="container g-body">
+    <div class="companyCertify" style="width: 30%">
+        <div class="modal-header" style="border-bottom:1px solid #cacaca;margin-top: -20px">
+            <button class="close" style="float: right;margin-top: 5px;"></button>
+            <h4 id="myModalLabel1" class="modal-title" style="font-size: 20px;color: #333;">资料确认 </h4>
+        </div>
+        <p class="text-center" style="margin-top: 20px">确认以上资料正确?</p>
+        <button class="nextStepBtn" style="width: 40%;margin-top: 10px">取消</button>
+        <button class="nextStepBtn" style="width: 40%;float: right;margin-top: 10px">确认</button>
+    </div>
+</div>

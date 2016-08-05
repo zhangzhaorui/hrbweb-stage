@@ -1,0 +1,147 @@
+/*
+ * 
+ */
+.nav > li > a:hover{
+	background-color:rgba(31,154,218,0.7);
+	cursor: pointer; 
+}
+.nav .open > a , .nav .open > a:focus {
+	background-color: #29abe2;
+}	
+.nav .open > a:hover{
+	background-color:rgba(31,154,218,0.7); 
+}
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.u-nLogosHeader{
+	font-size: 1em;color: #fff;float: left;font-size: 1em;margin-left: 30px;margin-right: -21px;margin-top: 16px;display: none;
+}
+
+.u-nHeaderSelect{
+	position: absolute;right: 50px;top: 15px;color: #fff;font-size: 1em;display: none;
+}
+
+.u-nHeaderSearch{
+	display: none;
+}
+
+.u-headerInput{
+	background-image:url('/img/lens.png');
+	background-repeat:no-repeat;
+	background-position: 98% 48%;
+	display:inline-block;
+	width:248px;
+	height:28px;border: 0 none;
+}
+.u-hSearchBtn{cursor: pointer;height: 28px;left: 238px;position: absolute;top: 0;width: 25px;}
+.u-nLogos{color: #fff;font-size: 2em}
+.u-searhLeft{margin:13px 0px 10px 0px;}
+.u-badgeHeader{
+    background-color: red;
+    border-radius: 50%;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    right: 5px;
+ 	top: 15px;
+ 	display: none;
+}
+.u-selectLoginb{
+	color: #fff;font-size: 1em
+}
+.g-iLoginb li a{
+	color: #000000;font-size: 1em;
+}
+.g-iLoginf li a{
+	color: #000000;
+	font-size: 1em
+}
+.g-iLoginb li a span{
+	
+}
+.g-iLoginf{
+	display: none;
+}
+.g-iLoginb{
+	display: none;
+}
+
+#u-phoneshowblog{display:none;}
+#u-phoneshowhelp{display:none;}
+#u-phoneshowlogout{display:none;}
+
+.m-dia{
+	border: 1px solid #29abe2;
+   border-radius: 3px;
+   color: #29abe2;
+   float: right;
+   font-size: 14px;
+   height: 18px;
+   line-height: 14px;
+   padding: 0 0 0 4px;
+   width: 18px;
+   margin-top: 5px;
+}
+
+.m-dia:hover{
+	cursor: pointer;
+	background-color: #29abe2;
+	color: #fff;
+}
+
+.m-loginbtnshow{
+	display: block;
+    line-height: 50px;
+    text-align: center;
+    width: 60px;
+}
+
+button.close {
+    background: rgba(0, 0, 0, 0) url("/img/closebox.png") no-repeat scroll 0 0;
+    height: 18px;
+    opacity: 1;
+    width: 18px;
+}
+button.close:hover {
+    background: rgba(0, 0, 0, 0) url("/img/closebox_hover.png") no-repeat scroll 0 0;
+    opacity: 1;
+}
+
+.u-nLogos:hover{
+	color: #fff;
+}
+.badgeHeader {
+    background-color: red;
+    border-radius: 50%;
+    display: none;
+    height: 10px;
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    width: 10px;
+}
+
+
+@media (max-width: 768px) {
+	.u-nLogosHeader{display:block;}
+	.u-nHeaderSelect{display:block;}
+	.u-nHeaderSearch{display: block;float: left;margin-left: 40px;margin-top: 10px;}
+	.u-headerInput{width: 150px;}
+	.u-hSearchBtn{left: 150px;top: 10px;}
+	.u-nLogos{display: none;}
+	.u-searhLeft{display:none;}
+	.dropdown-menu li{float: left;}
+	.dropdown-menu li > a{color: #fff;}
+	.dropdown-menu li > a:hover{background-color:rgba(31,154,218,0.7); color: #fff;}
+	.g-iLoginb li{float: left;}
+	#u-selectLoginb{display: none;}
+	#u-phoneshowblog{display:block;}
+	#u-phoneshowhelp{display:block;}
+	#u-phoneshowlogout{display:block;}
+	.g-iLoginf li{float: left;}
+	.g-iLoginf li[class="inLoginfLiF"]{
+		display:none;
+	}
+}

@@ -1,0 +1,209 @@
+#loginAfterHeader{
+    width: 100%;
+    height: 120px;
+    z-index: 999;
+    width: 1200px;
+    margin:auto;
+}
+
+
+#loginAfterHeader .logo {
+    float: left;
+    height: 100px;
+    padding-top: 20px;
+    width: 215px;
+}
+
+#loginAfterHeader .form{
+    float: left;
+    width: 660px;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid #000;
+    /*margin: 40px 60px;*/
+    margin-top: 14px; margin-left: 60px;
+}
+
+#loginAfterHeader .form p{
+    float: left;
+    margin-top: 45px;
+}
+#loginAfterHeader .nav_btn_if {
+    background-color: #eaeaea;
+    border-right: 1px solid;
+    color: #333;
+    float: left;
+    font-size: 12px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    width: 90px;
+}
+#loginAfterHeader .form .all {
+    border: medium none;
+    float: left;
+    height: 38px;
+    width: 520px;
+}
+#loginAfterHeader .form img {
+    height: 25px;
+    margin-left: 12px;
+    margin-top: 5px;
+    width: 25px;
+}
+#loginAfterHeader .form .butt {
+    background: #0488bb none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    height: 38px;
+    width: 48px;
+}
+
+/*.nav_btn_if {*/
+    /*background-color: #eaeaea;*/
+    /*border-right: 1px solid;*/
+    /*color: #333;*/
+    /*float: left;*/
+    /*font-size: 12px;*/
+    /*height: 39px;*/
+    /*line-height: 38px;*/
+    /*text-align: center;*/
+    /*width: 90px;*/
+/*}*/
+.nav_bg{
+    background-color: #e6ebf0;
+    width: 100%;
+    height: 191px;
+}
+.header{
+    width: 100%;
+    height: 120px;
+    z-index: 999;
+    width: 1200px;
+    margin: 10px auto 0;
+}
+
+
+.logo {
+    float: left;
+    height: 100px;
+    padding-top: 20px;
+    width: 215px;
+}
+
+/*.form{*/
+    /*float: left;*/
+    /*width: 660px;*/
+    /*height: 41px;*/
+    /*font-size: 14px;*/
+    /*border: 1px solid #000;*/
+    /*margin: 40px 60px;*/
+/*}*/
+
+.form {
+    border: 1px solid #000;
+    float: left;
+    font-size: 14px;
+    height: 41px;
+    margin: 63px 60px;
+    padding-top: 0;
+    position: relative;
+    width: 624px;
+}
+#kw {
+    width: 486px;
+}
+#su {
+    position: absolute;
+    right: 0;
+    /*left: 660px;*/
+}
+
+*::after, *::before {
+    box-sizing: border-box;
+}
+*::after, *::before {
+    box-sizing: border-box;
+}
+.form img {
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+    position: absolute;
+    width: 25px;
+}
+.nav_btn_if {
+    background-color: #eaeaea;
+    border: medium none;
+    color: #333;
+    float: left;
+    font-size: 12px;
+    height: 39px;
+    line-height: 38px;
+    text-align: center;
+    width: 90px;
+}
+
+.form {
+    border: 1px solid #000;
+    float: left;
+    font-size: 14px;
+    height: 41px;
+    margin: 63px 60px;
+    padding-top: 0;
+    position: relative;
+    width: 624px;
+}
+.form p{
+    float: left;
+    margin-top: 45px;
+}
+/*.form img{*/
+    /*margin-left: -37px;*/
+    /*width:25px;*/
+    /*height:25px;*/
+    /*margin-top:5px;*/
+/*}*/
+
+.form .all{
+    width: 520px;
+    height: 39px;
+    /*border: 1px solid #b7b7b7;*/
+    /*padding-left: 10px;*/
+    /*outline: none;*/
+    /*border-right: none;*/
+    border: none;
+    float: left;
+}
+
+.form .butt{
+    width: 48px;
+    height: 39px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #fff;
+    border: none;
+    background: #0488bb;
+    cursor: pointer;
+    float: left;
+}
+/*#noLogin .nav_btn{*/
+    /*border: 1px solid #053f6d;*/
+    /*border-radius: 2px;*/
+    /*color: #053f6d;*/
+    /*float: left;*/
+    /*font-size: 18px;*/
+    /*height: 28px;*/
+    /*margin-right: 20px;*/
+    /*text-align: center;*/
+    /*width: 60px;*/
+    /*cursor: pointer;*/
+    /*text-decoration: none;*/
+/*}*/
+#noLogin .nav_btn a{
+    text-decoration: none;
+}

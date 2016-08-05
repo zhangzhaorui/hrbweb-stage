@@ -1,0 +1,253 @@
+/*账务中心样式开始*/
+body{
+    margin: 0;
+    padding: 0;
+}
+#myAccount{
+    float: left;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+.Account_title{
+    float: left;
+    font-size: 28px;
+}
+#accountBalance{
+    float: left;
+    width: 1170px;
+    margin-top: 40px;
+    color: #666666;
+}
+#accountBalance .total_balance{
+    width:33%;
+    float: left;
+    text-align: center;
+}
+#accountBalance .usable_balance{
+    width:33%;
+    float: left;
+    text-align: center;
+}
+#accountBalance .cash_balance{
+    width:33%;
+    float: left;
+    text-align: center;
+}
+#accountBalance .account_text{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+#accountBalance .account_num{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#accountBalance .yuan{
+    font-size: 16px;
+    margin-left: 5px;
+}
+#accountBalance .get_cash{
+    font-weight: bold;
+    color: #43609f;
+    margin-top: 10px;
+
+}
+#recharge_btn{
+    width: 110px;
+    height: 40px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    background-image: linear-gradient(to bottom, #68e69b 0%, #50cd83 100%);
+    background-image: -webkit-linear-gradient(bottom, #68e69b 0%, #50cd83 100%);
+    background-image:      -o-linear-gradient(bottom, #68e69b 0%, #50cd83 100%);
+    border-radius: 5px;
+    border-color:#68e69b ;
+    font-weight: bold;
+}
+#recharge_btn:hover,
+#recharge_btn:focus {
+    background-color: #50cd83;
+    background-image: linear-gradient(to top, #50cd83 0%, #50cd83 100%);
+    background-image: -webkit-linear-gradient(top, #50cd83 0%, #50cd83 100%);
+    background-image:      -o-linear-gradient(top, #50cd83 0%, #50cd83 100%);
+}
+#reflect_btn{
+    width: 110px;
+    height: 40px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    background-image: linear-gradient(to top, #d98747 0%, #faaa68 100%);
+    background-image: -webkit-linear-gradient(top, #d98747 0%, #faaa68 100%);
+    background-image:      -o-linear-gradient(top, #d98747 0%, #faaa68 100%);
+    border-radius: 5px;
+    border-color:#d98747 ;
+    font-weight: bold;
+}
+#reflect_btn:hover,
+#reflect_btn:focus {
+    background-color: #d98747;
+    background-image: linear-gradient(to bottom, #d98747 0%, #d98747 100%);
+    background-image: -webkit-linear-gradient(bottom, #d98747 0%, #d98747 100%);
+    background-image:      -o-linear-gradient(bottom, #d98747 0%, #d98747 100%);
+}
+/*-------------------------accountRecordStart-------------------------------*/
+
+.table_title{
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    width: 1170px;
+    padding-left: 55px;
+    margin-right: 0px;
+    font-weight: bold;
+}
+.table_title span {
+    height: 55px;
+    width: 133px;
+    text-align: center;
+    display: inline-block;
+    line-height: 50px;
+}
+.table_main{
+    margin-left: 20px;
+    margin-right: 0px;
+}
+.Record_time_title{
+    padding-left: 30px;
+    background-image: url("/img/sliceU2.png");
+    background-repeat: no-repeat;
+    background-position: -275px 10px;
+    margin-right: 20px;
+    cursor:pointer;
+}
+.Record_time_title>p{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 0px;
+    font-weight: bold;
+    width: 1070px;
+}
+.Record_time_title>span{
+
+}
+.Record_body{
+    padding-left: 23px;
+    border-left: 1px solid #cccccc;
+    margin-left: 8px;
+    margin-top: -20px;
+    padding-top: 20px;
+    margin-bottom: -17px;
+    padding-bottom: 17px;
+}
+/*去除最后的左边线*/
+.table_main>div:last-child .Record_body{
+    padding-bottom: 0px;
+    /*border:0 !important;*/
+}
+.Record_body .table_content{
+    height: 50px;
+    width: 1070px;
+}
+.Record_body .table_content:hover{
+    background-color:#f2fafe;
+}
+.Record_body .table_content span{
+    height: 50px;
+    line-height: 50px;
+    width: 133px;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid #cccccc;
+
+}
+
+
+/*-------------------------accountRecordEnd-------------------------------*/
+.window {
+    background-color: white;
+    border: 5px solid #e5e5e5;
+    padding-top: 15px;
+    position: absolute;
+    text-align: center;
+    display: none;
+    margin-top:0px;
+    width: 245px;
+    height: 115px;
+    margin-left: 2px;
+    top: 307px;
+    left: 167px;
+}
+.window p {
+    color: #000;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+}
+.window p:nth-child(2) {
+    color: #29abe2;
+}
+.window1 {
+    background-color: white;
+    border: 5px solid #e5e5e5;
+    padding-top: 15px;
+    position: absolute;
+    text-align: center;
+    display: none;
+    margin-top: 0px;
+    width: 245px;
+    height: 115px;
+    margin-left: 2px;
+    left: 941px;
+    top: 307px;
+}
+.window1 p {
+    color: #000;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+}
+.window1 p:nth-child(2) {
+    color: #29abe2;
+}
+.count_num1{
+    color:#00a162;
+}
+.count_num2{
+    color:#d68d00;
+}
+/*账务中心样式结束*/
+/*pagination----分页样式*/
+.pagination{
+    margin-top: 60px;
+}
+.pagination span.current{
+    border: medium hidden !important;
+    color: #ffffff !important;
+    min-width: 1em;
+    /*padding: 0.5em 1em;*/
+    border-radius: 3px;
+    background: #29abe2 none repeat scroll 0 0;
+}
+.pagination a,.pagination span{
+    padding: 0.5em 1em !important;
+    min-width: 1em !important;
+    color: #666 !important;
+    border-radius: 3px !important;
+    border: 1px solid #e5e5e5 !important;
+}
+.g-selects-wrap .sel-page a, .g-selects-wrap .sel-page span{
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 3px;
+    color: #666 !important;
+    min-width: 1em !important;
+    padding: 0.5em 1em !important;
+}
+.pagination .current.prev, .pagination .current.next{
+    background: #fff none repeat scroll 0 0;
+    border-color: #999;
+    color: #999!important;
+}
+/*pagination----分页样式结束*/

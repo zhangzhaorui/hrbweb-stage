@@ -1,0 +1,227 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/module/companyCertify.css" />') %>
+<% block('js').append('<script src="/js/pagescript/companyCertify.js"></script>') %>
+<% block('js').append('<script src="/js/widget/upload.js"></script>') %>
+
+<div class="companyCertify">
+    <div class="cc_title">
+        <p>认证中心</p>
+        <p>便于您能快速发布数据数据资源、数据需求等</p>
+    </div>
+    <div class="cc_content">
+        <div class="cc_content">
+            <ul class="nav nav-tabs">
+                <li @click="liEvent" class="li_one selected">
+                    1 填写企业信息
+                </li>
+                <li @click="liEvent" class="li_two">
+                    2 填写法人信息
+                </li>
+                <li @click="liEvent" class="li_three">
+                    3 填写联系人信息
+                </li>
+                <li @click="liEvent" class="li_four">
+                    4 填写银行账号信息
+                </li>
+                <li @click="liEvent" class="li_five" style="width: 94px;">
+                    5 等待审核
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    <component :data="list" :datas="lists" :is="currentView" transition="fade" transition-mode="out-in" keep-alive></component>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<template id="view1">
+
+    <div class="view1">
+        <p class="view_title">企业基本信息</p>
+        <div class="form-group">
+            <label for="comName">公司名称<span>*</span></label>
+            <input  type="text" v-model="companyName" class="form-control " id="comName" @blur="comName" placeholder="">
+
+            <label for="comAddress">公司地址<span>*</span></label>
+            <input  type="text" v-model="companyAddress" class="form-control " id="comAddress" @blur="comAddress" placeholder="">
+
+            <label for="regNumber">营业执照注册号<span>*</span></label>
+            <input  type="text" v-model="kbisNum" class="form-control " id="regNumber" @blur="regNumber" placeholder="">
+            <div class="part-group">
+                <label>营业执照扫描件<span>*</span></label>
+                <div class="col-lg-6" style="padding: 0;width: 600px; float: none;">
+                    <div class="input-group">
+                        <input type="text" v-model="kbisNum"  class="form-control" id="comCardFilename" @blur="comCardFilename" placeholder="" style="width: 500px;">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="comCardFile.click()" style="width:100px;">选择文件</button>
+                            <input type="file" id="comCardFile" onchange="comCardFilename.value=this.value" style="display:none">
+                        </span>
+                    </div>
+                    <span>图片大小1M以内，支持PNG/JPG格式</span>
+                </div>
+            </div>
+            <div>
+                <label for="orgCode">组织机构代码</label>
+                <input  type="text" v-model="org" class="form-control"@blur="orgCode" id="orgCode" placeholder="">
+            </div>
+            <div class="part-group">
+                <label>组织机构代码扫描件<span>*</span></label>
+                <div class="col-lg-6" style="padding: 0;width: 600px; float: none;">
+                    <div class="input-group">
+                        <input type="text" v-model="orgPiv" class="form-control" id="orgFilename" placeholder="" style="width: 500px;">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"onclick="orgFile.click()" style="width:100px;">选择文件</button>
+                            <input type="file" id="orgFile" onchange="orgFilename.value=this.value" style="display:none">
+                        </span>
+                    </div>
+                    <span>图片大小1M以内，支持PNG/JPG格式</span>
+                </div>
+            </div>
+        </div>
+        <div class="nextStepBtn" @click="view1Event">下一步</div>
+    </div>
+</template>
+
+<template id="view2">
+    <div class="view2">
+        <p class="view_title">法人信息</p>
+        <div class="form-group">
+            <label for="legalName">法人姓名<span>*</span></label>
+            <input  type="text" v-model="" class="form-control " id="legalName" placeholder="">
+
+            <label for="legalAddress">法人归属地<span>*</span></label>
+            <select v-model="" class="form-control " id="legalAddress" placeholder=""></select>
+
+            <label for="IDNumber">身份证号码<span>*</span></label>
+            <input  type="text" v-model="" class="form-control " id="IDNumber" placeholder="">
+            <div class="part-group">
+                <label>身份证正面扫描件<span>*</span></label>
+                <div class="col-lg-6" style="padding: 0;width: 600px; float: none;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="personFilenameUp" placeholder="" style="width: 500px;">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="personFileUp.click()" style="width:100px;">选择文件</button>
+                            <input type="file" id="personFileUp" onchange="personFilenameUp.value=this.value" style="display:none">
+                        </span>
+                    </div>
+                    <span>图片大小1M以内，支持PNG/JPG格式</span>
+                </div>
+            </div>
+            <div class="part-group">
+                <label>身份证反面扫描件<span>*</span></label>
+                <div class="col-lg-6" style="padding: 0;width: 600px; float: none;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="personFilenameDown" placeholder="" style="width: 500px;">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="personFileDown.click()" style="width:100px;">选择文件</button>
+                            <input type="file" id="personFileDown" onchange="personFilenameDown.value=this.value" style="display:none">
+                        </span>
+                    </div>
+                    <span>图片大小1M以内，支持PNG/JPG格式</span>
+                </div>
+            </div>
+        </div>
+        <div class="StepBtn">
+            <div class="lastStep">上一步</div>
+            <div class="nextStep">下一步</div>
+        </div>
+    </div>
+</template>
+<template id="view3">
+    <div class="view3">
+        <div  class="view3_title">
+            <p>联系人信息</p>
+            <p>确保您的注册行为属于企业授权行为</p>
+        </div>
+        <div class="form-group">
+            <label for="linkmanName">联系人姓名<span>*</span></label>
+            <input  type="text" v-model="" class="form-control " id="linkmanName" placeholder="">
+
+            <label for="mobileNumber">手机号码<span>*</span></label>
+            <input  type="text" v-model="" class="form-control " id="mobileNumber" placeholder="">
+
+            <label for="email">电子邮箱<span>*</span></label>
+            <input  type="email" v-model="" class="form-control " id="email" placeholder="">
+
+            <label for="view3-IDNumber">身份证号码<span>*</span></label>
+            <input  type="text" v-model="" class="form-control " id="view3-IDNumber" placeholder="">
+
+            <div class="part-group">
+                <label>身份证正面扫描件<span>*</span></label>
+                <div class="col-lg-6" style="padding: 0;width: 600px; float: none;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="view3PersonFilenameUp" placeholder="" style="width: 500px;">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="view3PersonFileUp.click()" style="width:100px;">选择文件</button>
+                            <input type="file" id="view3PersonFileUp" onchange="view3PersonFilenameUp.value=this.value" style="display:none">
+                        </span>
+                    </div>
+                    <span>图片大小1M以内，支持PNG/JPG格式</span>
+                </div>
+            </div>
+            <div class="part-group">
+                <label>身份证反面扫描件<span>*</span></label>
+                <div class="col-lg-6" style="padding: 0;width: 600px; float: none;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="view3PersonFilenameDown" placeholder="" style="width: 500px;">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="view3PersonFileDown.click()" style="width:100px;">选择文件</button>
+                            <input type="file" id="view3PersonFileDown" onchange="view3PersonFilenameDown.value=this.value" style="display:none">
+                        </span>
+                    </div>
+                    <span>图片大小1M以内，支持PNG/JPG格式</span>
+                </div>
+            </div>
+            <div class="part-group">
+                <label>授权书扫描件<span>*</span></label>
+                <div class="col-lg-6" style="padding: 0;width: 600px; float: none;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="powerFilename" placeholder="" style="width: 500px;">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" onclick="powerFile.click()" style="width:100px;">选择文件</button>
+                            <input type="file" id="powerFile" onchange="powerFilename.value=this.value" style="display:none">
+                        </span>
+                    </div>
+                    <span>图片大小1M以内，支持PNG/JPG格式</span>
+                </div>
+            </div>
+        </div>
+        <div class="StepBtn">
+            <div class="lastStep">上一步</div>
+            <div class="nextStep">下一步</div>
+        </div>
+    </div>
+</template>
+<template id="view4">
+    <div class="view4">
+        <p class="view_title">银行账户信息</p>
+        <div class="form-group">
+            <label for="accountName">银行账户名称<span>*</span></label>
+            <input  type="text" v-model="" class="form-control " id="accountName" placeholder="">
+
+            <label for="accountID">银行账号<span>*</span></label>
+            <input  type="text" v-model="" class="form-control " id="accountID" placeholder="">
+
+            <label for="bankName">开户行名称<span>*</span></label>
+            <select v-model="" class="form-control " id="bankName" placeholder=""></select>
+
+            <label for="bankBranch">开户银行支行名称<span>*</span></label>
+            <input  type="text" v-model="" class="form-control " id="bankBranch" placeholder="">
+        </div>
+        <div class="StepBtn">
+            <div class="lastStep">上一步</div>
+            <div class="nextStep">下一步</div>
+        </div>
+    </div>
+</template>
+<template id="view5">
+    <div class="view5">
+        <p class="view_title">等待审核</p>
+        <div class="view5-content">
+            <p><img src="/img/images02_125.png"/>恭喜您，认证申请已成功。</p>
+            <p>我们将在七个工作日内完成审核，审核结果会在第一时间通知您。</p>
+        </div>
+        <div class="nextStepBtn nextStepBtnReady" @click="test">返回首页</div>
+    </div>
+</template>

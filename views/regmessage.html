@@ -1,0 +1,7 @@
+<% layout('tpl/layout.html') -%>
+<% block('js').append('<script src="/js/pagescript/regmess.js"></script>')%>
+
+
+<div id='bodycon' loginname='<%=loginname %>' sid='<%=vid %>'>
+    <app :show="show" loginname='<%=loginname %>' sid='<%=vid %>'></app>
+</div>

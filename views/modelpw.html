@@ -1,0 +1,32 @@
+<link rel="stylesheet"  href="/css/module/modelpw.css">
+<script src="/js/widget/modelpw.js"></script>
+<div id="test">
+    <div style="height: 30px;">
+        <p id="message"><span class="back_icon"></span>邮箱不能为空</p>
+        <p id="message2"><span class="back_icon"></span>邮箱格式不正确</p>
+        <p id="message3"><span class="back_icon"></span>服务器内部错误</p>
+        <p id="message4"><span class="back_icon"></span>该账户未注册</p>
+    </div>
+    <div class="form-group">
+        <input type="email" @blur="msgReady" maxlength="32"  v-model="msg" placeholder="邮箱" id="exampleInputEmail2" class="form-control" value="" name="email">
+    </div>
+    <div class="btn" id="signs2" v-if="ready" @click="tt">
+        <model m-text="发送密码重置邮件" m-title="发送密码重置邮件" m-href="pwback" m-width="300"></model>
+    </div>
+    <div class="btn"  id="signs2"  @click="tt" v-else>
+        <span>发送密码重置邮件</span>
+    </div>
+    <div style="margin-top: 15px; margin-bottom: 0px;">
+        <p class="text-center">还没有账号？申请成为会员
+            <a href="mailto:datahub@asiainfo.com?subject=申请成为Datahub会员">
+                <img class="shens" title="申请注册" src="/img/images02_158.png">
+            </a>
+        </p>
+    </div>
+</div>
+
+
+
+
+
+

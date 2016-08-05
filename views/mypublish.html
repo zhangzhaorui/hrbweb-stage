@@ -1,0 +1,86 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/plugin/pagination/pagination.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/module/modelper.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/module/modelcooper.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/include/myOder.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/module/myItemListModel.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/include/addAndUpdaterep.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/include/jquery-ui.min.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/include/mypublish.css" />') %>
+<script>
+    var myOrder='<%=myOrder%>';
+</script>
+<% block('js').append('<script src="/js/jquery-ui.min.js"></script>') %>
+<% block('js').append('<script src="/js/publicRepoList.js"></script>') %>
+<% block('js').append('<script src="/plugin/pagination/jquery.pagination.js"></script>') %>
+
+<% block('js').append('<script src="/js/pagescript/modelper.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/myItemListModel.js"></script>') %>
+<% block('js').append('<script src="/js/util/modelcen.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/mypublish.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/premissionBox.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/repoPermission.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/deleRepo.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/addAndUpdaterep.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/myOder.js"></script>') %>
+
+
+<div class="isdelperBox">
+    <div style="border-bottom:0px;padding:0px;padding-bottom:8px;border-bottom: 1px solid #666" class="modal-header">
+        <button aria-hidden="true" data-dismiss="modal" class="close closedelper" type="button"></button>
+        <h4 id="myModalLabel" class="modal-title">确认删除</h4>
+    </div>
+    <div id="delPremissionCon">确认删除选中的协作者用户吗？</div>
+    <div class="delperbtnwrop">
+        <span class="nodelper" datadelper="1" datadeluser="">取消</span><span class="yesdelper" datadelper="1">确认</span>
+    </div>
+</div>
+<div class="noisdelperBox">
+    <div style="border-bottom:0px;padding:0px;padding-bottom:8px;border-bottom: 1px solid #666" class="modal-header">
+        <button aria-hidden="true" data-dismiss="modal" class="close closenodelper" type="button"></button>
+        <h4 id="nomyModalLabel" class="modal-title">无法删除</h4>
+    </div>
+    <div id="nodelPremissionCon">无法删除选中的白名单用户，请先将用户从协作者用户中删除。</div>
+    <div class="nodelperbtnwrop">
+       <span class="colsenodelbox" datadelper="1">我知道了</span>
+    </div>
+</div>
+<div class="top_nav">
+    <div class="topanvcon cur">我的发布<span class="add-icon"></span>
+        <div id="judgment" style="display: none;">
+            <p id="openRepo">开放Repository</p>
+            <p id="privateRepo">私有Repository</p>
+        </div>
+        <div id="judgment_number" style="display: none;">
+            <p id="p1"><span></span><label>可用资源不足。</label></p>
+            <p id="p2">请通过<a class="linkUpgrade" target="_blank" href="/my/member"><span>会员升级</span></a>获取更多资源</p>
+        </div>
+    </div>
+    <div class="topanvcon">我的订单</div>
+</div>
+<ul class="mypushcomment">
+    <li style="display: block">
+        <p id="pubnums" style='margin-bottom:0px;height:60px;color: #333333;font-size: 12px;font-weight: bold;line-height: 60px;padding-left: 22px;'>发布量:<span id="pubitemnum"></span></p>
+        <div class="repList"></div>
+        <div class="repopages"></div>
+    </li>
+    <li>
+    	<p id="pubordernums" style='border-bottom:1px solid #c8c8c8;margin-bottom:0px;height:60px;color: #333333;font-size: 12px;font-weight: bold;line-height: 60px;padding-left: 22px;'>发布量:<span id="puborderitemnum"></span></p>     
+        <div class="myodertitle">
+        <table class="toptab table" style="border:0;" id="newheadertable">
+            <tr>
+                <td style="width: 12%">订单号</td>
+                <td style="width: 12%;">时间</td>
+                <td style="width: 22%;">repo名/item名</td>
+                <td style="width: 18%;">订购方</td>
+                <td style="width: 24%;">价格包</td>
+                <td style="width: 12%;">订单状态</td>
+            </tr>
+        </table>
+        </div>
+        <div class="dingcon">
+
+        </div>
+        <div class="oderpages"></div>
+    </li>
+</ul>

@@ -1,0 +1,31 @@
+.repotitle{
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0 70px;
+}
+.titlename {
+    border-bottom: 1px solid #c8c8c8;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    padding-bottom: 20px;
+    word-wrap: break-word;
+}
+.titlename a {
+    color: #43609f;
+}
+.titlename a:hover {
+    color: #395289;
+}
+.titleicon {
+    height: 24px;
+    line-height: 24px;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+.titleicon span {
+    color: #666666;
+    font-size: 12px;
+    padding: 0 50px 0 15px;
+}

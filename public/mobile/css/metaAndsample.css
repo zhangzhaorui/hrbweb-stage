@@ -1,0 +1,20 @@
+.boxwrop {
+    overflow: hidden;
+    padding: 50px 20px;
+}
+.contop{
+
+    border-bottom: 1px solid #e6e6e6;
+    color: #43609f;
+    font-size: 2rem;
+    height: 40px;
+    line-height: 40px;
+    /*padding: 0 20px;*/
+    width: 100%;
+}
+.conment{
+    width: 100%;
+    overflow: hidden;
+    line-height: 1.5em;
+    font-size: 1.2em;
+}

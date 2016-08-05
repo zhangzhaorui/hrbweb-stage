@@ -1,0 +1,59 @@
+<% layout('tpl/layout.html') -%>
+<script>
+    var tname='<%=tname%>';
+    var resetId='<%=resetId%>';
+</script>
+<% block('css').append('<link rel="stylesheet" href="/css/module/forgetpw.css"/>') %>
+
+<% block('js').append('<script src="/plugin/md5.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/forgetpw.js"></script>') %>
+<!--D:\localrepo\datahub_web_new\public\plugin\md5.js-->
+<div class="container">
+    <div class="Box">
+        <div class="infoBox" >
+            <div ID="titleBox">
+                <p>重置密码登录</p>
+            </div>
+            <div class="labelBox">
+                <p id="label_one" style="display:none;"><img style=" padding-right:10px;" src="/img/images02_127.png">信息不能为空</p>
+                <p id="label_two" style="display: none"><img style=" padding-right:10px;" src="/img/images02_127.png">密码不能少于8个字符</p>
+                <p id="label_three" style="display: none"><img style=" padding-right:10px;" src="/img/images02_127.png">两次密码输入不一致</p>
+                <p id="label_four" style="display: none"><img style=" padding-right:10px;" src="/img/images02_127.png">重置密码链接已失效。请点击<a>这里</a>生成新的链接</p>
+            </div>
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="password" class="form-control" id="ps" maxlength="32" placeholder="请输入新密码">
+                    <input type="password" class="form-control" id="rps" maxlength="32" placeholder="请再次输入新密码">
+
+                </div>
+                <div class="btn" ID="registration">
+                    设置新的密码
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!--reset before 24 hrs-->
+<div class="container" style="width:740px;">
+    <div ID="successed">
+        <div ID="success_con">
+            <p>重置登陆密码</p>
+            <div class="success_content"><p><img src="/img/images02_125.png" style="margin-right:8px;width:18px;height:18px;vertical-align:middle;display: inline-block;"/>登陆密码重置成功</p></div>
+            <div class="btn btn-lg " id="btn03" rel="button">
+                <model m-text="重新登录" m-title="datahub登录" m-href="login" m-width="300"></model>
+            </div>
+        </div>
+    </div>
+    <div ID="failed" >
+        <div ID="failed_con">
+            <p>重置登陆密码</p>
+            <div class="failed_content"><p><img src="/img/images02_127.png" />链接已失效,请点击按钮生成新链接。</p></div>
+            <div class="btn btn-lg" ID="reforget" role="button">
+                <model m-text="生产新链接" m-title="忘记密码" m-href="pw" m-width="300"></model>
+            </div>
+        </div>
+    </div>
+</div>
+<!--reset agter 24 hrs-->

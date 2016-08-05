@@ -1,0 +1,23 @@
+<% include tpl/iteminfo.html %>
+
+<% block('css').append('<link rel="stylesheet" href="/plugin/pagination/pagination.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/module/publicRepoList.css" />') %>
+<% block('css').append('<link rel="stylesheet" href="/css/include/dataOwner.css" />') %>
+
+<% block('js').append('<script src="/js/publicRepoList.js"></script>') %>
+<% block('js').append('<script src="/plugin/pagination/jquery.pagination.js"></script>') %>
+<% block('js').append('<script src="/js/widget/dataOwner.js"></script>') %>
+<% block('js').append('<script src="/js/widget/iteminfo.js"></script>') %>
+<script>
+    var vals='<%=sname %>'
+</script>
+<div class="repodetailsWrop">
+    <div class="repotitle">
+        <p class="dataNamer"></p>
+        <img id="userType" src="" alt=""/>
+    </div>
+    <div id='repoactive'></div>
+    <div class="pages"></div>
+</div>
+
+

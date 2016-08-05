@@ -1,0 +1,44 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" type="text/css" href="/css/module/messageRequired.css"/>') %>
+<!--<% block('css').append('<link rel="stylesheet" type="text/css" href="/plugin/pagination/pagination.css"/>')%>-->
+<% block('js').append('<script src="/plugin/pagination/jquery.pagination.js"></script>')%>
+<% block('js').append('<script src="/js/pagescript/messageRequired.js"></script>')%>
+<!--D:\localrepo\datahub_web_new\public\css\module\messageRequired.css-->
+
+<!--内容-->
+<div class="container" style="padding:0px;">
+    <div class="title">
+        <p><span id="allmess">全部消息</span></p>
+    </div>
+
+    <div class="testZs" style="float: left; margin-bottom:100px;">
+
+        <div class="tabs" style="float: left;">
+            <div class="request">
+                <a>请求<sup><span class="zongReqNums"></span></sup></a>
+            </div>
+            <div class="ortherMessage">
+                <a>其他消息<sup><span class="zongOtherNums"></span></sup></a>
+            </div>
+        </div>
+        <div>
+            <div id="pull" class="container-fluid">
+                <div id="pull-body" style="width: 100%;">
+                    <div id="terminal-content-body" style="float:left; width:100%;"></div>
+                    <div class="pages"></div>
+                </div>
+                <!--
+                <div class="d2" id="pull-body" style="width: 1090px">
+                    <div id="terminal-content-body" style="float:left; width:100%;"></div>
+                </div>
+                 -->
+            </div>
+        </div>
+    </div>
+    <!--
+    <div style="float: left;">
+        <div class="pages"></div>
+    </div>
+     -->
+
+</div>

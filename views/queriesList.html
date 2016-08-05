@@ -1,0 +1,17 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" type="text/css" href="/css/module/queriesList.css"/>')%>
+<% block('css').append('<link rel="stylesheet" type="text/css" href="/plugin/pagination/pagination.css"/>')%>
+<% block('js').append('<script src="/plugin/pagination/jquery.pagination.js"></script>')%>
+<% block('js').append('<script src="/js/widget/queriesList.js"></script>')%>
+<% block('js').append('<script src="/js/vue.js"></script>')%>
+
+
+<div class="account-top">
+    <account actual-Bal="{{actual}}" avail-Bal="{{avail}}"></account>
+</div>
+
+<div class="account-content">
+    <accountlist :obj=accountObj :next.sync=accountNext ></accountlist>
+</div>
+
+

@@ -1,0 +1,91 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/module/certificateCenter.css" />') %>
+<% block('js').append('<script src="/js/pagescript/certificateCenter.js"></script>') %>
+<style>
+	.autoNo{
+		float: left;
+		margin-right: 28px;
+		width: 230px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center
+	}
+	.autoTo{
+		text-decoration:underline;
+		height: 40px;
+		line-height: 40px
+	}
+	.autoStatus{
+		margin-right: 28px;
+		float: left;
+		background-color: #f9f9f9
+	}
+</style>
+
+<div class="certificateCenter" style="height: auto">
+    <div class="ca_title">
+        <p>认证中心</p>
+    </div>
+    <div class="account_input">
+        <label for="ca_account">账号</label>
+        <input  type="email" v-model="email" class="form-control " id="ca_account" placeholder="" readonly="readonly" disabled="disabled">
+    </div>
+    
+    <template v-if="statusbool">
+			<div class="account_input">
+		        <label>类型</label>
+		        <div>
+		            <span class="company" id="company" @click="selected" style="margin-right: 28px;">企业</span>
+		            <span class="personal" id="personal" @click="selected">个人</span>
+		        </div>
+		        <!-- <a href="{{href}}"><div @click="next" class="nextBtn">下一步</div></a> -->
+		        <a href="javaScript:void(0);"><div @click="next" class="nextBtn">下一步</div></a>
+		    </div>
+		</template>
+        <template v-else>
+
+			<template v-if="statusauth">
+				<!--显示审核不通过的状态-->
+
+				<div class="account_input">
+					<label>类型</label>
+					<div>
+						<!--<label style="float: left;width: 100%;">类型</label>-->
+						<span class="company" id="company" style="margin-right: 28px;background-color: #f9f9f9;" >{{type}}</span>
+					</div>
+					<label style="margin-top: 20px;">审核状态</label>
+					<div>
+						<span class="autoStatus">
+							{{status}}
+						</span>
+						<p class="autoNo">
+							{{masssage}}
+						</p>
+						<a :href="dhref" class="autoTo">点击重新填写认证信息</a>
+					</div>
+					<!-- <a href="{{href}}"><div @click="next" class="nextBtn">下一步</div></a> -->
+					<!--<a href="javaScript:void(0);"><div @click="next" class="nextBtn">下一步</div></a>-->
+				</div>
+
+
+				</template>
+			<template v-else>
+				<!--除了审核不通过的情况-->
+
+				<div class="account_input" >
+					<label style="float: left;width: 100%;">类型</label>
+					<span class="company" style="margin-right: 28px;background-color: #f9f9f9;">{{type}}</span>
+				</div>
+				<div class="account_input" >
+					<label style="float: left;width: 100%;">状态</label>
+					<span class="company" style="margin-right: 28px;background-color: #f9f9f9;">{{status}}</span>
+				</div>
+
+			</template>
+
+
+
+		</template>
+    
+    
+</div>

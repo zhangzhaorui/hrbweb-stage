@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<script src="/mobile/js/jquery.min.js"></script>
+	<script src="/mobile/js/jquery.cookie.js"></script>
+	<script>
+	    function getParam(key) {
+	        var value='';
+	        var itemid = new RegExp("\\?.*"+key+"=([^&]*).*$");
+	        if (itemid.test(decodeURIComponent(window.location.href))) {
+	            value = itemid.exec(decodeURIComponent(window.location.href))[1];
+	        }
+	        return value;
+	    }
+	    
+	    function browserRedirect() {
+	        var pcorphone;
+	        var sUserAgent = navigator.userAgent.toLowerCase();
+	        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+	        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+	        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+	        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+	        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+	        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+	        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+	        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+	        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+	            pcorphone = 'phone';
+	            return pcorphone;
+	        } else {
+	            pcorphone = 'pc';
+	            return pcorphone;
+	        }
+	    }
+    
+        var ispc = browserRedirect();
+    	var itemloginName="";
+        if(ispc == 'pc') {
+            if(getParam("username")!=""){
+            	var headerToken={};
+            	if($.cookie("token")!=null&&$.cookie("token")!="null"){
+            	    headerToken={Authorization:"Token "+$.cookie("token")};
+            	}
+            	$.ajax({
+                    url: "/api/users/" + getParam("username"),
+                    cache: false,
+                    async: false,
+                    headers:headerToken,
+                    success: function (datas) {
+                    	console.log(datas);
+                        itemloginName = datas.data.nickName;
+                    }
+                });
+            	location.href="/userdet/"+itemloginName; 
+            }
+        }else{
+        	
+        	if(getParam("username")!=""&&getParam("type")!=""){
+            	var headerToken={};
+            	if($.cookie("token")!=null&&$.cookie("token")!="null"){
+            	    headerToken={Authorization:"Token "+$.cookie("token")};
+            	}
+            	$.ajax({
+                    url: "/api/users/" + getParam("username"),
+                    cache: false,
+                    async: false,
+                    headers:headerToken,
+                    success: function (datas) {
+                        itemloginName = datas.data.loginName;
+                    }
+                });
+            	location.href="/mobile/dataOfDetailsPhone.html?username="+itemloginName;
+            } 
+
+        }
+
+    </script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="DataHub，批量数据，API数据，流式数据，数据流动，数据交易，运营商数据，空气质量数据，免费数据调用，数据版权保护，大数据，电商数据，物流数据，交通数据" />
+	<meta name="description" content="DataHub是国内首个去中心化、P2P大数据流通平台，通过将DataHub协议开源，致力于与全社会一起共建一套数据流通协议，打造数据互联网，让数据流通在阳光下流通。" />
+	<title>基本信息_DataHub阳光下的数据流通平台 全国首个去中心化、P2P大数据流通平台_数据共享经济_ 开源协议_数据互联网_免费数据</title>
+	<link rel="stylesheet" href="/mobile/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/mobile/css/command.css">
+	<link rel="stylesheet" href="/mobile/css/loader.css">
+	<link rel="stylesheet" href="/mobile/css/dataofDetailsPhone.css" />
+</head>
+<style>
+
+</style>
+<body>
+<!-- 头部导航 -->
+<header></header>
+	<div class="boxwrop">
+		<div style="padding:0px 20px">
+			<div class="contop datausername"></div>
+			<div class="contop borderbt"><div id='usertype' class=""></div></div>
+			<div class="conment"></div>
+		</div>
+
+			<div class="partitionline"></div>
+		<div style="padding:0px 20px">
+			<ul class="listbox">
+			</ul>
+		</div>
+	</div>
+	<footer></footer>
+
+	<div id="loginTem"></div>
+	
+	<script src="/mobile/js/bootstrap.min.js"></script>
+	<script src="/mobile/js/ngUrl.js"></script>
+	<script src="/mobile/js/login.js"></script>
+	<script src="/mobile/js/base64.js"></script>
+	<script src="/mobile/js/md5.js"></script>
+	<script src="/mobile/js/ajaxSetup.js"></script>
+	<script src='/mobile/js/errorDialog.js'></script>
+
+	<script>
+
+		$("a").focus(function(){this.blur()});
+		$("header").load("common/header.html");
+		$("footer").load("common/footer.html");
+		$("#loginTem").load("common/login.html");
+		$(window).load(function(){
+			$(".be-loader").fadeOut("slow");
+		});
+
+
+		$(function(){
+			function getParam(key) {
+				var value='';
+				var itemid = new RegExp("\\?.*"+key+"=([^&]*).*$");
+				if (itemid.test(decodeURIComponent(window.location.href))) {
+					value = itemid.exec(decodeURIComponent(window.location.href))[1];
+				}
+				return value;
+			}
+			var thisrepousername = '';
+			$.ajax({
+				//url:ngUrl+"/users/"+$.cookie("tname"),
+				url: ngUrl + "/users/" + getParam("username"),
+				type: "get",
+				cache: false,
+				async: false,
+				//	headers: {Authorization: "Token " + $.cookie("token")},
+				datatype: 'json',
+				success: function (d) {
+					thisrepousername = d.data.userName;
+					var UT = d.data.userType;
+					$(".datausername").text(d.data.userName);
+					$(".conment").text(d.data.comment);
+					if (UT == 3) {
+						$('#usertype').attr('class','vip1');
+					}
+					else if (UT == 4) {
+						$('#usertype').attr('class','vip2')
+
+					}
+					else if (UT == 5) {
+						$('#usertype').attr('class','vip3')
+
+					}
+				}
+			});
+			var headerToken={};
+			var thisrepolength = 0;
+			var pages=1;
+			//登陆后
+			if($.cookie("token")!=null&&$.cookie("token")!="null"){
+				headerToken={Authorization:"Token "+$.cookie("token")};
+			}
+			function addgatlist(reponame) {
+				var str =   '<li class="replist">'+
+						'<div class="liconwrop borderb">'+
+						'<div class="listTop"><a href="repDetailsPhone.html?repname='+reponame+'">'+reponame+'</a></div>'+
+						'<div class="listbt">本数据由：<span class="itemcur">'+thisrepousername+'</span>&nbsp;提供</div>'+
+						'<div class="listicon"><a href="repDetailsPhone.html?repname='+reponame+'"></a></div>'
+						'</div>'+
+						'</li>'
+
+				$('.listbox').append(str);
+			}
+			function getrepocon(pages){
+				$.ajax({
+					type: "get",
+					async: false,
+					headers:headerToken,
+					url: ngUrl+"/repositories?username="+getParam("username")+"&size=6&page="+pages,
+					success: function(json){
+						if(json.code == 0){
+							thisrepolength = json.data.length;
+							for(var i = 0 ;i < thisrepolength; i++){
+								addgatlist(json.data[i].repname);
+							}
+						}
+					}
+				});
+			}
+			getrepocon(1);
+			window.onscroll = function(){
+				if(getScrollTop() + getWindowHeight() == getScrollHeight()){
+					if(thisrepolength>=6){
+						pages++;
+						getrepocon(pages);
+					}
+				}
+			};
+
+		})
+		//滚动条在Y轴上的滚动距离
+		function getScrollTop(){
+			var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+			if(document.body){
+				bodyScrollTop = document.body.scrollTop;
+			}
+			if(document.documentElement){
+				documentScrollTop = document.documentElement.scrollTop;
+			}
+			scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+			return scrollTop;
+		}
+		//文档的总高度
+		function getScrollHeight(){
+			var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+			if(document.body){
+				bodyScrollHeight = document.body.scrollHeight;
+			}
+			if(document.documentElement){
+				documentScrollHeight = document.documentElement.scrollHeight;
+			}
+			scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+			return scrollHeight;
+		}
+		//浏览器视口的高度
+		function getWindowHeight(){
+			var windowHeight = 0;
+			if(document.compatMode == "CSS1Compat"){
+				windowHeight = document.documentElement.clientHeight;
+			}else{
+				windowHeight = document.body.clientHeight;
+			}
+			return windowHeight;
+		}
+	</script>
+
+	
+</body>

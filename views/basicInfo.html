@@ -1,0 +1,150 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/module/basicInfo.css">')%>
+<% block('js').append('<script src="/js/pagescript/basicInfo.js"></script>')%>
+
+<div  class="container main">
+    <div class="topBox" >
+        <div style="float:left;margin-top:30px;width:950px;">
+            <div class="top_title">
+                <p>账户信息</p>
+            </div>
+            <div  class="top_main">
+                <div class="form-group" style="margin-bottom: 15px">
+                    <label for="exampleInputEmail1">注册邮箱</label>
+                    <input  type="email" v-model="email" disabled="disabled" class="form-control " id="exampleInputEmail1" placeholder="注册邮箱"
+                           style="margin-bottom: 0px;width:480px;">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputTime">注册时间</label>
+                    <input type="text" v-model="regtime" disabled="disabled" class="form-control" id="exampleInputTime" placeholder="注册时间">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputMember">会员级别</label>
+                    <input type="text" v-model="membership" disabled="disabled" class="form-control" id="exampleInputMember" placeholder="会员级别" disabled="disabled">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputTime">截止时间</label>
+                    <input type="text" v-model="endTime" disabled="disabled" class="form-control" id="exampleStopTime" placeholder="截止时间">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="midBox">
+        <div style="float:left;margin-top:30px;width:950px;">
+            <div  class="mid_title">
+                <p>基本信息</p>
+            </div>
+            <div id="mid_alert" >
+                <p id="success">修改成功！</p>
+                <p id="error">提交失败！</p>
+                <p id="error_emptyName">名称不能为空</p>
+                <p id="error_emptyName2">昵称不能为空</p>
+                <p id="error_emptyName3">昵称已经存在</p>
+                <p id="error_emptyComment">简介不能为空</p>
+                <p id="error_allEmpty">输入内容不能为空</p>
+                <p id="error_limit">限使用英文字母、数字、“_”</p>
+                <!--做到这-->
+            </div>
+            <div  class="mid_main">
+
+                <div id="update_icon" @click="formUpdate">
+                    <span class="span_icon"></span>
+                </div>
+                <div class="form-group">
+                    <!--<label for="exampleInputName">名称<span>设置后不能修改</span></label>-->
+                    <label for="exampleInputName">名称</label>
+                    <input v-model="username" disabled="disabled" type="email"  class="form-control " id="exampleInputName" placeholder="企业名称/个人名称"
+                           style="margin-bottom: 0;width:480px;">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName" style="float: left;width: 100%;margin-bottom: 0px">昵称</label>
+                    <input  v-model="nickname" class="form-control"  id="exampleInputName2" placeholder="昵称"
+                            style="margin-bottom: 0;width:480px;float: left;margin-bottom: 15px">
+                    <span style="float: left;width: 40%;height: 40px;line-height: 40px;
+                        margin-left: 10px;color: red" id="nameAlert">昵称不能为空!</span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputTime" style="float: left;width: 100%;margin-bottom: 0px">简介</label>
+                    <textarea v-model="comment" id="textComment"  class="form-control form-control-self" rows="6"
+                              placeholder="基本情况介绍，100字以内"maxlength="100" style="width:480px;float:left;"></textarea>
+                    <span style="float: left;width: 40%;height: 140px;line-height: 140px;
+                        margin-left: 10px;color: red" id="commentAlert">简介不能为空!</span>
+                </div>
+                <!--<button type="submit" @click="formSubmit" id="button01" class="btn btn-default" style="float: left">提交</button>-->
+                <div style="width: 100%;float: left;margin-top: 15px">
+                    <button type="submit" @click="formSubmit" id="button01" class="btn btn-default" style="border: none">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="underBox">
+        <div style="float:left;margin-top:30px;width:950px;">
+            <div class="under_title">
+                <p>资源状态</p>
+            </div>
+            <div  class="under_main">
+                <div  class="p_progress">
+                    <p>免费资源下载量：<span>2000次/天</span></p>
+                    <div class="pn_progress">
+                        <div id="pullNum" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" data-toggle='tooltip' data-placement="top">
+                            <span class="sr-only">40% Complete (success)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle_group">
+                    <div class="circle">
+                        <div class="pie_left">
+                            <div class="left"></div>
+                        </div>
+                        <div class="pie_right">
+                            <div class="right"></div>
+                        </div>
+                        <div class="mask">
+                            <div >
+                                <p>已用</p>
+                                <p id="usePublic"></p>
+                            </div>
+                        </div>
+                        <p>开放Repository：<span></span></p>
+                    </div>
+
+                    <div class="circle1">
+                        <div class="pie_left1">
+                            <div class="left1"></div>
+                        </div>
+                        <div class="pie_right1">
+                            <div class="right1"></div>
+                        </div>
+                        <div class="mask1">
+                            <div >
+                                <p>已用</p>
+                                <p id="usePrivate"></p>
+                            </div>
+                        </div>
+                        <p>私有Repository：<span></span></p>
+                    </div>
+
+                    <div class="circle2">
+                        <div class="pie_left2">
+                            <div class="left2"></div>
+                        </div>
+                        <div class="pie_right2">
+                            <div class="right2"></div>
+                        </div>
+                        <div class="mask2">
+
+                            <p>已用</p>
+                            <p id="deposit"></p>
+
+                        </div>
+                        <p>托管空间：<span></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

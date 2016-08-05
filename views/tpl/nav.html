@@ -1,0 +1,29 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/include/nav.css" />') %>
+<% block('js').append('<script src="/js/widget/nav.js"></script>') %>
+
+<div class="m-navselect">
+    <ul>
+        <li v-for="name in obj" class="li{{$index}}">
+            <span v-text="name.labelname"></span>
+        </li>
+
+
+    <!--    <li v-for="name in obj" class="li{{$index}}">
+            <div @mouseenter="li_enter" @mouseleave="li_leave" @click="li_click"v-if="hoverStates[$index]='1'">
+                <img :src='name.icon_web | iconPath' />
+                &lt;!&ndash;<img :src='name.icon_web_hover | iconPath'/>&ndash;&gt;
+                <span v-text="name.labelname"></span>
+            </div>
+            <div @mouseenter="li_enter" @mouseleave="li_leave" @click="li_click"v-else>
+                &lt;!&ndash;<img :src='name.icon_web | iconPath' />&ndash;&gt;
+                <img :src='name.icon_web_hover | iconPath' />
+                <span v-text="name.labelname"></span>
+            </div>
+
+
+        </li>-->
+        <!--<li v-for="name in obj" class="li0{{$index}}"><span v-text="name.labelname"></span></li>-->
+        <!--D:\localrepo\datahub_web_new\public\img\selects_new-->
+    </ul>
+</div>

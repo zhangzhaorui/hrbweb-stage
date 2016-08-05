@@ -1,0 +1,350 @@
+ol,ul,li{
+    list-style: none;
+}
+.itemtop {
+    border-bottom: 1px solid #c8c8c8;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+.itemtopLeft {
+    float: left;
+    overflow: hidden;
+    width: 80%;
+}
+.itemandrepName {
+    color: #666;
+    font-size: 20px;
+    line-height: 29px;
+}
+.itemandrepName a {
+    color: #43609f;
+}
+.thisiscooperatestatname {
+    color: #666666;
+    font-size: 12px;
+}
+.itemComment {
+    color: #666;
+    line-height: 24px;
+    margin-top: 10px;
+}
+.itemtopRight {
+    float: right;
+    overflow: hidden;
+    width: 15%;
+}
+.itemtopRight p {
+    color: #b5b5b5;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 28px;
+    width: 100%;
+}
+.baimingdan {
+    background: rgba(0, 0, 0, 0) url("/img/as_user.png") no-repeat scroll left 5px;
+}
+.xiugairep {
+    background: rgba(0, 0, 0, 0) url("/img/edit.png") no-repeat scroll left 5px;
+}
+.chekcprice {
+    background: rgba(0, 0, 0, 0) url("/img/price.png") no-repeat scroll left 5px;
+}
+.xiugairep:hover {
+    background: rgba(0, 0, 0, 0) url("/img/edit_hover.png") no-repeat scroll left 5px;
+    color: #395289;
+}
+.chekcprice:hover {
+    background: rgba(0, 0, 0, 0) url("/img/price_hover.png") no-repeat scroll left 5px;
+    color: #395289;
+}
+.xiezuozhe:hover {
+    background: rgba(0, 0, 0, 0) url("/img/delete_hover.png") no-repeat scroll left 5px;
+    color: #395289;
+}
+.baimingdan:hover, .chakanbaimingdan:hover {
+    background: rgba(0, 0, 0, 0) url("/img/as_user_hover.png") no-repeat scroll left 5px;
+    color: #395289;
+}
+.itemtopbt {
+    overflow: hidden;
+    padding-bottom: 60px;
+    padding-top: 20px;
+    width: 100%;
+}
+.topbtleft, .topbtcenter, .topbtright {
+    float: left;
+    overflow: hidden;
+    width: 33%;
+}
+.iconiamg2 {
+    margin-left: 20px;
+}
+.iconiamg1 {
+    margin-left: 60px;
+    margin-right: 15px;
+}
+.topbtright, .topbtleft span {
+    color: #b5b5b5;
+}
+.topbtcenter {
+    text-align: center;
+}
+.topbtleft, .topbtcenter, .topbtright {
+    float: left;
+    overflow: hidden;
+    width: 33%;
+}
+.topbtcenter span.period {
+    border-radius: 2px;
+    color: #666;
+    font-size: 12px;
+    margin-left: 1px;
+    padding: 1px 10px;
+}
+.topbtcenter span.api {
+    border-radius: 2px;
+    color: #666;
+    font-size: 12px;
+    margin-left: 1px;
+    padding: 1px 10px;
+}
+.topbtcenter span.flot-data {
+    border-radius: 2px;
+    color: #666;
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: 1px;
+    padding: 0 10px;
+}
+.topbtcenter span.personaltag {
+    border-radius: 2px;
+    color: #666;
+    font-size: 12px;
+    margin-left: 1px;
+    padding: 1px 10px;
+}
+.topbtcenter span {
+    border-radius: 3px;
+    float: left;
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 1px 10px;
+}
+.period {
+    border: 1px solid #8fc31f;
+}
+.personaltag {
+    border: 1px solid #666;
+}
+.api {
+    border: 1px solid #eb6877;
+}
+.flot-data {
+    border: 1px solid #f8b551;
+}
+.itembottom {
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    width: 98%;
+}
+.itembtNav {
+    border-bottom: 1px solid #8c97cb;
+    border-top: 1px solid #8c97cb;
+    color: #43609f;
+    font-size: 20px;
+    height: 52px;
+    text-align: center;
+    width: 100%;
+}
+.itembtNav li.borderBt {
+    border-bottom: 4px solid #8c97cb;
+    font-weight: bold;
+}
+.itembtNav li {
+    border-bottom: 4px solid #fff;
+    cursor: pointer;
+    float: left;
+    height: 50px;
+    line-height: 54px;
+    width: 20%;
+}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+.alltagnums {
+    border: 1px solid #43609f;
+    border-radius: 9px;
+    font-size: 10px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 1px 4px;
+}
+.commentallnum {
+    border: 1px solid #43609f;
+    border-radius: 9px;
+    font-size: 10px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 1px 4px;
+    width: 30px;
+}
+.itembottomcon li {
+    display: none;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    width: 98%;
+}
+.tagListcon {
+    overflow: hidden;
+    padding: 30px 0;
+    width: 100%;
+}
+.tagName {
+    color: #666;
+    float: left;
+    overflow: hidden;
+    width: 40%;
+}
+.tagName p {
+    font-size: 12px;
+    line-height: 25px;
+}
+.tagtime {
+    line-height: 25px;
+    text-align: center;
+}
+.tagtime, .tagpullNum {
+    float: left;
+    overflow: hidden;
+    width: 25%;
+}
+.tagpullNum {
+    float: right;
+}
+.tagpullNum p {
+    line-height: 24px;
+    text-align: center;
+}
+.metatitle {
+    color: #666666;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0 15px 15px;
+}
+.editmeta, .editsample {
+    background: rgba(0, 0, 0, 0) url("/img/edit.png") no-repeat scroll left center;
+    cursor: pointer;
+    float: right;
+    font-size: 14px;
+    font-weight: normal;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 30px;
+    width: 70px;
+}
+.metabox {
+    border: 1px dashed #c8c8c8;
+    overflow: hidden;
+    padding: 40px;
+    width: 100%;
+    word-break: break-all;
+}
+.markdown-body {
+    color: #333;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.metabox {
+    border: 1px dashed #c8c8c8;
+    overflow: hidden;
+    padding: 40px;
+    width: 100%;
+    word-break: break-all;
+}
+.pricetype {
+    border-radius: 3px;
+    display: inline;
+    font-size: 12px;
+    margin-left: 5px;
+    padding: 2px 5px;
+    position: relative;
+    top:-3px;
+}
+.freetype {
+    border: 1px solid #f49f12;
+    color: #f49f12;
+}
+.additembtn{
+    background: rgba(0, 0, 0, 0) url("/img/additem_icon.png") no-repeat scroll right center;
+    color: #43609f;
+    float: right;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    width: 100px;
+
+}
+.ui-widget{
+    z-index: 11111;
+}
+.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+* html .ui-autocomplete {
+    height: 100px;
+}
+.isdelperBox {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px 3px #cfcfcf;
+    box-sizing: border-box;
+    display: none;
+    height: 190px;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -95px;
+    overflow: hidden;
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    width: 300px;
+    z-index: 10000;
+}
+#delPremissionCon {
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+}
+.delperbtnwrop {
+    height: 40px;
+    width: 100%;
+}
+.delperbtnwrop span.nodelper {
+    background: #9e9e9e none repeat scroll 0 0;
+    margin-right: 54px;
+}
+.delperbtnwrop span {
+    background: #29abe2 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px 30px;
+}

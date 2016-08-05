@@ -1,0 +1,25 @@
+<% layout('tpl/layout.html') -%>
+<% block('css').append('<link rel="stylesheet" href="/css/include/editormd.css"/>') %>
+<script>
+    var rep='<%=rep %>';
+    var item='<%=item %>';
+    var type='<%=type %>';
+</script>
+<div class="container" style="padding: 0px;margin-top:100px;margin-bottom: 100px;">
+	<div class="row">
+		<div class="col-md-12 col-sm-12" id="lComs">			
+			<div id="editormd">
+			    <textarea id='tt' style="display:none;"></textarea>
+			</div> 	
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 col-sm-12">	
+			<button class="btn btn-info" type="button" style="float: right; margin-right:5%;" id='sub'>提交修改</button>		
+		</div>
+	</div>
+</div>
+<% block('js').append('<script src="/plugin/mark/editormd.js"></script>')%>
+<% block('js').append('<script src="/js/pagescript/mymarkdown.js"></script>')%>
+
+

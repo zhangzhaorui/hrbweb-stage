@@ -1,0 +1,17 @@
+<% include tpl/nav.html %>
+<% block('css').append('<link rel="stylesheet" href="/css/module/publicRepoList.css"/>') %>
+<% block('css').append('<link rel="stylesheet" href="/css/module/selects.css"/>') %>
+<% block('css').append('<link rel="stylesheet" href="/plugin/pagination/pagination.css"/>') %>
+
+<script>
+    var selectsType='<%=selectsType %>';
+</script>
+
+<% block('js').append('<script src="/js/publicRepoList.js"></script>') %>
+<% block('js').append('<script src="/js/pagescript/selects.js"></script>') %>
+<% block('js').append('<script src="/plugin/pagination/jquery.pagination.js"></script>') %>
+<div class="g-selects-wrap">
+    <div class="u-selects-title"></div>
+    <div class="g-selects-box"></div>
+    <div class="sel-page"></div>
+</div>

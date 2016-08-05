@@ -1,0 +1,62 @@
+.g-body {
+    margin-bottom: 80px;
+}
+.itemName{
+    font-family: '微软雅黑';
+    font-size: 20px;
+    color: #43609f;
+    margin: 10px auto;
+}
+.itemLine{
+    border-bottom: 1px solid #cacaca;
+    width: 100%;
+    margin-top: 40px;
+}
+.itemCenter{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+ul{
+    margin: 0px;
+    padding-left: 10px;
+}
+li{
+    color: #43609f;
+}
+
+.itemText ul li span{
+    font-size: 14px;
+    color: #333333;
+    padding-left: 10px;
+    line-height: 24px;
+    display: block;
+}
+
+.itemText{
+    width: 100%;
+    float: left;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 1px;
+}
+.itemDiv{
+    width:100%;
+    height: auto;
+}
+.itemDivBlock{
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.itemLine_2{
+    border-bottom: 1px solid #cacaca;
+    width: 100%;
+    margin-top: 40px;
+}
+
+
+
+

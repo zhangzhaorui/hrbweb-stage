@@ -1,0 +1,413 @@
+.top_nav {
+    border-bottom: 1px solid #c8c8c8;
+    font-size: 27px;
+    overflow: hidden;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.topanvcon {
+    border-bottom: 4px solid #fff;
+    color: #43609f;
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    padding-bottom: 40px;
+    width: 50%;
+}
+.cur {
+    border-bottom: 4px solid #43609f;
+}
+.mypushcomment{
+    width: 100%;
+    height: auto;
+    padding: 0px;
+}
+.mypushcomment li{
+    width: 100%;
+    overflow: hidden;
+    list-style: none;
+    display: none;
+}
+.add-icon {
+    background-image: url("/img/myPublish.png");
+    background-position: -91px -28px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    height: 18px;
+    margin-bottom: -2px;
+    margin-top: 2px;
+    position: relative;
+    width: 18px;
+}
+#judgment {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    display: none;
+    margin: -40px 0 10px 125px;
+    position: absolute;
+    width: 140px;
+    z-index: 100;
+}
+#judgment p {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 26px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 15px;
+}
+#judgment_number {
+    background-color: #ffffff;
+    border: 5px solid #e5e5e5;
+    display: none;
+    height: 108px;
+    padding: 25px 0;
+    position: absolute;
+    width: 290px;
+    z-index: 100;
+}
+#p1 {
+    color: #000;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+}
+#p1 > span {
+    background-image: url("/img/images02_127.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    margin-bottom: -6px;
+    margin-right: 8px;
+    width: 23px;
+}
+#p2 {
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+}
+#p2 span {
+    color: #29abe2;
+}
+.repList {
+    overflow: hidden;
+    width: 100%;
+}
+.repo {
+    border-bottom: 1px solid #c8c8c8;
+    border-top: 1px solid #c8c8c8;
+    float: left;
+    margin-bottom: 60px;
+    position: relative;
+    width: 100%;
+}
+.describe {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.left {
+    float: left;
+    width: 590px;
+}
+.subtitle {
+    float: left;
+    overflow: hidden;
+    width: 100%;
+}
+.subtitle span.curreoName {
+    color: #43609f;
+    display: inline-block;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-top: 21px;
+    max-width: 460px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.reptoppr {
+    float: left;
+    margin-top: 26px;
+}
+.freetype {
+    border: 1px solid #f49f12;
+    color: #f49f12;
+}
+.pricetype {
+    border-radius: 3px;
+    display: inline;
+    font-size: 12px;
+    margin-left: 5px;
+    padding: 2px 5px;
+}
+.thiscoopername {
+    color: #666666;
+    float: left;
+    font-size: 12px;
+    padding-bottom: 15px;
+}
+.thiscoopername span {
+    padding-left: 30px;
+}
+.description {
+    float: left;
+    overflow: hidden;
+    width: 100%;
+}
+.description p {
+    color: #333333;
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 30px;
+    overflow: hidden;
+    width: 560px;
+    word-wrap: break-word;
+}
+.subline {
+    float: left;
+    width: 100%;
+}
+.icon {
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.iconiamg1 {
+    margin-left: 60px;
+    margin-right: 15px;
+}
+.iconiamg2 {
+    margin-left: 30px;
+}
+.icon span {
+    color: #b5b5b5;
+}
+.repcenter {
+    float: left;
+    margin-left: 97px;
+    margin-right: 20px;
+    margin-top: 53px;
+    overflow: hidden;
+    width: 160px;
+}
+.iconGroup {
+    color: #b5b5b5;
+    float: left;
+    font-size: 12px;
+    width: 160px;
+}
+.like {
+    float: left;
+    margin-top: 20px;
+    padding-right: 20px;
+    width: 50%;
+}.like span, .cart span, .download span,.itemComment span{
+     margin-left: 20px;
+ }
+.cart {
+    float: left;
+    margin-top: 20px;
+    padding-right: 20px;
+    width: 50%;
+}
+.download {
+    float: left;
+    margin-top: 20px;
+    padding-right: 20px;
+    width: 50%;
+}
+.itemComment {
+    float: left;
+    margin-top: 20px;
+    padding-right: 20px;
+    width: 50%;
+}
+.repright {
+    float: left;
+    margin-left: 57px;
+    margin-top: 65px;
+    overflow: hidden;
+    width: 200px;
+}
+.repright p {
+    color: #b5b5b5;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 28px;
+    width: 100%;
+}
+.xiugairep {
+    background: rgba(0, 0, 0, 0) url("/img/edit.png") no-repeat scroll left 5px;
+}
+.xiezuozhe {
+    background: rgba(0, 0, 0, 0) url("/img/as_user.png") no-repeat scroll left 5px;
+}
+.baimingdan {
+    background: rgba(0, 0, 0, 0) url("/img/white_user.png") no-repeat scroll left 5px;
+}
+.isdelerepo {
+    background: rgba(0, 0, 0, 0) url("/img/delete.png") repeat scroll 0 0;
+    cursor: pointer;
+    display: inline-block;
+    height: 23px;
+    position: absolute;
+    right: 30px;
+    top: 28px;
+    width: 23px;
+}
+.baimingdan:hover {
+    background: rgba(0, 0, 0, 0) url("/img/white_user_hover.png") no-repeat scroll left 5px;
+    color: #395289;
+}
+.xiezuozhe:hover {
+    background: rgba(0, 0, 0, 0) url("/img/as_user_hover.png") no-repeat scroll left 5px;
+    color: #395289;
+}
+.xiugairep:hover {
+    background: rgba(0, 0, 0, 0) url("/img/edit_hover.png") no-repeat scroll left 5px;
+    color: #395289;
+}
+.isdelerepo:hover {
+    background: rgba(0, 0, 0, 0) url("/img/delete_hover.png") repeat scroll 0 0;
+}
+#myModalPriCooper .modal-dialog{
+    width: 800px;
+}
+.pagination a, .pagination span {
+    padding: 0.5em 1em;
+}
+.coopage .pagination a,.coopage .pagination span ,.perpage .pagination a,.perpage .pagination span{
+    padding: 0.2em 0.3em;
+}
+.pagination a {
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    color: #666;
+}
+.pagination span.current {
+    background: #29abe2 none repeat scroll 0 0;
+    border-radius: 3px;
+}
+.pagination {
+    text-align: right;
+    width: 100%;
+}
+.pagination a, .pagination span {
+    display: inline;
+    float: none;
+}
+.delerepotitle,.additemtitle {
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 18px;
+    height: 35px;
+    width: 100%;
+}
+.delerepocomment {
+    line-height: 24px;
+    margin-top: 27px;
+    text-align: center;
+    width: 100%;
+}
+.delerepobtnwrop {
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+.nodelrepo {
+    background: #29abe2 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px 30px;
+}
+.delerepocomment {
+    line-height: 24px;
+    margin-top: 27px;
+    text-align: center;
+    width: 100%;
+}
+.nodelerepo {
+    margin-left: 20px;
+}
+.additembtn{
+    background: rgba(0, 0, 0, 0) url("/img/additem_icon.png") no-repeat scroll right center;
+    color: #43609f;
+    float: right;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    width: 100px;
+    cursor: pointer;
+    margin-right: 85px;
+    position: relative;
+
+}
+.additembtn:hover{
+    background: rgba(0, 0, 0, 0) url("/img/additem_icon_hovre.png") no-repeat scroll right center;
+    text-decoration: underline;
+}
+.additemconp1{
+    margin-top:10px;
+    height: 25px;
+    line-height: 25px;
+    color: #666666;
+    text-align: center;
+}
+.additemconp2{
+    height: 25px;
+    line-height: 25px;
+    color: #29abe2;
+    text-align: center;
+}
+.additemconp2:hover{
+    color: #1998ce;
+}
+.additembtnwrop{
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+.additembtnwrop span{
+    background: #29abe2 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px 30px;
+}
+#additemalert .modal-dialog{
+    width: 300px;
+}
+#delerepoalert .modal-dialog{
+    width: 300px;
+}
+.ui-widget{
+    z-index: 11111;
+}
+.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+* html .ui-autocomplete {
+    height: 100px;
+}

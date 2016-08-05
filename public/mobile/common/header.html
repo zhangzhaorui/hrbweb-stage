@@ -1,0 +1,556 @@
+<style>
+	.nav > li > a:hover{
+		background-color:rgba(31,154,218,0.7); 
+	}	
+	
+	.nav .open > a , .nav .open > a:focus {
+		background-color: #29abe2;
+	}
+	
+	/** .nav .open > a:focus, **/
+	
+	.nav .open > a:hover{
+		background-color:rgba(31,154,218,0.7); 
+	}
+	#col-right{
+		display:none;
+	}
+	
+	#phoneSelect{
+		display: none;
+	}
+	
+	#nSearchs{
+		display: none;
+	}
+	
+	.navbar-toggle .icon-bar {
+    	background-color: #fff;
+	}
+	
+	#headerInput{
+		background-image:url('/mobile/images/lens.png');
+		background-repeat:no-repeat;
+		background-position: 98% 48%;
+		display:inline-block;	
+		width:248px;
+		height:40px;
+	}
+	
+	.hSearchBtn{
+		cursor: pointer;height: 28px;left: 238px;position: absolute;top: 0;width: 25px;
+	}
+	
+	#nLogosHeader{
+		display: none;
+	}
+	
+	.badgeHeader{
+		/* background-color: red;
+	    border-radius: 5px;
+	    color: #fff;
+	    font-size: 5px;
+	    font-weight: 700;
+	    line-height: 1;
+	    margin-left: -3px;
+	    margin-top: 0;
+	    min-width: 0;
+	    padding: 2px 4px;
+	    position: absolute;
+	    text-align: left;
+	    vertical-align: middle;
+	    white-space: nowrap;
+	    display: none; */
+	    background-color: red;
+	    border-radius: 50%;
+	    height: 10px;
+	    position: absolute;
+	    width: 10px;
+	    right: 5px;
+  		top: 15px;
+  		display: none;
+	}
+	
+	#phoneshowblog{
+		display:none;
+	}
+	#phoneshowhelp{
+		display:none;
+	}
+	#phoneshowlogout{
+		display:none;
+	}
+	
+	 @media (max-width: 768px) {
+	 
+		#col-left{
+			display:none;
+		}
+		#col-right{
+			display:inline;
+		}
+		
+		#phoneSelect{
+			display: block;
+		}
+	
+		
+		#iLoginf li{
+			float: left;
+		}
+		
+		#iLoginLiF{
+			width: 100%;
+		}
+		
+		#nLogos{
+			display: none;
+		}
+		
+		#nSearchs{
+			display: block;
+		    float: left;
+		    margin-left: 40px;
+		    margin-top: 10px;
+		}
+		
+		.dropdown-menu li{
+			float: left;
+		}
+		
+		.dropdown-menu li > a{
+			color: #fff;
+		}
+		
+		.dropdown-menu li > a:hover{
+			background-color:rgba(31,154,218,0.7); 
+			color: #fff;
+		}
+		
+		#headerInput{
+			width: 150px;
+		}
+		
+		.hSearchBtn{
+			left: 150px;
+    		top: 10px;
+		}
+		
+		#iLoginb li {
+		    float: left;
+		}
+		
+		#selectbtnFpc{
+			display: none;
+		}
+		
+		#selectBtnA{
+			display: none;
+		}
+		
+		#nLogosHeader{
+			display:block;
+		}
+ 	#phoneshowblog{
+		display:block;
+	}
+	#phoneshowhelp{
+		display:block;
+	}
+	#phoneshowlogout{
+		display:block;
+	}
+	
+	#iLoginf li[class="inLoginfLiF"]{
+		display:none;
+	}
+	
+	#sign-gj{
+		display: none;
+	}
+  }
+	
+</style>
+<div style="background-color:#29abe2;border: none;" class="navbar navbar-fixed-top" id="menu-nav">
+      <div class="container" style="padding: 0px">
+          <div class="navbar-header">
+          	<!-- 
+          		<a id="nLogosHeader" style="position: absolute;right: 120px;top: 15px;color: #fff;font-size: 1em;" href="/">DataHub</a>
+          	--> 
+          		<a id="nLogosHeader" style="font-size: 1em;color: #fff;float: left;font-size: 1em;margin-left: 30px;margin-right: -21px;margin-top: 16px;" href="/">DataHub</a>
+          	  <a id="phoneSelect" class="selectbtn" href="selects.html" style='position: absolute;right: 50px;top: 15px;color: #fff;font-size: 1em;'>数据精选</a>          	
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">切换导航 </span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+               
+				<div id="nSearchs">
+					<input id="headerInput" type="text" class="form-control" placeholder="寻找海量数据" style="height:28px;border: 0 none;">
+					<div class="hSearchBtn"></div>
+				</div> 
+			
+              <a id="nLogos" class="navbar-brand" style="color: #fff;font-size: 2em" href="/">DataHub</a>
+          </div> 
+		  <div  id="col-left" class="col-sm-4"  style="margin:13px 0px 10px 0px;">
+			<input id="headerInput" type="text" class="form-control headerInput" placeholder="寻找海量数据" style="height:28px;border: 0 none;">
+			<div class="hSearchBtn"></div>
+		  </div>
+
+	
+              
+        <div id='iLoginb'>    
+          <div class="navbar-collapse collapse navbar-right" >
+              <!-- 搜索 -->
+<!--            	<div class="col-sm-5" style="margin-top: 10px;"> -->
+<!--   				<input id="headerInput" type="text" class="form-control" placeholder="寻找海量数据" style="width:100%;height:32px;border: 0 none;"> -->
+<!-- 			</div> -->
+              <ul class="nav navbar-nav">
+              		<!-- 
+				  <li>
+						<div  id="col-right" class="col-sm-4"  style="margin:13px 0px 10px 0px;">
+						<input id="headerInput" type="text" class="form-control" placeholder="寻找海量数据" style="width:248px;height:28px;border: 0 none;">
+							<div class="hSearchBtn"></div>
+						</div>
+				  </li>
+			  -->
+                  <li class="active">
+                  	<a id="selectBtnA" class="selectbtn" style="color: #fff;font-size: 1em" href="selects.html">数据精选</a>
+                  </li>
+                  	 
+                  <li>
+                  	<a id="sign-in" style="color: #fff;font-size: 1em;" href="javaScript:void(0);" data-toggle="modal" data-target="#about-modal">登录</a>
+                  </li> 
+                  <!--<li>
+                  	<a id="sign-tool" style="color: #fff;font-size: 1em;" href="" data-toggle="modal" data-target="#about-modal">工具</a>
+                  </li>--> 
+                  <li style="float: left;">
+                      	<a id='sign-gj' title='工具' target="_blank" href='clientDownload.html' style='color: #fff;font-size: 1em;'>
+                      		工具
+                      	</a>
+                  </li>                      
+                  <li>
+                  	<a id='sign-help' target="_blank" href='http://docs.hub.dataos.io/' style='color: #fff;font-size: 1em;'>
+                        		<!--
+                        		<img src="images/i.png">
+                        		-->
+                        		帮助
+                     </a>
+                  </li> 
+                  <li>
+                  	<a id='sign-blog' target="_blank" href='http://blog.hub.dataos.io' style='color: #fff;font-size: 1em;'>
+                        		<!--
+                        		<img src="images/i.png">
+                        		-->
+                        		博客
+                     </a>
+                  </li> 
+				  <!--<li>
+                  	<a id='sign-comment' target="_blank" href='' style='color: #fff;font-size: 1em;'>
+                        		论坛
+                     </a>
+                  </li> 
+                  -->
+              </ul>
+          </div>
+         </div> 
+         <div id='iLoginf'>    
+          <div class="navbar-collapse collapse navbar-right" >
+              <!-- 搜索 -->
+           
+              <ul class="nav navbar-nav">
+              	  
+              	   
+                  <li class="active">
+                  	<a id="selectbtnFpc" class="selectbtn" style="color: #fff;font-size: 1em" href="selects.html" >数据精选</a>
+                  </li>
+                   
+ 
+                 <li class="inLoginfLiF">
+                  	<a title='我的发布' style="color: #fff;font-size: 1em" href="myPublish.html">
+                  		<!--  
+                  		<img src="images/fl4.png" />
+                  		-->
+                  		我的发布
+                  	</a>
+                  </li>
+
+                  <li class="inLoginfLiF">
+                  	<a title='我的订购' style="color: #fff;font-size: 1em" href="mySubscribe.html">
+                  		<!--  
+                  		<img src="images/fl1.png" />
+                  		-->
+                  		我的订购
+                  	</a>
+                  </li> 
+                   <!--<li>
+                  	<a id="sign-tool" style="color: #fff;font-size: 1em;" href="" data-toggle="modal" data-target="#about-modal">工具</a>
+                  </li> 
+                  -->
+                  
+                  <!--                      
+                  <li class="inLoginfLiF">
+                  	<a title='pull记录' style="color: #fff;font-size: 1em" href="mypullDetails.html">
+                  		pull记录
+                  	</a>
+                  </li> 
+                   -->  
+                   
+                 <li class="inLoginfLiF">
+                  	<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title='个人中心' style="color: #fff;font-size: 1em" href="javaScript:void(0);">
+                  		<!--
+                  		<img src="images/fl3.png" />
+                  		-->个人中心<span class="badgeHeader">&nbsp;</span>
+                  	</a>
+					  <ul class="dropdown-menu">
+					    <li><a id="innames" href="javaScript:void(0);" style="cursor: default;"></a></li>
+					    <li role="separator" class="divider"></li>
+					    <li><a href="memberUpgrade.html " target="_blank">会员升级</a></li>
+					    <li><a href="basicPwd.html" target="_blank">修改密码</a></li>
+					    <li><a href="basicInfo.html" target="_blank">基本信息</a></li>
+					    <li><a href="monitor.html" target="_blank">监控中心</a></li>
+						<li><a href="myAccount.html" target="_blank">账务中心</a></li>
+						<li><a href="messageRequired.html" target="_blank">消息中心</a></li>
+					    <li role="separator" class="divider"></li>
+					    <li><a id="logout" href="javaScript:void(0);">退出</a></li>
+					  </ul>	  
+                 </li>
+                 <li class="inLoginfLiF">
+                     	<a target="_blank" href='clientDownload.html' title='工具' style='color: #fff;font-size: 1em;'>
+                     		工具
+                     	</a>
+                 </li> 
+                 <li class="inLoginfLiF">
+					<a  target="_blank" href="http://docs.hub.dataos.io" title='帮助' style="color: #fff;font-size: 1em" href="mypullDetails.html">
+                  		<!--
+                  		<img src="images/fl2.png" />
+                  		-->
+                  		帮助
+                  	</a>
+                  </li>
+                 <li class="inLoginfLiF">
+                  	<a id='sign-blog' target="_blank" href='http://blog.hub.dataos.io' style='color: #fff;font-size: 1em;'>
+                        		<!--
+                        		<img src="images/i.png">
+                        		-->
+                        		博客
+                     </a>
+                  </li> 
+				  <!--<li>
+                  	<a id='sign-comment' target="_blank" href='' style='color: #fff;font-size: 1em;'>
+                        		
+                        		论坛
+                     </a>
+                  </li> 
+                  -->
+                    <li id="phoneshowhelp">
+                  	<a  target="_blank" href="http://docs.hub.dataos.io" title='帮助' style="color: #fff;font-size: 1em" href="mypullDetails.html">
+                  		<!--
+                  		<img src="images/fl2.png" />
+                  		-->
+                  		帮助
+                  	</a>
+                  </li> 
+                   <li id="phoneshowblog">
+                  	<a id='sign-blog' target="_blank" href='http://blog.hub.dataos.io' style='color: #fff;font-size: 1em;'>
+                        		<!--
+                        		<img src="images/i.png">
+                        		-->
+                        		博客
+                     </a>
+                  </li> 
+                   <li id="phoneshowlogout">
+                  	<a id="logout" href='javaScript:void(0);' style='color: #fff;font-size: 1em;'>
+                        		<!--
+                        		<img src="images/i.png">
+                        		-->
+                        		退出
+                     </a>
+                  </li>                 
+              </ul>
+          </div>
+         </div> 
+         
+         
+      </div>
+  </div>
+  
+<script>
+	if($.cookie("token")!=null&&$.cookie("tname")!=null&&$.cookie("tname")!="null"&&$.cookie("tname")!="null"){
+		$('#iLoginb').hide();
+		$("#iLoginf").show();
+		$("#innames").text($.cookie("tname"));
+	}else{
+		$('#iLoginb').show();
+		$("#iLoginf").hide();
+	}
+	
+	$("#sign-in").click(function(){
+		$(".modal-open").css("padding-right","15px");
+		
+		$('#myModal').on('show.bs.modal', function (event) {
+		  	$("#menu-nav").css("padding-right","15px");
+		});
+		$('#myModal').on('hidden.bs.modal', function (event) {
+			$("#menu-nav").css("padding-right","0px");
+		}); 
+		
+		$('#myModal').modal('toggle');
+	});
+	
+</script>
+  
+<script src="/mobile/js/lib/terminal.js"></script>
+
+<script>
+	var pcorphone =  browserRedirect();
+	if(pcorphone == 'pc'){
+		$('.selectbtn').attr('href','selects.html')
+	}
+	if(pcorphone == 'phone'){
+		$('.selectbtn').attr('href','selectsPhone.html')
+	}
+	$(document).on('keydown',"#headerInput",function (e) {
+	  if (e.keyCode == 13) {
+		  var vals=$(this).val();
+		  if(pcorphone == 'pc'){
+			  location.href="search.html?rtext="+vals;
+		  }
+		  if(pcorphone == 'phone'){
+			  location.href="searchPhone.html?rtext="+vals;
+		  }
+	  }
+	});
+	
+	$(document).on('click',".hSearchBtn",function (e) {
+		
+		  var vals=$(".headerInput").val();
+		  if(pcorphone == 'pc'){
+			  location.href="search.html?rtext="+vals;
+		  }
+		  if(pcorphone == 'phone'){
+			  location.href="searchPhone.html?rtext="+vals;
+		  }
+	});
+	
+	
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?8d1c4d8ec0ca2cd1bd8684e439437124";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	
+	
+	var _vds = _vds || [];
+	window._vds = _vds;
+	(function(){
+	  _vds.push(['setAccountId', '18ed57dc7073494c929bbf12d4c028ec']);
+	  (function() {
+	    var vds = document.createElement('script');
+	    vds.type='text/javascript';
+	    vds.async = true;
+	    vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(vds, s);
+	  })();
+	})();
+	
+	(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//widget.daovoice.io/widget/cd9644b0.js","daovoice");
+		
+	if($.cookie("token")!=null&&$.cookie("token")!="null"){
+		
+		if($.cookie("tuserid")!=null&&$.cookie("tuserid")!="null"){
+			
+		}else{
+			var userid="";
+			var nickname="";
+			var regtime="";
+			$.ajax({
+			       // url: ngUrl+"/repositories/asd/asd",
+			       	url: ngUrl+"/users/"+$.cookie("tname"),
+			        type: "get",
+			        cache:false,
+			        data:{},
+			        async:false,
+			        dataType:'json',
+			        success:function(json){
+			        	userid=json.data.userId;
+			        	nickname=json.data.nickName;
+			        	regtime=json.data.registTime;
+			        },
+			        error:function(json){
+			        	
+			        }
+			    });
+			
+			 var str = regtime;
+			 str = str.replace(/-/g,"/");
+			 var date = new Date(str); 
+			 var humanDate = new Date(Date.UTC(date.getFullYear(),date.getMonth(),date.getDate(),date.getHours(),date.getMinutes(), date.getSeconds())); 
+			 regtime=humanDate.getTime()/1000 - 8*60*60;
+			 
+			 $.cookie("tuserid",userid.toString()); // 必填: 该用户在您系统上的唯一ID
+			 $.cookie("tnickname",nickname); // 选填: 用户名
+			 $.cookie("tregtime",regtime); // 选填: 用户的注册时间，用Unix时间戳表示
+		}
+		
+		daovoice('init', {
+		  	app_id: "cd9644b0",
+		  	user_id: $.cookie("tuserid"), // 必填: 该用户在您系统上的唯一ID
+		  	email: $.cookie("tname"), // 选填:  该用户在您系统上的主邮箱
+		  	name: $.cookie("tnickname"), // 选填: 用户名
+		  	signed_up: $.cookie("tregtime") // 选填: 用户的注册时间，用Unix时间戳表示
+		});
+		
+	}else{		
+		daovoice('init', {
+			  app_id: "cd9644b0"
+		});
+	}
+	daovoice('update');
+	
+	if($.cookie("badgeHeader")!=null&&$.cookie("badgeHeader")!="null"){
+		$(".badgeHeader").show();
+	}else{
+		$(".badgeHeader").hide();
+	} 
+	
+ 	$(".badgeHeader").click(function(e){
+ 		e.stopPropagation();
+ 		location.href="messageRequired.html";
+ 	});
+	
+ 	
+ 	setInterval(mess,5000);
+ 	
+ 	function mess(){
+ 		var headerToken={};
+ 		//登陆后
+ 		if($.cookie("token")!=null&&$.cookie("token")!="null"){
+ 			//获取消息提示
+ 			$.ajax({
+ 				url: ngUrl+"/notification_stat",
+ 		        type: "get",
+ 		        cache:false,
+ 		        async:false,
+ 		        headers:{Authorization:"Token "+$.cookie("token")},
+ 		        dataType:'json',
+ 		        success:function(json){
+ 		        	//没有新消息
+ 		        	if(json.data==null){
+ 		        		
+ 		        	}else{
+ 		        		$(".badgeHeader").show();
+ 		        	}
+ 		        }
+ 			});
+ 		}		
+ 	}
+ 	
+ 	
+	
+	
+</script>
